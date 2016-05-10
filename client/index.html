@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app = "myApp">
+<head>
+    <title>Trade School</title>
+    <link rel="stylesheet" href="static/style.css">
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-messages.js"></script>
+	<script src="js/ngStorage.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>
+		
+		var Markit = {};
+
+		Markit.QuoteService = function(sSymbol, fCallback) {
+		    this.symbol = sSymbol;
+		    this.fCallback = fCallback;
+		    this.DATA_SRC = "http://dev.markitondemand.com/Api/v2/Quote/jsonp";
+		    this.makeRequest();
+		};
+
+		Markit.QuoteService.prototype.handleSuccess = function(jsonResult) {
+		    this.fCallback(jsonResult);
+		};
+
+		Markit.QuoteService.prototype.handleError = function(jsonResult) {
+		    console.error(jsonResult);
+		};
+
+		Markit.QuoteService.prototype.makeRequest = function() {
+		    //Abort any open requests
+		    if (this.xhr) { this.xhr.abort(); }
+		    //Start a new request
+		    this.xhr = $.ajax({
+		        data: { symbol: this.symbol },
+		        url: this.DATA_SRC,
+		        dataType: "jsonp",
+		        success: this.handleSuccess,
+		        error: this.handleError,
+		        context: this
+		    });
+		};
+
+	</script>
+	<script src="/js/config.js"></script>
+  	<script src="js/factories/userFactory.js"></script>
+	<script src="js/controllers/userController.js"></script>
+</head>
+<body>
+<div ng-view = ''>
+</div>
+</body>
+</html>

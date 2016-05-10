@@ -1,0 +1,43 @@
+<div ng-controller='userController'>
+	<div id="profileContainer">
+		<img src="static/images/logo.png" alt="logo">
+		<div id = "completeprofile">
+			<h1> Complete Profile </h1>
+
+			<h3>Basic Info</h3>
+			<input type="text" placeholder="Name" ng-model="user.name"><br><br>
+			<input type="text" placeholder="Location" ng-model="user.location"><br><br>
+
+			<h3>Interests <span id="select3">(select three)</span></h3>
+			<table>
+				<tr>
+					<td><input type="checkbox" name="basicindustries" ng-model="interests.basicindustries" ng-true-model='true' ng-false-value='false'>Basic Industries<br><p id="tabledetail">Proctor & Gamble, Praxair</p></td>
+					<td><input type="checkbox" name="capitalgoods" ng-model="interests.capitalgoods" ng-true-model='true' ng-false-value='false'>Capital Goods<p id="tabledetail">Ford, Boeing, Tesla</p></td>
+					<td><input type="checkbox" name="consumerdurables" ng-model="interests.consumerdurables" ng-true-model='true' ng-false-value='false'>Consumer Durables<p id="tabledetail">Clorox, Carmax, Whirlpool</p></td>
+					<td><input type="checkbox" name="consumernondurables" ng-model="interests.consumernondurables" ng-true-model='true' ng-false-value='false'>Consumer Non-Durables<p id="tabledetail">Molson Coors, Nike</p></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="consumerservices" ng-model="interests.consumerservices" ng-true-model='true' ng-false-value='false'>Consumer Services<p id="tabledetail">Amazon, Costco, Starbucks</p></td>
+					<td><input type="checkbox" name="energy" ng-model="interests.energy" ng-true-model='true' ng-false-value='false'>Energy<p id="tabledetail" >General Electric, Exxon</p></td>
+					<td><input type="checkbox" name="finance" ng-model="interests.finance" ng-true-model='true' ng-false-value='false'>Finance<p id="tabledetail">Wells Fargo, Bank of America</p></td>
+					<td><input type="checkbox" name="healthcare" ng-model="interests.healthcare" ng-true-model="'YES'" ng-false-value="'NO'">Healthcare<p id="tabledetail">Merck, Pfizer</p></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="misc" ng-model="interests.miscellaneous" ng-true-model='true' ng-false-value='false'>Miscellaneous<p id="tabledetail">PayPal, Visa, eBay, Mastercard</p></td>
+					<td><input type="checkbox" name="publicutilities" ng-model="interests.publicutilities" ng-true-model='true' ng-false-value='false'>Public Utilities<p id="tabledetail">Verizon, AT&T, CenturyLink</p></td>
+					<td><input type="checkbox" name="technology" ng-model="interests.technology" ng-true-model='true' ng-false-value='false'>Technology<p id="tabledetail">Apple, Alphabet, Facebook, Intel</p></td>
+					<td><input type="checkbox" name="transportation" ng-model="interests.transportation" ng-true-model='true' ng-false-value='false'>Transportation<p id="tabledetail">UPS, American Airlines, Delta</p></td>
+				</tr>
+			</table><br>
+
+			<h3>Investing Goals</h3>
+			<table>
+				<tr>
+					<td><input type="checkbox" name="conservative" ng-model="strategy.conservative" ng-true-model='true' ng-false-value='false'>Conservative</td>
+					<td><input type="checkbox" name="aggressive" ng-model="strategy.aggressive" ng-true-model='true' ng-false-value='false'>Aggressive</td>
+				</tr>
+			</table>
+			<button ng-click="completeProfile()">Submit</button>
+		</div>
+	</div>
+</div>

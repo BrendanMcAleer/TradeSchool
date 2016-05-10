@@ -1,0 +1,21 @@
+<div ng-controller='userController'>
+	<div id="landingContainer">
+		<img src="static/images/logo.png" alt="logo">
+		<div id = "signup">
+			<div id ="signupform">
+					<h1> Create an Account </h1>
+					<input type="text" placeholder="Email Address" ng-model="user.email"><br><br>
+					<input type="password" placeholder="Password" ng-model="user.password"><br>
+					<button ng-click="createUser()">Submit</button>
+			</div>
+		</div>
+		<div id = "login">
+			<div id = "loginform">
+				<h1> Sign In</h1>
+				<input type="text" placeholder="Email Address" ng-model="login.email"><br><br>
+				<input type="password" placeholder="Password" ng-model="login.password">
+				<button ng-click="loginUser()">Submit</button>
+			</div>
+		</div>
+	</div>
+</div>

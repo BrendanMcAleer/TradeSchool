@@ -1,0 +1,4000 @@
+<div ng-controller="userController">
+	<div id="dashboardcontainer">
+		<div class="header">
+			<img src="static/images/logo.png" alt="logo">
+			<ul>
+				<li>
+					<a href="#/dashboard">Dashboard</a>
+				</li>
+				<li>
+					<a href="#/dashboard">Research</a>
+				</li>
+				<li>
+					<a href="#/dashboard">Buy Stocks</a>
+				</li>
+				<li>
+					<a href="#/">Logout</a>
+				</li>
+			</ul>
+		</div>
+		<div class = "sidebar">
+			<h3> Brendan McAleer </h3>
+			<div class="profilepicture"></div>
+			<div class="portfoliostats">
+				<h4>Portfolio Total</h4>
+				<p> ${{(user.stock1buyprice * user.stock1quantity) + (user.stock2buyprice * user.stock2quantity) + (user.stock3buyprice * user.stock3quantity) + (user.stock4buyprice * user.stock4quantity) + (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<h4> Change Since Purchase </h4>
+				<p> +$245</p>
+				<h4>Number of Trades</h4>
+				<p> 0 </p>
+			</div>
+		</div>
+		<div class = "maincontent">
+			<h1> My Stocks </h1>
+
+
+<!-- Microsoft -->
+		<div ng-if="user.stock1 == 'msft'">
+				<div class = "stockinfo">
+					<h1>Microsoft</h1>
+					<h2>MSFT</h2>
+					<img src="static/images/microsoft_logo.png" alt="microsoftlogo">
+					<h2>${{stocks[2]['l']}}</h2>
+					<h3>Today's Change</h3>
+					<p>${{stocks[2]['c']}} ({{stocks[2]['cp']}}%)</p>
+					<h3>Change Since Purchase</h3>
+					<p>${{(stocks[2]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'msft'">
+				<div class = "stockinfo">
+					<h1>Microsoft</h1>
+					<h2>MSFT</h2>
+					<img src="static/images/microsoft_logo.png" alt="microsoftlogo">
+					<h2>${{stocks[2]['l']}}</h2>
+					<h3>Today's Change</h3>
+					<p>${{stocks[2]['c']}} ({{stocks[2]['cp']}}%)</p>
+					<h3>Change Since Purchase</h3>
+					<p>${{(stocks[5]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'msft'">
+				<div class = "stockinfo">
+					<h1>Microsoft</h1>
+					<h2>MSFT</h2>
+					<img src="static/images/microsoft_logo.png" alt="microsoftlogo">
+					<h2>${{stocks[2]['l']}}</h2>
+					<h3>Today's Change</h3>
+					<p>${{stocks[2]['c']}} ({{stocks[2]['cp']}}%)</p>
+					<h3>Change Since Purchase</h3>
+					<p>${{(stocks[5]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'msft'">
+			<div class = "stockinfo">
+					<h1>Microsoft</h1>
+					<h2>MSFT</h2>
+					<img src="static/images/microsoft_logo.png" alt="microsoftlogo">
+					<h2>${{stocks[2]['l']}}</h2>
+					<h3>Today's Change</h3>
+					<p>${{stocks[2]['c']}} ({{stocks[2]['cp']}}%)</p>
+					<h3>Change Since Purchase</h3>
+					<p>${{(stocks[5]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'msft'">
+			<div class = "stockinfo">
+					<h1>Microsoft</h1>
+					<h2>MSFT</h2>
+					<img src="static/images/microsoft_logo.png" alt="microsoftlogo">
+					<h2>${{stocks[2]['l']}}</h2>
+					<h3>Today's Change</h3>
+					<p>${{stocks[2]['c']}} ({{stocks[2]['cp']}}%)</p>
+					<h3>Change Since Purchase</h3>
+					<p>${{(stocks[5]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Google -->
+		<div ng-if="user.stock1 == 'googl'">
+				<div class = "stockinfo">				
+					<h1>Google</h1>
+					<h2>GOOGL</h2>
+					<img src="static/images/google_logo.png" alt="googlelogo">
+					<h2>${{stocks[4]['l']}}</h2>
+					<h3>Today's Change</h3>
+					<p>${{stocks[4]['c']}} ({{stocks[4]['cp']}}%)</p>
+					<h3>Change Since Purchase</h3>
+					<p>${{(stocks[4]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+					<button ng-click='sellStock()'>Sell</button>
+				</div>
+		</div>
+		<div ng-if="user.stock2 == 'googl'">
+				<div class = "stockinfo">				
+					<h1>Google</h1>
+					<h2>GOOGL</h2>
+					<img src="static/images/google_logo.png" alt="googlelogo">
+					<h2>${{stocks[4]['l']}}</h2>
+					<h3>Today's Change</h3>
+					<p>${{stocks[4]['c']}} ({{stocks[4]['cp']}}%)</p>
+					<h3>Change Since Purchase</h3>
+					<p>${{(stocks[4]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+					<button ng-click='sellStock()'>Sell</button>
+				</div>
+		</div>
+		<div ng-if="user.stock3 == 'googl'">
+				<div class = "stockinfo">				
+					<h1>Google</h1>
+					<h2>GOOGL</h2>
+					<img src="static/images/google_logo.png" alt="googlelogo">
+					<h2>${{stocks[4]['l']}}</h2>
+					<h3>Today's Change</h3>
+					<p>${{stocks[4]['c']}} ({{stocks[4]['cp']}}%)</p>
+					<h3>Change Since Purchase</h3>
+					<p>${{(stocks[4]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+					<button ng-click='sellStock()'>Sell</button>
+				</div>
+		</div>
+		<div ng-if="user.stock4 == 'googl'">
+				<div class = "stockinfo">				
+					<h1>Google</h1>
+					<h2>GOOGL</h2>
+					<img src="static/images/google_logo.png" alt="googlelogo">
+					<h2>${{stocks[4]['l']}}</h2>
+					<h3>Today's Change</h3>
+					<p>${{stocks[4]['c']}} ({{stocks[4]['cp']}}%)</p>
+					<h3>Change Since Purchase</h3>
+					<p>${{(stocks[4]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+					<button ng-click='sellStock()'>Sell</button>
+				</div>
+		</div>
+		<div ng-if="user.stock5 == 'googl'">
+			<div class = "stockinfo">				
+				<h1>Google</h1>
+				<h2>GOOGL</h2>
+				<img src="static/images/google_logo.png" alt="googlelogo">
+				<h2>${{stocks[4]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[4]['c']}} ({{stocks[4]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[4]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Apple -->
+		<div ng-if="user.stock1 == 'aapl'">
+			<div class = "stockinfo">				
+				<h1>Apple</h1>
+				<h2>AAPL</h2>
+				<img src="static/images/apple_logo.png" alt="applelogo">
+				<h2>${{stocks[1]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[1]['c']}} ({{stocks[1]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[1]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'aapl'">
+			<div class = "stockinfo">				
+				<h1>Apple</h1>
+				<h2>AAPL</h2>
+				<img src="static/images/apple_logo.png" alt="applelogo">
+				<h2>${{stocks[1]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[1]['c']}} ({{stocks[1]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[1]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'aapl'">
+			<div class = "stockinfo">				
+				<h1>Apple</h1>
+				<h2>AAPL</h2>
+				<img src="static/images/apple_logo.png" alt="applelogo">
+				<h2>${{stocks[1]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[1]['c']}} ({{stocks[1]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[1]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'aapl'">
+			<div class = "stockinfo">				
+				<h1>Apple</h1>
+				<h2>AAPL</h2>
+				<img src="static/images/apple_logo.png" alt="applelogo">
+				<h2>${{stocks[1]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[1]['c']}} ({{stocks[1]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[1]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'aapl'">
+			<div class = "stockinfo">				
+				<h1>Apple</h1>
+				<h2>AAPL</h2>
+				<img src="static/images/apple_logo.png" alt="applelogo">
+				<h2>${{stocks[1]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[1]['c']}} ({{stocks[1]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[1]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Facebook -->
+		<div ng-if="user.stock1 == 'fb'">
+			<div class = "stockinfo">				
+				<h1>Facebook</h1>
+				<h2>FB</h2>
+				<img src="static/images/facebook_logo.png" alt="facebooklogo">
+				<h2>${{stocks[3]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[3]['c']}} ({{stocks[3]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[3]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'fb'">
+			<div class = "stockinfo">				
+				<h1>Facebook</h1>
+				<h2>FB</h2>
+				<img src="static/images/facebook_logo.png" alt="facebooklogo">
+				<h2>${{stocks[3]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[3]['c']}} ({{stocks[3]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[3]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'fb'">
+			<div class = "stockinfo">				
+				<h1>Facebook</h1>
+				<h2>FB</h2>
+				<img src="static/images/facebook_logo.png" alt="facebooklogo">
+				<h2>${{stocks[3]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[3]['c']}} ({{stocks[3]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[3]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'fb'">
+			<div class = "stockinfo">				
+				<h1>Facebook</h1>
+				<h2>FB</h2>
+				<img src="static/images/facebook_logo.png" alt="facebooklogo">
+				<h2>${{stocks[3]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[3]['c']}} ({{stocks[3]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[3]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'fb'">
+			<div class = "stockinfo">				
+				<h1>Facebook</h1>
+				<h2>FB</h2>
+				<img src="static/images/facebook_logo.png" alt="facebooklogo">
+				<h2>${{stocks[3]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[3]['c']}} ({{stocks[3]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[3]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Intel -->
+		<div ng-if="user.stock1 == 'intc'">
+			<div class = "stockinfo">				
+				<h1>Intel</h1>
+				<h2>INTC</h2>
+				<img src="static/images/intel_logo.png" alt="intellogo">
+				<h2>${{stocks[59]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[59]['c']}} ({{stocks[59]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[59]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'intc'">
+			<div class = "stockinfo">				
+				<h1>Intel</h1>
+				<h2>INTC</h2>
+				<img src="static/images/intel_logo.png" alt="intellogo">
+				<h2>${{stocks[59]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[59]['c']}} ({{stocks[59]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[59]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'intc'">
+			<div class = "stockinfo">				
+				<h1>Intel</h1>
+				<h2>INTC</h2>
+				<img src="static/images/intel_logo.png" alt="intellogo">
+				<h2>${{stocks[59]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[59]['c']}} ({{stocks[59]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[59]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'intc'">
+			<div class = "stockinfo">				
+				<h1>Intel</h1>
+				<h2>INTC</h2>
+				<img src="static/images/intel_logo.png" alt="intellogo">
+				<h2>${{stocks[59]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[59]['c']}} ({{stocks[59]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[59]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'intc'">
+			<div class = "stockinfo">				
+				<h1>Intel</h1>
+				<h2>INTC</h2>
+				<img src="static/images/intel_logo.png" alt="intellogo">
+				<h2>${{stocks[59]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[59]['c']}} ({{stocks[59]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[59]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- P&G -->
+		<div ng-if="user.stock1 == 'pg'">
+			<div class = "stockinfo">				
+				<h1>Proctor & Gamble</h1>
+				<h2>PG</h2>
+				<img src="static/images/pg_logo.png" alt="pglogo">
+				<h2>${{stocks[5]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[5]['c']}} ({{stocks[5]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[5]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'pg'">
+			<div class = "stockinfo">				
+				<h1>Proctor & Gamble</h1>
+				<h2>PG</h2>
+				<img src="static/images/pg_logo.png" alt="pglogo">
+				<h2>${{stocks[5]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[5]['c']}} ({{stocks[5]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[5]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'pg'">
+			<div class = "stockinfo">				
+				<h1>Proctor & Gamble</h1>
+				<h2>PG</h2>
+				<img src="static/images/pg_logo.png" alt="pglogo">
+				<h2>${{stocks[5]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[5]['c']}} ({{stocks[5]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[5]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'pg'">
+			<div class = "stockinfo">				
+				<h1>Proctor & Gamble</h1>
+				<h2>PG</h2>
+				<img src="static/images/pg_logo.png" alt="pglogo">
+				<h2>${{stocks[5]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[5]['c']}} ({{stocks[5]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[5]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'pg'">
+			<div class = "stockinfo">				
+				<h1>Proctor & Gamble</h1>
+				<h2>PG</h2>
+				<img src="static/images/pg_logo.png" alt="pglogo">
+				<h2>${{stocks[5]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[5]['c']}} ({{stocks[5]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[5]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Praxair -->
+		<div ng-if="user.stock1 == 'px'">
+			<div class = "stockinfo">				
+				<h1>Praxair</h1>
+				<h2>PX</h2>
+				<img src="static/images/praxair_logo.png" alt="praxairlogo">
+				<h2>${{stocks[6]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[6]['c']}} ({{stocks[6]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[6]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'px'">
+			<div class = "stockinfo">				
+				<h1>Praxair</h1>
+				<h2>PX</h2>
+				<img src="static/images/praxair_logo.png" alt="praxairlogo">
+				<h2>${{stocks[6]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[6]['c']}} ({{stocks[6]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[6]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'px'">
+			<div class = "stockinfo">				
+				<h1>Praxair</h1>
+				<h2>PX</h2>
+				<img src="static/images/praxair_logo.png" alt="praxairlogo">
+				<h2>${{stocks[6]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[6]['c']}} ({{stocks[6]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[6]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity)| number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'px'">
+			<div class = "stockinfo">				
+				<h1>Praxair</h1>
+				<h2>PX</h2>
+				<img src="static/images/praxair_logo.png" alt="praxairlogo">
+				<h2>${{stocks[6]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[6]['c']}} ({{stocks[6]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[6]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'px'">
+			<div class = "stockinfo">				
+				<h1>Praxair</h1>
+				<h2>PX</h2>
+				<img src="static/images/praxair_logo.png" alt="praxairlogo">
+				<h2>${{stocks[6]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[6]['c']}} ({{stocks[6]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[6]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>			
+<!-- Monsanto -->
+		<div ng-if="user.stock1 == 'mon'">	
+			<div class = "stockinfo">				
+				<h1>Monsanto</h1>
+				<h2>MON</h2>
+				<img src="static/images/monsanto_logo.png" alt="monsantologo">
+				<h2>${{stocks[7]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[7]['c']}} ({{stocks[7]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[7]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'mon'">	
+			<div class = "stockinfo">				
+				<h1>Monsanto</h1>
+				<h2>MON</h2>
+				<img src="static/images/monsanto_logo.png" alt="monsantologo">
+				<h2>${{stocks[7]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[7]['c']}} ({{stocks[7]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[7]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'mon'">	
+			<div class = "stockinfo">				
+				<h1>Monsanto</h1>
+				<h2>MON</h2>
+				<img src="static/images/monsanto_logo.png" alt="monsantologo">
+				<h2>${{stocks[7]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[7]['c']}} ({{stocks[7]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[7]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'mon'">	
+			<div class = "stockinfo">				
+				<h1>Monsanto</h1>
+				<h2>MON</h2>
+				<img src="static/images/monsanto_logo.png" alt="monsantologo">
+				<h2>${{stocks[7]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[7]['c']}} ({{stocks[7]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[7]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'mon'">	
+			<div class = "stockinfo">				
+				<h1>Monsanto</h1>
+				<h2>MON</h2>
+				<img src="static/images/monsanto_logo.png" alt="monsantologo">
+				<h2>${{stocks[7]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[7]['c']}} ({{stocks[7]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[7]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Valspar -->
+		<div ng-if="user.stock1 == 'val'">
+			<div class = "stockinfo">				
+				<h1>Valspar</h1>
+				<h2>VAL</h2>
+				<img src="static/images/valspar_logo.png" alt="valsparlogo">
+				<h2>${{stocks[8]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[8]['c']}} ({{stocks[8]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[8]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'val'">
+			<div class = "stockinfo">				
+				<h1>Valspar</h1>
+				<h2>VAL</h2>
+				<img src="static/images/valspar_logo.png" alt="valsparlogo">
+				<h2>${{stocks[8]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[8]['c']}} ({{stocks[8]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[8]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'val'">
+			<div class = "stockinfo">				
+				<h1>Valspar</h1>
+				<h2>VAL</h2>
+				<img src="static/images/valspar_logo.png" alt="valsparlogo">
+				<h2>${{stocks[8]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[8]['c']}} ({{stocks[8]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[8]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'val'">
+			<div class = "stockinfo">				
+				<h1>Valspar</h1>
+				<h2>VAL</h2>
+				<img src="static/images/valspar_logo.png" alt="valsparlogo">
+				<h2>${{stocks[8]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[8]['c']}} ({{stocks[8]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[8]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>				
+		<div ng-if="user.stock5 == 'val'">
+			<div class = "stockinfo">				
+				<h1>Valspar</h1>
+				<h2>VAL</h2>
+				<img src="static/images/valspar_logo.png" alt="valsparlogo">
+				<h2>${{stocks[8]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[8]['c']}} ({{stocks[8]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[8]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Steel Dynamics  -->
+		<div ng-if="user.stock1 == 'stld'">
+			<div class = "stockinfo">				
+				<h1>Steel Dynamics</h1>
+				<h2>STLD</h2>
+				<img src="static/images/steeldynamics_logo.png" alt="sdlogo">
+				<h2>${{stocks[9]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[9]['c']}} ({{stocks[9]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[9]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'stld'">
+			<div class = "stockinfo">				
+				<h1>Steel Dynamics</h1>
+				<h2>STLD</h2>
+				<img src="static/images/steeldynamics_logo.png" alt="sdlogo">
+				<h2>${{stocks[9]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[9]['c']}} ({{stocks[9]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[9]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'stld'">
+			<div class = "stockinfo">				
+				<h1>Steel Dynamics</h1>
+				<h2>STLD</h2>
+				<img src="static/images/steeldynamics_logo.png" alt="sdlogo">
+				<h2>${{stocks[9]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[9]['c']}} ({{stocks[9]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[9]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'stld'">
+			<div class = "stockinfo">				
+				<h1>Steel Dynamics</h1>
+				<h2>STLD</h2>
+				<img src="static/images/steeldynamics_logo.png" alt="sdlogo">
+				<h2>${{stocks[9]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[9]['c']}} ({{stocks[9]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[9]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'stld'">
+			<div class = "stockinfo">				
+				<h1>Steel Dynamics</h1>
+				<h2>STLD</h2>
+				<img src="static/images/steeldynamics_logo.png" alt="sdlogo">
+				<h2>${{stocks[9]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[9]['c']}} ({{stocks[9]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[9]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Ford -->
+		<div ng-if="user.stock1 == 'f'">
+			<div class = "stockinfo">				
+				<h1>Ford</h1>
+				<h2>F</h2>
+				<img src="static/images/ford_logo.png" alt="fordlogo">
+				<h2>${{stocks[10]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[10]['c']}} ({{stocks[10]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[10]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'f'">
+			<div class = "stockinfo">				
+				<h1>Ford</h1>
+				<h2>F</h2>
+				<img src="static/images/ford_logo.png" alt="fordlogo">
+				<h2>${{stocks[10]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[10]['c']}} ({{stocks[10]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[10]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'f'">
+			<div class = "stockinfo">				
+				<h1>Ford</h1>
+				<h2>F</h2>
+				<img src="static/images/ford_logo.png" alt="fordlogo">
+				<h2>${{stocks[10]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[10]['c']}} ({{stocks[10]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[10]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'f'">
+			<div class = "stockinfo">				
+				<h1>Ford</h1>
+				<h2>F</h2>
+				<img src="static/images/ford_logo.png" alt="fordlogo">
+				<h2>${{stocks[10]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[10]['c']}} ({{stocks[10]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[10]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'f'">
+			<div class = "stockinfo">				
+				<h1>Ford</h1>
+				<h2>F</h2>
+				<img src="static/images/ford_logo.png" alt="fordlogo">
+				<h2>${{stocks[10]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[10]['c']}} ({{stocks[10]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[10]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity)| number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Boeing -->
+		<div ng-if="user.stock1 == 'ba'">
+			<div class = "stockinfo">				
+				<h1>Boeing</h1>
+				<h2>BA</h2>
+				<img src="static/images/boeing_logo.png" alt="boeinglogo">
+				<h2>${{stocks[0]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[0]['c']}} ({{stocks[0]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[0]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>	
+		<div ng-if="user.stock2 == 'ba'">
+			<div class = "stockinfo">				
+				<h1>Boeing</h1>
+				<h2>BA</h2>
+				<img src="static/images/boeing_logo.png" alt="boeinglogo">
+				<h2>${{stocks[0]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[0]['c']}} ({{stocks[0]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[0]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>				
+		<div ng-if="user.stock3 == 'ba'">
+			<div class = "stockinfo">				
+				<h1>Boeing</h1>
+				<h2>BA</h2>
+				<img src="static/images/boeing_logo.png" alt="boeinglogo">
+				<h2>${{stocks[0]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[0]['c']}} ({{stocks[0]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[0]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity)| number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'ba'">
+			<div class = "stockinfo">				
+				<h1>Boeing</h1>
+				<h2>BA</h2>
+				<img src="static/images/boeing_logo.png" alt="boeinglogo">
+				<h2>${{stocks[0]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[0]['c']}} ({{stocks[0]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[0]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>		
+		<div ng-if="user.stock5 == 'ba'">
+			<div class = "stockinfo">				
+				<h1>Boeing</h1>
+				<h2>BA</h2>
+				<img src="static/images/boeing_logo.png" alt="boeinglogo">
+				<h2>${{stocks[0]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[0]['c']}} ({{stocks[0]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[0]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>		
+<!-- Tesla -->
+		<div ng-if="user.stock1 == 'tsla'">
+			<div class = "stockinfo">				
+				<h1>Tesla</h1>
+				<h2>TSLA</h2>
+				<img src="static/images/tesla_logo.png" alt="teslalogo">
+				<h2>${{stocks[11]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[11]['c']}} ({{stocks[11]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[11]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'tsla'">
+			<div class = "stockinfo">				
+				<h1>Tesla</h1>
+				<h2>TSLA</h2>
+				<img src="static/images/tesla_logo.png" alt="teslalogo">
+				<h2>${{stocks[11]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[11]['c']}} ({{stocks[11]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[11]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>			
+		<div ng-if="user.stock3 == 'tsla'">
+			<div class = "stockinfo">				
+				<h1>Tesla</h1>
+				<h2>TSLA</h2>
+				<img src="static/images/tesla_logo.png" alt="teslalogo">
+				<h2>${{stocks[11]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[11]['c']}} ({{stocks[11]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[11]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>	
+		<div ng-if="user.stock4 == 'tsla'">
+			<div class = "stockinfo">				
+				<h1>Tesla</h1>
+				<h2>TSLA</h2>
+				<img src="static/images/tesla_logo.png" alt="teslalogo">
+				<h2>${{stocks[11]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[11]['c']}} ({{stocks[11]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[11]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>			
+		<div ng-if="user.stock5 == 'tsla'">
+			<div class = "stockinfo">				
+				<h1>Tesla</h1>
+				<h2>TSLA</h2>
+				<img src="static/images/tesla_logo.png" alt="teslalogo">
+				<h2>${{stocks[11]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[11]['c']}} ({{stocks[11]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[11]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>		
+<!-- Caterpillar -->
+		<div ng-if="user.stock1 == 'cat'">
+			<div class = "stockinfo">				
+				<h1>Caterpillar</h1>
+				<h2>CAT</h2>
+				<img src="static/images/caterpillar_logo.png" alt="caterpillarlogo">
+				<h2>$134.23</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[12]['c']}} ({{stocks[12]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[12]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'cat'">
+			<div class = "stockinfo">				
+				<h1>Caterpillar</h1>
+				<h2>CAT</h2>
+				<img src="static/images/caterpillar_logo.png" alt="caterpillarlogo">
+				<h2>$134.23</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[12]['c']}} ({{stocks[12]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[12]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'cat'">
+			<div class = "stockinfo">				
+				<h1>Caterpillar</h1>
+				<h2>CAT</h2>
+				<img src="static/images/caterpillar_logo.png" alt="caterpillarlogo">
+				<h2>$134.23</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[12]['c']}} ({{stocks[12]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[12]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'cat'">
+			<div class = "stockinfo">				
+				<h1>Caterpillar</h1>
+				<h2>CAT</h2>
+				<img src="static/images/caterpillar_logo.png" alt="caterpillarlogo">
+				<h2>$134.23</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[12]['c']}} ({{stocks[12]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[12]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>			
+		<div ng-if="user.stock5 == 'cat'">
+			<div class = "stockinfo">				
+				<h1>Caterpillar</h1>
+				<h2>CAT</h2>
+				<img src="static/images/caterpillar_logo.png" alt="caterpillarlogo">
+				<h2>$134.23</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[12]['c']}} ({{stocks[12]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[12]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>				
+<!-- Ferrari -->
+		<div ng-if="user.stock1 == 'race'">
+			<div class = "stockinfo">				
+				<h1>Ferrari</h1>
+				<h2>RACE</h2>
+				<img src="static/images/ferrari_logo.png" alt="ferrarilogo">
+				<h2>${{stocks[13]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[13]['c']}} ({{stocks[13]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[13]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'race'">
+			<div class = "stockinfo">				
+				<h1>Ferrari</h1>
+				<h2>RACE</h2>
+				<img src="static/images/ferrari_logo.png" alt="ferrarilogo">
+				<h2>${{stocks[13]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[13]['c']}} ({{stocks[13]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[13]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>		
+		<div ng-if="user.stock3 == 'race'">
+			<div class = "stockinfo">				
+				<h1>Ferrari</h1>
+				<h2>RACE</h2>
+				<img src="static/images/ferrari_logo.png" alt="ferrarilogo">
+				<h2>${{stocks[13]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[13]['c']}} ({{stocks[13]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[13]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'race'">
+			<div class = "stockinfo">				
+				<h1>Ferrari</h1>
+				<h2>RACE</h2>
+				<img src="static/images/ferrari_logo.png" alt="ferrarilogo">
+				<h2>${{stocks[13]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[13]['c']}} ({{stocks[13]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[13]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>		
+		<div ng-if="user.stock5 == 'race'">
+			<div class = "stockinfo">				
+				<h1>Ferrari</h1>
+				<h2>RACE</h2>
+				<img src="static/images/ferrari_logo.png" alt="ferrarilogo">
+				<h2>${{stocks[13]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[13]['c']}} ({{stocks[13]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[13]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>	
+<!-- Clorox -->
+		<div ng-if="user.stock1 == 'clx'">
+			<div class = "stockinfo">				
+				<h1>Clorox</h1>
+				<h2>CLX</h2>
+				<img src="static/images/clorox_logo.png" alt="cloroxlogo">
+				<h2>${{stocks[14]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[14]['c']}} ({{stocks[14]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[14]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'clx'">
+			<div class = "stockinfo">				
+				<h1>Clorox</h1>
+				<h2>CLX</h2>
+				<img src="static/images/clorox_logo.png" alt="cloroxlogo">
+				<h2>${{stocks[14]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[14]['c']}} ({{stocks[14]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[14]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'clx'">
+			<div class = "stockinfo">				
+				<h1>Clorox</h1>
+				<h2>CLX</h2>
+				<img src="static/images/clorox_logo.png" alt="cloroxlogo">
+				<h2>${{stocks[14]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[14]['c']}} ({{stocks[14]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[14]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'clx'">
+			<div class = "stockinfo">				
+				<h1>Clorox</h1>
+				<h2>CLX</h2>
+				<img src="static/images/clorox_logo.png" alt="cloroxlogo">
+				<h2>${{stocks[14]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[14]['c']}} ({{stocks[14]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[14]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>	
+		<div ng-if="user.stock5 == 'clx'">
+			<div class = "stockinfo">				
+				<h1>Clorox</h1>
+				<h2>CLX</h2>
+				<img src="static/images/clorox_logo.png" alt="cloroxlogo">
+				<h2>${{stocks[14]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[14]['c']}} ({{stocks[14]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[14]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>				
+<!-- Whirlpool -->
+		<div ng-if="user.stock1 == 'whr'">
+			<div class = "stockinfo">				
+				<h1>Whirlpool</h1>
+				<h2>WHR</h2>
+				<img src="static/images/whirlpool_logo.png" alt="whirlpoollogo">
+				<h2>${{stocks[15]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[15]['c']}} ({{stocks[15]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[15]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'whr'">
+			<div class = "stockinfo">				
+				<h1>Whirlpool</h1>
+				<h2>WHR</h2>
+				<img src="static/images/whirlpool_logo.png" alt="whirlpoollogo">
+				<h2>${{stocks[15]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[15]['c']}} ({{stocks[15]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[15]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'whr'">
+			<div class = "stockinfo">				
+				<h1>Whirlpool</h1>
+				<h2>WHR</h2>
+				<img src="static/images/whirlpool_logo.png" alt="whirlpoollogo">
+				<h2>${{stocks[15]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[15]['c']}} ({{stocks[15]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[15]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'whr'">
+			<div class = "stockinfo">				
+				<h1>Whirlpool</h1>
+				<h2>WHR</h2>
+				<img src="static/images/whirlpool_logo.png" alt="whirlpoollogo">
+				<h2>${{stocks[15]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[15]['c']}} ({{stocks[15]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[15]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'whr'">
+			<div class = "stockinfo">				
+				<h1>Whirlpool</h1>
+				<h2>WHR</h2>
+				<img src="static/images/whirlpool_logo.png" alt="whirlpoollogo">
+				<h2>${{stocks[15]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[15]['c']}} ({{stocks[15]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[15]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- CarMax -->
+		<div ng-if="user.stock1 == 'kmx'">
+			<div class = "stockinfo">				
+				<h1>CarMax</h1>
+				<h2>KMX</h2>
+				<img src="static/images/carmax_logo.png" alt="carmaxlogo">
+				<h2>${{stocks[16]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[16]['c']}} ({{stocks[16]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[16]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'kmx'">
+			<div class = "stockinfo">				
+				<h1>CarMax</h1>
+				<h2>KMX</h2>
+				<img src="static/images/carmax_logo.png" alt="carmaxlogo">
+				<h2>${{stocks[16]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[16]['c']}} ({{stocks[16]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[16]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'kmx'">
+			<div class = "stockinfo">				
+				<h1>CarMax</h1>
+				<h2>KMX</h2>
+				<img src="static/images/carmax_logo.png" alt="carmaxlogo">
+				<h2>${{stocks[16]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[16]['c']}} ({{stocks[16]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[16]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'kmx'">
+			<div class = "stockinfo">				
+				<h1>CarMax</h1>
+				<h2>KMX</h2>
+				<img src="static/images/carmax_logo.png" alt="carmaxlogo">
+				<h2>${{stocks[16]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[16]['c']}} ({{stocks[16]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[16]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'kmx'">
+			<div class = "stockinfo">				
+				<h1>CarMax</h1>
+				<h2>KMX</h2>
+				<img src="static/images/carmax_logo.png" alt="carmaxlogo">
+				<h2>${{stocks[16]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[16]['c']}} ({{stocks[16]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[16]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Goodyear -->
+		<div ng-if="user.stock1 == 'gt'">
+			<div class = "stockinfo">				
+				<h1>Goodyear</h1>
+				<h2>GT</h2>
+				<img src="static/images/goodyear_logo.png" alt="goodyearlogo">
+				<h2>${{stocks[17]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[17]['c']}} ({{stocks[17]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[17]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'gt'">
+			<div class = "stockinfo">				
+				<h1>Goodyear</h1>
+				<h2>GT</h2>
+				<img src="static/images/goodyear_logo.png" alt="goodyearlogo">
+				<h2>${{stocks[17]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[17]['c']}} ({{stocks[17]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[17]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'gt'">
+			<div class = "stockinfo">				
+				<h1>Goodyear</h1>
+				<h2>GT</h2>
+				<img src="static/images/goodyear_logo.png" alt="goodyearlogo">
+				<h2>${{stocks[17]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[17]['c']}} ({{stocks[17]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[17]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'gt'">
+			<div class = "stockinfo">				
+				<h1>Goodyear</h1>
+				<h2>GT</h2>
+				<img src="static/images/goodyear_logo.png" alt="goodyearlogo">
+				<h2>${{stocks[17]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[17]['c']}} ({{stocks[17]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[17]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'gt'">
+			<div class = "stockinfo">				
+				<h1>Goodyear</h1>
+				<h2>GT</h2>
+				<img src="static/images/goodyear_logo.png" alt="goodyearlogo">
+				<h2>${{stocks[17]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[17]['c']}} ({{stocks[17]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[17]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>			
+<!-- Autonation -->
+		<div ng-if="user.stock1 == 'an'">
+			<div class = "stockinfo">				
+				<h1>AutoNation</h1>
+				<h2>AN</h2>
+				<img src="static/images/autonation_logo.png" alt="autonationlogo">
+				<h2>${{stocks[18]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[18]['c']}} ({{stocks[18]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[18]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'an'">
+			<div class = "stockinfo">				
+				<h1>AutoNation</h1>
+				<h2>AN</h2>
+				<img src="static/images/autonation_logo.png" alt="autonationlogo">
+				<h2>${{stocks[18]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[18]['c']}} ({{stocks[18]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[18]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'an'">
+			<div class = "stockinfo">				
+				<h1>AutoNation</h1>
+				<h2>AN</h2>
+				<img src="static/images/autonation_logo.png" alt="autonationlogo">
+				<h2>${{stocks[18]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[18]['c']}} ({{stocks[18]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[18]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'an'">
+			<div class = "stockinfo">				
+				<h1>AutoNation</h1>
+				<h2>AN</h2>
+				<img src="static/images/autonation_logo.png" alt="autonationlogo">
+				<h2>${{stocks[18]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[18]['c']}} ({{stocks[18]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[18]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'an'">
+			<div class = "stockinfo">				
+				<h1>AutoNation</h1>
+				<h2>AN</h2>
+				<img src="static/images/autonation_logo.png" alt="autonationlogo">
+				<h2>${{stocks[18]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[18]['c']}} ({{stocks[18]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[18]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>	
+<!-- Coors -->
+		<div ng-if="user.stock1 == 'tap'">
+			<div class = "stockinfo">				
+				<h1>Molson Coors</h1>
+				<h2>TAP</h2>
+				<img src="static/images/coors_logo.png" alt="coorslogo">
+				<h2>${{stocks[19]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[19]['c']}} ({{stocks[19]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[19]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'tap'">
+			<div class = "stockinfo">				
+				<h1>Molson Coors</h1>
+				<h2>TAP</h2>
+				<img src="static/images/coors_logo.png" alt="coorslogo">
+				<h2>${{stocks[19]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[19]['c']}} ({{stocks[19]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[19]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>		
+		<div ng-if="user.stock3 == 'tap'">
+			<div class = "stockinfo">				
+				<h1>Molson Coors</h1>
+				<h2>TAP</h2>
+				<img src="static/images/coors_logo.png" alt="coorslogo">
+				<h2>${{stocks[19]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[19]['c']}} ({{stocks[19]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[19]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>	
+		<div ng-if="user.stock4 == 'tap'">
+			<div class = "stockinfo">				
+				<h1>Molson Coors</h1>
+				<h2>TAP</h2>
+				<img src="static/images/coors_logo.png" alt="coorslogo">
+				<h2>${{stocks[19]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[19]['c']}} ({{stocks[19]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[19]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>	
+		<div ng-if="user.stock5 == 'tap'">
+			<div class = "stockinfo">				
+				<h1>Molson Coors</h1>
+				<h2>TAP</h2>
+				<img src="static/images/coors_logo.png" alt="coorslogo">
+				<h2>${{stocks[19]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[19]['c']}} ({{stocks[19]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[19]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Coca-Cola -->
+		<div ng-if="user.stock1 == 'ko'">
+			<div class = "stockinfo">				
+				<h1>Coca-Cola</h1>
+				<h2>KO</h2>
+				<img src="static/images/cocacola_logo.png" alt="cocacolalogo">
+				<h2>${{stocks[20]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[20]['c']}} ({{stocks[20]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[20]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'ko'">
+			<div class = "stockinfo">				
+				<h1>Coca-Cola</h1>
+				<h2>KO</h2>
+				<img src="static/images/cocacola_logo.png" alt="cocacolalogo">
+				<h2>${{stocks[20]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[20]['c']}} ({{stocks[20]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[20]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'ko'">
+			<div class = "stockinfo">				
+				<h1>Coca-Cola</h1>
+				<h2>KO</h2>
+				<img src="static/images/cocacola_logo.png" alt="cocacolalogo">
+				<h2>${{stocks[20]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[20]['c']}} ({{stocks[20]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[20]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'ko'">
+			<div class = "stockinfo">				
+				<h1>Coca-Cola</h1>
+				<h2>KO</h2>
+				<img src="static/images/cocacola_logo.png" alt="cocacolalogo">
+				<h2>${{stocks[20]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[20]['c']}} ({{stocks[20]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[20]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'ko'">
+			<div class = "stockinfo">				
+				<h1>Coca-Cola</h1>
+				<h2>KO</h2>
+				<img src="static/images/cocacola_logo.png" alt="cocacolalogo">
+				<h2>${{stocks[20]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[20]['c']}} ({{stocks[20]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[20]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Nike -->
+		<div ng-if="user.stock1 == 'nke'">
+			<div class = "stockinfo">				
+				<h1>Nike</h1>
+				<h2>NKE</h2>
+				<img src="static/images/nike_logo.png" alt="nikelogo">
+				<h2>${{stocks[21]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[21]['c']}} ({{stocks[21]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[21]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'nke'">
+			<div class = "stockinfo">				
+				<h1>Nike</h1>
+				<h2>NKE</h2>
+				<img src="static/images/nike_logo.png" alt="nikelogo">
+				<h2>${{stocks[21]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[21]['c']}} ({{stocks[21]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[21]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'nke'">
+			<div class = "stockinfo">				
+				<h1>Nike</h1>
+				<h2>NKE</h2>
+				<img src="static/images/nike_logo.png" alt="nikelogo">
+				<h2>${{stocks[21]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[21]['c']}} ({{stocks[21]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[21]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'nke'">
+			<div class = "stockinfo">				
+				<h1>Nike</h1>
+				<h2>NKE</h2>
+				<img src="static/images/nike_logo.png" alt="nikelogo">
+				<h2>${{stocks[21]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[21]['c']}} ({{stocks[21]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[21]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>	
+		<div ng-if="user.stock5 == 'nke'">
+			<div class = "stockinfo">				
+				<h1>Nike</h1>
+				<h2>NKE</h2>
+				<img src="static/images/nike_logo.png" alt="nikelogo">
+				<h2>${{stocks[21]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[21]['c']}} ({{stocks[21]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[21]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Tyson Foods -->
+		<div ng-if="user.stock1 == 'tsn'">
+			<div class = "stockinfo">				
+				<h1>Tyson Foods</h1>
+				<h2>TSN</h2>
+				<img src="static/images/tysonfoods_logo.png" alt="tysonfoodslogo">
+				<h2>${{stocks[22]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[22]['c']}} ({{stocks[22]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[22]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity)| number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'tsn'">
+			<div class = "stockinfo">				
+				<h1>Tyson Foods</h1>
+				<h2>TSN</h2>
+				<img src="static/images/tysonfoods_logo.png" alt="tysonfoodslogo">
+				<h2>${{stocks[22]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[22]['c']}} ({{stocks[22]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[22]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>		
+		<div ng-if="user.stock3 == 'tsn'">
+			<div class = "stockinfo">				
+				<h1>Tyson Foods</h1>
+				<h2>TSN</h2>
+				<img src="static/images/tysonfoods_logo.png" alt="tysonfoodslogo">
+				<h2>${{stocks[22]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[22]['c']}} ({{stocks[22]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[22]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'tsn'">
+			<div class = "stockinfo">				
+				<h1>Tyson Foods</h1>
+				<h2>TSN</h2>
+				<img src="static/images/tysonfoods_logo.png" alt="tysonfoodslogo">
+				<h2>${{stocks[22]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[22]['c']}} ({{stocks[22]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[22]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>		
+		<div ng-if="user.stock5 == 'tsn'">
+			<div class = "stockinfo">				
+				<h1>Tyson Foods</h1>
+				<h2>TSN</h2>
+				<img src="static/images/tysonfoods_logo.png" alt="tysonfoodslogo">
+				<h2>${{stocks[22]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[22]['c']}} ({{stocks[22]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[22]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>	
+<!-- Philip Morris -->
+		<div ng-if="user.stock1 == 'pm'">
+			<div class = "stockinfo">				
+				<h1>Philip Morris</h1>
+				<h2>PM</h2>
+				<img src="static/images/philipmorris_logo.png" alt="philipmorrislogo">
+				<h2>${{stocks[23]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[23]['c']}} ({{stocks[23]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[23]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'pm'">
+			<div class = "stockinfo">				
+				<h1>Philip Morris</h1>
+				<h2>PM</h2>
+				<img src="static/images/philipmorris_logo.png" alt="philipmorrislogo">
+				<h2>${{stocks[23]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[23]['c']}} ({{stocks[23]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[23]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'pm'">
+			<div class = "stockinfo">				
+				<h1>Philip Morris</h1>
+				<h2>PM</h2>
+				<img src="static/images/philipmorris_logo.png" alt="philipmorrislogo">
+				<h2>${{stocks[23]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[23]['c']}} ({{stocks[23]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[23]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>		
+		<div ng-if="user.stock4 == 'pm'">
+			<div class = "stockinfo">				
+				<h1>Philip Morris</h1>
+				<h2>PM</h2>
+				<img src="static/images/philipmorris_logo.png" alt="philipmorrislogo">
+				<h2>${{stocks[23]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[23]['c']}} ({{stocks[23]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[23]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'pm'">
+			<div class = "stockinfo">				
+				<h1>Philip Morris</h1>
+				<h2>PM</h2>
+				<img src="static/images/philipmorris_logo.png" alt="philipmorrislogo">
+				<h2>${{stocks[23]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[23]['c']}} ({{stocks[23]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[23]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>				
+<!-- Amazon -->
+		<div ng-if="user.stock1 == 'amzn'">
+			<div class = "stockinfo">				
+				<h1>Amazon</h1>
+				<h2>AMZN</h2>
+				<img src="static/images/amazon_logo.png" alt="amazonlogo">
+				<h2>${{stocks[24]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[24]['c']}} ({{stocks[24]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[24]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'amzn'">
+			<div class = "stockinfo">				
+				<h1>Amazon</h1>
+				<h2>AMZN</h2>
+				<img src="static/images/amazon_logo.png" alt="amazonlogo">
+				<h2>${{stocks[24]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[24]['c']}} ({{stocks[24]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[24]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>		
+		<div ng-if="user.stock3 == 'amzn'">
+			<div class = "stockinfo">				
+				<h1>Amazon</h1>
+				<h2>AMZN</h2>
+				<img src="static/images/amazon_logo.png" alt="amazonlogo">
+				<h2>${{stocks[24]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[24]['c']}} ({{stocks[24]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[24]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'amzn'">
+			<div class = "stockinfo">				
+				<h1>Amazon</h1>
+				<h2>AMZN</h2>
+				<img src="static/images/amazon_logo.png" alt="amazonlogo">
+				<h2>${{stocks[24]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[24]['c']}} ({{stocks[24]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[24]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>			
+		<div ng-if="user.stock5 == 'amzn'">
+			<div class = "stockinfo">				
+				<h1>Amazon</h1>
+				<h2>AMZN</h2>
+				<img src="static/images/amazon_logo.png" alt="amazonlogo">
+				<h2>${{stocks[24]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[24]['c']}} ({{stocks[24]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[24]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>			
+<!-- Costco -->
+		<div ng-if="user.stock1 == 'cost'">
+			<div class = "stockinfo">				
+				<h1>Costco</h1>
+				<h2>COST</h2>
+				<img src="static/images/costco_logo.png" alt="costcologo">
+				<h2>${{stocks[25]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[25]['c']}} ({{stocks[25]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[25]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'cost'">
+			<div class = "stockinfo">				
+				<h1>Costco</h1>
+				<h2>COST</h2>
+				<img src="static/images/costco_logo.png" alt="costcologo">
+				<h2>${{stocks[25]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[25]['c']}} ({{stocks[25]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[25]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'cost'">
+			<div class = "stockinfo">				
+				<h1>Costco</h1>
+				<h2>COST</h2>
+				<img src="static/images/costco_logo.png" alt="costcologo">
+				<h2>${{stocks[25]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[25]['c']}} ({{stocks[25]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[25]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'cost'">
+			<div class = "stockinfo">				
+				<h1>Costco</h1>
+				<h2>COST</h2>
+				<img src="static/images/costco_logo.png" alt="costcologo">
+				<h2>${{stocks[25]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[25]['c']}} ({{stocks[25]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[25]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>		
+		<div ng-if="user.stock5 == 'cost'">
+			<div class = "stockinfo">				
+				<h1>Costco</h1>
+				<h2>COST</h2>
+				<img src="static/images/costco_logo.png" alt="costcologo">
+				<h2>${{stocks[25]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[25]['c']}} ({{stocks[25]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[25]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>		
+<!-- Starbucks -->
+		<div ng-if="user.stock1 == 'sbux'">
+			<div class = "stockinfo">				
+				<h1>Starbucks</h1>
+				<h2>SBUX</h2>
+				<img src="static/images/starbucks_logo.png" alt="starbuckslogo">
+				<h2>${{stocks[26]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[26]['c']}} ({{stocks[26]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[26]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'sbux'">
+			<div class = "stockinfo">				
+				<h1>Starbucks</h1>
+				<h2>SBUX</h2>
+				<img src="static/images/starbucks_logo.png" alt="starbuckslogo">
+				<h2>${{stocks[26]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[26]['c']}} ({{stocks[26]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[26]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'sbux'">
+			<div class = "stockinfo">				
+				<h1>Starbucks</h1>
+				<h2>SBUX</h2>
+				<img src="static/images/starbucks_logo.png" alt="starbuckslogo">
+				<h2>${{stocks[26]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[26]['c']}} ({{stocks[26]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[26]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'sbux'">
+			<div class = "stockinfo">				
+				<h1>Starbucks</h1>
+				<h2>SBUX</h2>
+				<img src="static/images/starbucks_logo.png" alt="starbuckslogo">
+				<h2>${{stocks[26]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[26]['c']}} ({{stocks[26]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[26]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'sbux'">
+			<div class = "stockinfo">				
+				<h1>Starbucks</h1>
+				<h2>SBUX</h2>
+				<img src="static/images/starbucks_logo.png" alt="starbuckslogo">
+				<h2>${{stocks[26]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[26]['c']}} ({{stocks[26]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[26]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Comcast -->
+		<div ng-if="user.stock1 == 'cmcsa'">
+			<div class = "stockinfo">				
+				<h1>Comcast</h1>
+				<h2>CMCSA</h2>
+				<img src="static/images/comcast_logo.png" alt="comcastlogo">
+				<h2>${{stocks[27]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[27]['c']}} ({{stocks[27]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[27]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'cmcsa'">
+			<div class = "stockinfo">				
+				<h1>Comcast</h1>
+				<h2>CMCSA</h2>
+				<img src="static/images/comcast_logo.png" alt="comcastlogo">
+				<h2>${{stocks[27]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[27]['c']}} ({{stocks[27]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[27]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'cmcsa'">
+			<div class = "stockinfo">				
+				<h1>Comcast</h1>
+				<h2>CMCSA</h2>
+				<img src="static/images/comcast_logo.png" alt="comcastlogo">
+				<h2>${{stocks[27]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[27]['c']}} ({{stocks[27]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[27]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'cmcsa'">
+			<div class = "stockinfo">				
+				<h1>Comcast</h1>
+				<h2>CMCSA</h2>
+				<img src="static/images/comcast_logo.png" alt="comcastlogo">
+				<h2>${{stocks[27]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[27]['c']}} ({{stocks[27]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[27]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'cmcsa'">
+			<div class = "stockinfo">				
+				<h1>Comcast</h1>
+				<h2>CMCSA</h2>
+				<img src="static/images/comcast_logo.png" alt="comcastlogo">
+				<h2>${{stocks[27]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[27]['c']}} ({{stocks[27]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[27]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Disney -->
+		<div ng-if="user.stock1 == 'dis'">
+			<div class = "stockinfo">				
+				<h1>Disney</h1>
+				<h2>DIS</h2>
+				<img src="static/images/disney_logo.png" alt="disneylogo">
+				<h2>${{stocks[28]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[28]['c']}} ({{stocks[28]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[28]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'dis'">
+			<div class = "stockinfo">				
+				<h1>Disney</h1>
+				<h2>DIS</h2>
+				<img src="static/images/disney_logo.png" alt="disneylogo">
+				<h2>${{stocks[28]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[28]['c']}} ({{stocks[28]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[28]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'dis'">
+			<div class = "stockinfo">				
+				<h1>Disney</h1>
+				<h2>DIS</h2>
+				<img src="static/images/disney_logo.png" alt="disneylogo">
+				<h2>${{stocks[28]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[28]['c']}} ({{stocks[28]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[28]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'dis'">
+			<div class = "stockinfo">				
+				<h1>Disney</h1>
+				<h2>DIS</h2>
+				<img src="static/images/disney_logo.png" alt="disneylogo">
+				<h2>${{stocks[28]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[28]['c']}} ({{stocks[28]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[28]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'dis'">
+			<div class = "stockinfo">				
+				<h1>Disney</h1>
+				<h2>DIS</h2>
+				<img src="static/images/disney_logo.png" alt="disneylogo">
+				<h2>${{stocks[28]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[28]['c']}} ({{stocks[28]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[28]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>	
+<!-- General Electric -->
+		<div ng-if="user.stock1 == 'ge'">
+			<div class = "stockinfo">				
+				<h1>General Electric</h1>
+				<h2>GE</h2>
+				<img src="static/images/generalelectric_logo.png" alt="gelogo">
+				<h2>${{stocks[29]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[29]['c']}} ({{stocks[29]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[29]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'ge'">
+			<div class = "stockinfo">				
+				<h1>General Electric</h1>
+				<h2>GE</h2>
+				<img src="static/images/generalelectric_logo.png" alt="gelogo">
+				<h2>${{stocks[29]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[29]['c']}} ({{stocks[29]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[29]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'ge'">
+			<div class = "stockinfo">				
+				<h1>General Electric</h1>
+				<h2>GE</h2>
+				<img src="static/images/generalelectric_logo.png" alt="gelogo">
+				<h2>${{stocks[29]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[29]['c']}} ({{stocks[29]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[29]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'ge'">
+			<div class = "stockinfo">				
+				<h1>General Electric</h1>
+				<h2>GE</h2>
+				<img src="static/images/generalelectric_logo.png" alt="gelogo">
+				<h2>${{stocks[29]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[29]['c']}} ({{stocks[29]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[29]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'ge'">
+			<div class = "stockinfo">				
+				<h1>General Electric</h1>
+				<h2>GE</h2>
+				<img src="static/images/generalelectric_logo.png" alt="gelogo">
+				<h2>${{stocks[29]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[29]['c']}} ({{stocks[29]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[29]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Exxon -->
+		<div ng-if="user.stock1 == 'xom'">
+			<div class = "stockinfo">				
+				<h1>Exxon Mobil</h1>
+				<h2>XOM</h2>
+				<img src="static/images/exxon_logo.png" alt="exxonlogo">
+				<h2>${{stocks[30]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[30]['c']}} ({{stocks[30]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[30]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'xom'">
+			<div class = "stockinfo">				
+				<h1>Exxon Mobil</h1>
+				<h2>XOM</h2>
+				<img src="static/images/exxon_logo.png" alt="exxonlogo">
+				<h2>${{stocks[30]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[30]['c']}} ({{stocks[30]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[30]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'xom'">
+			<div class = "stockinfo">				
+				<h1>Exxon Mobil</h1>
+				<h2>XOM</h2>
+				<img src="static/images/exxon_logo.png" alt="exxonlogo">
+				<h2>${{stocks[30]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[30]['c']}} ({{stocks[30]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[30]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'xom'">
+			<div class = "stockinfo">				
+				<h1>Exxon Mobil</h1>
+				<h2>XOM</h2>
+				<img src="static/images/exxon_logo.png" alt="exxonlogo">
+				<h2>${{stocks[30]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[30]['c']}} ({{stocks[30]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[30]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'xom'">
+			<div class = "stockinfo">				
+				<h1>Exxon Mobil</h1>
+				<h2>XOM</h2>
+				<img src="static/images/exxon_logo.png" alt="exxonlogo">
+				<h2>${{stocks[30]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[30]['c']}} ({{stocks[30]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[30]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Chevron -->
+		<div ng-if="user.stock1 == 'cvx'">
+			<div class = "stockinfo">				
+				<h1>Chevron</h1>
+				<h2>CVX</h2>
+				<img src="static/images/chevron_logo.png" alt="chevronlogo">
+				<h2>${{stocks[31]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[31]['c']}} ({{stocks[31]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[31]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'cvx'">
+			<div class = "stockinfo">				
+				<h1>Chevron</h1>
+				<h2>CVX</h2>
+				<img src="static/images/chevron_logo.png" alt="chevronlogo">
+				<h2>${{stocks[31]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[31]['c']}} ({{stocks[31]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[31]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'cvx'">
+			<div class = "stockinfo">				
+				<h1>Chevron</h1>
+				<h2>CVX</h2>
+				<img src="static/images/chevron_logo.png" alt="chevronlogo">
+				<h2>${{stocks[31]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[31]['c']}} ({{stocks[31]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[31]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'cvx'">
+			<div class = "stockinfo">				
+				<h1>Chevron</h1>
+				<h2>CVX</h2>
+				<img src="static/images/chevron_logo.png" alt="chevronlogo">
+				<h2>${{stocks[31]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[31]['c']}} ({{stocks[31]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[31]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'cvx'">
+			<div class = "stockinfo">				
+				<h1>Chevron</h1>
+				<h2>CVX</h2>
+				<img src="static/images/chevron_logo.png" alt="chevronlogo">
+				<h2>${{stocks[31]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[31]['c']}} ({{stocks[31]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[31]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Conoco -->
+		<div ng-if="user.stock1 == 'cop'">
+			<div class = "stockinfo">				
+				<h1>ConocoPhillips</h1>
+				<h2>COP</h2>
+				<img src="static/images/conoco_logo.png" alt="conocologo">
+				<h2>${{stocks[32]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[32]['c']}} ({{stocks[32]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[32]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'cop'">
+			<div class = "stockinfo">				
+				<h1>ConocoPhillips</h1>
+				<h2>COP</h2>
+				<img src="static/images/conoco_logo.png" alt="conocologo">
+				<h2>${{stocks[32]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[32]['c']}} ({{stocks[32]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[32]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'cop'">
+			<div class = "stockinfo">				
+				<h1>ConocoPhillips</h1>
+				<h2>COP</h2>
+				<img src="static/images/conoco_logo.png" alt="conocologo">
+				<h2>${{stocks[32]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[32]['c']}} ({{stocks[32]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[32]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'cop'">
+			<div class = "stockinfo">				
+				<h1>ConocoPhillips</h1>
+				<h2>COP</h2>
+				<img src="static/images/conoco_logo.png" alt="conocologo">
+				<h2>${{stocks[32]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[32]['c']}} ({{stocks[32]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[32]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'cop'">
+			<div class = "stockinfo">				
+				<h1>ConocoPhillips</h1>
+				<h2>COP</h2>
+				<img src="static/images/conoco_logo.png" alt="conocologo">
+				<h2>${{stocks[32]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[32]['c']}} ({{stocks[32]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[32]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Halliburton -->
+		<div ng-if="user.stock1 == 'hal'">
+			<div class = "stockinfo">				
+				<h1>Halliburton</h1>
+				<h2>HAL</h2>
+				<img src="static/images/halliburton_logo.png" alt="halliburtonlogo">
+				<h2>${{stocks[33]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[33]['c']}} ({{stocks[33]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[33]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'hal'">
+			<div class = "stockinfo">				
+				<h1>Halliburton</h1>
+				<h2>HAL</h2>
+				<img src="static/images/halliburton_logo.png" alt="halliburtonlogo">
+				<h2>${{stocks[33]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[33]['c']}} ({{stocks[33]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[33]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'hal'">
+			<div class = "stockinfo">				
+				<h1>Halliburton</h1>
+				<h2>HAL</h2>
+				<img src="static/images/halliburton_logo.png" alt="halliburtonlogo">
+				<h2>${{stocks[33]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[33]['c']}} ({{stocks[33]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[33]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'hal'">
+			<div class = "stockinfo">				
+				<h1>Halliburton</h1>
+				<h2>HAL</h2>
+				<img src="static/images/halliburton_logo.png" alt="halliburtonlogo">
+				<h2>${{stocks[33]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[33]['c']}} ({{stocks[33]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[33]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'hal'">
+			<div class = "stockinfo">				
+				<h1>Halliburton</h1>
+				<h2>HAL</h2>
+				<img src="static/images/halliburton_logo.png" alt="halliburtonlogo">
+				<h2>${{stocks[33]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[33]['c']}} ({{stocks[33]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[33]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Wells Fargo -->
+		<div ng-if="user.stock1 == 'wfc'">
+			<div class = "stockinfo">				
+				<h1>Wells Fargo</h1>
+				<h2>WFC</h2>
+				<img src="static/images/wellsfargo_logo.png" alt="wellsfargologo">
+				<h2>${{stocks[34]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[34]['c']}} ({{stocks[34]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[34]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'wfc'">
+			<div class = "stockinfo">				
+				<h1>Wells Fargo</h1>
+				<h2>WFC</h2>
+				<img src="static/images/wellsfargo_logo.png" alt="wellsfargologo">
+				<h2>${{stocks[34]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[34]['c']}} ({{stocks[34]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[34]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'wfc'">
+			<div class = "stockinfo">				
+				<h1>Wells Fargo</h1>
+				<h2>WFC</h2>
+				<img src="static/images/wellsfargo_logo.png" alt="wellsfargologo">
+				<h2>${{stocks[34]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[34]['c']}} ({{stocks[34]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[34]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'wfc'">
+			<div class = "stockinfo">				
+				<h1>Wells Fargo</h1>
+				<h2>WFC</h2>
+				<img src="static/images/wellsfargo_logo.png" alt="wellsfargologo">
+				<h2>${{stocks[34]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[34]['c']}} ({{stocks[34]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[34]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'wfc'">
+			<div class = "stockinfo">				
+				<h1>Wells Fargo</h1>
+				<h2>WFC</h2>
+				<img src="static/images/wellsfargo_logo.png" alt="wellsfargologo">
+				<h2>${{stocks[34]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[34]['c']}} ({{stocks[34]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[34]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Bank of America -->
+		<div ng-if="user.stock1 == 'bac'">
+			<div class = "stockinfo">				
+				<h1>Bank of America</h1>
+				<h2>BAC</h2>
+				<img src="static/images/bankofamerica_logo.png" alt="bankofamericalogo">
+				<h2>${{stocks[35]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[35]['c']}} ({{stocks[35]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[35]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'bac'">
+			<div class = "stockinfo">				
+				<h1>Bank of America</h1>
+				<h2>BAC</h2>
+				<img src="static/images/bankofamerica_logo.png" alt="bankofamericalogo">
+				<h2>${{stocks[35]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[35]['c']}} ({{stocks[35]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[35]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'bac'">
+			<div class = "stockinfo">				
+				<h1>Bank of America</h1>
+				<h2>BAC</h2>
+				<img src="static/images/bankofamerica_logo.png" alt="bankofamericalogo">
+				<h2>${{stocks[35]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[35]['c']}} ({{stocks[35]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[35]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'bac'">
+			<div class = "stockinfo">				
+				<h1>Bank of America</h1>
+				<h2>BAC</h2>
+				<img src="static/images/bankofamerica_logo.png" alt="bankofamericalogo">
+				<h2>${{stocks[35]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[35]['c']}} ({{stocks[35]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[35]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'bac'">
+			<div class = "stockinfo">				
+				<h1>Bank of America</h1>
+				<h2>BAC</h2>
+				<img src="static/images/bankofamerica_logo.png" alt="bankofamericalogo">
+				<h2>${{stocks[35]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[35]['c']}} ({{stocks[35]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[35]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- JPMorgan -->
+		<div ng-if="user.stock1 == 'jpm'">
+			<div class = "stockinfo">				
+				<h1>JPMorgan Chase</h1>
+				<h2>JPM</h2>
+				<img src="static/images/chase_logo.png" alt="chaselogo">
+				<h2>${{stocks[36]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[36]['c']}} ({{stocks[36]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[36]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'jpm'">
+			<div class = "stockinfo">				
+				<h1>JPMorgan Chase</h1>
+				<h2>JPM</h2>
+				<img src="static/images/chase_logo.png" alt="chaselogo">
+				<h2>${{stocks[36]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[36]['c']}} ({{stocks[36]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[36]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'jpm'">
+			<div class = "stockinfo">				
+				<h1>JPMorgan Chase</h1>
+				<h2>JPM</h2>
+				<img src="static/images/chase_logo.png" alt="chaselogo">
+				<h2>${{stocks[36]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[36]['c']}} ({{stocks[36]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[36]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'jpm'">
+			<div class = "stockinfo">				
+				<h1>JPMorgan Chase</h1>
+				<h2>JPM</h2>
+				<img src="static/images/chase_logo.png" alt="chaselogo">
+				<h2>${{stocks[36]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[36]['c']}} ({{stocks[36]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[36]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'jpm'">
+			<div class = "stockinfo">				
+				<h1>JPMorgan Chase</h1>
+				<h2>JPM</h2>
+				<img src="static/images/chase_logo.png" alt="chaselogo">
+				<h2>${{stocks[36]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[36]['c']}} ({{stocks[36]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[36]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Citigroup -->
+		<div ng-if="user.stock1 == 'c'">
+			<div class = "stockinfo">				
+				<h1>Citigroup</h1>
+				<h2>C</h2>
+				<img src="static/images/citi_logo.png" alt="citilogo">
+				<h2>${{stocks[37]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[37]['c']}} ({{stocks[37]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[37]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'c'">
+			<div class = "stockinfo">				
+				<h1>Citigroup</h1>
+				<h2>C</h2>
+				<img src="static/images/citi_logo.png" alt="citilogo">
+				<h2>${{stocks[37]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[37]['c']}} ({{stocks[37]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[37]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'c'">
+			<div class = "stockinfo">				
+				<h1>Citigroup</h1>
+				<h2>C</h2>
+				<img src="static/images/citi_logo.png" alt="citilogo">
+				<h2>${{stocks[37]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[37]['c']}} ({{stocks[37]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[37]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'c'">
+			<div class = "stockinfo">				
+				<h1>Citigroup</h1>
+				<h2>C</h2>
+				<img src="static/images/citi_logo.png" alt="citilogo">
+				<h2>${{stocks[37]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[37]['c']}} ({{stocks[37]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[37]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'c'">
+			<div class = "stockinfo">				
+				<h1>Citigroup</h1>
+				<h2>C</h2>
+				<img src="static/images/citi_logo.png" alt="citilogo">
+				<h2>${{stocks[37]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[37]['c']}} ({{stocks[37]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[37]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Goldman Sachs -->
+		<div ng-if="user.stock1 == 'gs'">
+			<div class = "stockinfo">				
+				<h1>Goldman Sachs</h1>
+				<h2>GS</h2>
+				<img src="static/images/goldmansachs_logo.png" alt="gslogo">
+				<h2>${{stocks[38]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[38]['c']}} ({{stocks[38]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[38]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'gs'">
+			<div class = "stockinfo">				
+				<h1>Goldman Sachs</h1>
+				<h2>GS</h2>
+				<img src="static/images/goldmansachs_logo.png" alt="gslogo">
+				<h2>${{stocks[38]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[38]['c']}} ({{stocks[38]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[39]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'gs'">
+			<div class = "stockinfo">				
+				<h1>Goldman Sachs</h1>
+				<h2>GS</h2>
+				<img src="static/images/goldmansachs_logo.png" alt="gslogo">
+				<h2>${{stocks[38]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[38]['c']}} ({{stocks[38]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[39]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'gs'">
+			<div class = "stockinfo">				
+				<h1>Goldman Sachs</h1>
+				<h2>GS</h2>
+				<img src="static/images/goldmansachs_logo.png" alt="gslogo">
+				<h2>${{stocks[38]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[38]['c']}} ({{stocks[38]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[38]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'gs'">
+			<div class = "stockinfo">				
+				<h1>Goldman Sachs</h1>
+				<h2>GS</h2>
+				<img src="static/images/goldmansachs_logo.png" alt="gslogo">
+				<h2>${{stocks[38]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[38]['c']}} ({{stocks[38]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[38]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Merck -->
+		<div ng-if="user.stock1 == 'mrk'">
+			<div class = "stockinfo">				
+				<h1>Merck</h1>
+				<h2>MRK</h2>
+				<img src="static/images/merck_logo.png" alt="mercklogo">
+				<h2>${{stocks[39]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[39]['c']}} ({{stocks[39]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[39]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'mrk'">
+			<div class = "stockinfo">				
+				<h1>Merck</h1>
+				<h2>MRK</h2>
+				<img src="static/images/merck_logo.png" alt="mercklogo">
+				<h2>${{stocks[39]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[39]['c']}} ({{stocks[39]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[39]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'mrk'">
+			<div class = "stockinfo">				
+				<h1>Merck</h1>
+				<h2>MRK</h2>
+				<img src="static/images/merck_logo.png" alt="mercklogo">
+				<h2>${{stocks[39]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[39]['c']}} ({{stocks[39]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[39]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>	
+		<div ng-if="user.stock4 == 'mrk'">
+			<div class = "stockinfo">				
+				<h1>Merck</h1>
+				<h2>MRK</h2>
+				<img src="static/images/merck_logo.png" alt="mercklogo">
+				<h2>${{stocks[39]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[39]['c']}} ({{stocks[39]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[39]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'mrk'">
+			<div class = "stockinfo">				
+				<h1>Merck</h1>
+				<h2>MRK</h2>
+				<img src="static/images/merck_logo.png" alt="mercklogo">
+				<h2>${{stocks[39]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[39]['c']}} ({{stocks[39]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[39]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>		
+<!-- Pfizer -->
+		<div ng-if="user.stock1 == 'pfe'">
+			<div class = "stockinfo">				
+				<h1>Pfizer</h1>
+				<h2>PFE</h2>
+				<img src="static/images/pfizer_logo.png" alt="pfizerlogo">
+				<h2>${{stocks[40]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[40]['c']}} ({{stocks[40]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[40]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'pfe'">
+			<div class = "stockinfo">				
+				<h1>Pfizer</h1>
+				<h2>PFE</h2>
+				<img src="static/images/pfizer_logo.png" alt="pfizerlogo">
+				<h2>${{stocks[40]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[40]['c']}} ({{stocks[40]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[40]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'pfe'">
+			<div class = "stockinfo">				
+				<h1>Pfizer</h1>
+				<h2>PFE</h2>
+				<img src="static/images/pfizer_logo.png" alt="pfizerlogo">
+				<h2>${{stocks[40]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[40]['c']}} ({{stocks[40]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[40]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'pfe'">
+			<div class = "stockinfo">				
+				<h1>Pfizer</h1>
+				<h2>PFE</h2>
+				<img src="static/images/pfizer_logo.png" alt="pfizerlogo">
+				<h2>${{stocks[40]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[40]['c']}} ({{stocks[40]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[40]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>		
+		<div ng-if="user.stock5 == 'pfe'">
+			<div class = "stockinfo">				
+				<h1>Pfizer</h1>
+				<h2>PFE</h2>
+				<img src="static/images/pfizer_logo.png" alt="pfizerlogo">
+				<h2>${{stocks[40]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[40]['c']}} ({{stocks[40]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[40]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>				
+<!-- CVS -->
+		<div ng-if="user.stock1 == 'cvs'">
+			<div class = "stockinfo">				
+				<h1>CVS</h1>
+				<h2>CVS</h2>
+				<img src="static/images/cvs_logo.png" alt="cvslogo">
+				<h2>${{stocks[41]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[41]['c']}} ({{stocks[41]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[41]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'cvs'">
+			<div class = "stockinfo">				
+				<h1>CVS</h1>
+				<h2>CVS</h2>
+				<img src="static/images/cvs_logo.png" alt="cvslogo">
+				<h2>${{stocks[41]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[41]['c']}} ({{stocks[41]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[41]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'cvs'">
+			<div class = "stockinfo">				
+				<h1>CVS</h1>
+				<h2>CVS</h2>
+				<img src="static/images/cvs_logo.png" alt="cvslogo">
+				<h2>${{stocks[41]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[41]['c']}} ({{stocks[41]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[41]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'cvs'">
+			<div class = "stockinfo">				
+				<h1>CVS</h1>
+				<h2>CVS</h2>
+				<img src="static/images/cvs_logo.png" alt="cvslogo">
+				<h2>${{stocks[41]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[41]['c']}} ({{stocks[41]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[41]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'cvs'">
+			<div class = "stockinfo">				
+				<h1>CVS</h1>
+				<h2>CVS</h2>
+				<img src="static/images/cvs_logo.png" alt="cvslogo">
+				<h2>${{stocks[41]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[41]['c']}} ({{stocks[41]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[41]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>						
+<!-- 3M -->
+		<div ng-if="user.stock1 == 'mmm'">
+			<div class = "stockinfo">				
+				<h1>3M</h1>
+				<h2>MMM</h2>
+				<img src="static/images/3m_logo.png" alt="3mlogo">
+				<h2>${{stocks[42]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[42]['c']}} ({{stocks[42]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[42]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'mmm'">
+			<div class = "stockinfo">				
+				<h1>3M</h1>
+				<h2>MMM</h2>
+				<img src="static/images/3m_logo.png" alt="3mlogo">
+				<h2>${{stocks[42]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[42]['c']}} ({{stocks[42]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[42]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'mmm'">
+			<div class = "stockinfo">				
+				<h1>3M</h1>
+				<h2>MMM</h2>
+				<img src="static/images/3m_logo.png" alt="3mlogo">
+				<h2>${{stocks[42]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[42]['c']}} ({{stocks[42]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[42]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'mmm'">
+			<div class = "stockinfo">				
+				<h1>3M</h1>
+				<h2>MMM</h2>
+				<img src="static/images/3m_logo.png" alt="3mlogo">
+				<h2>${{stocks[42]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[42]['c']}} ({{stocks[42]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[42]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'mmm'">
+			<div class = "stockinfo">				
+				<h1>3M</h1>
+				<h2>MMM</h2>
+				<img src="static/images/3m_logo.png" alt="3mlogo">
+				<h2>${{stocks[42]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[42]['c']}} ({{stocks[42]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[42]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>		
+<!-- Walgreens -->
+		<div ng-if="user.stock1 == 'wba'">
+			<div class = "stockinfo">				
+				<h1>Walgreens</h1>
+				<h2>WBA</h2>
+				<img src="static/images/walgreens_logo.png" alt="walgreenslogo">
+				<h2>${{stocks[43]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[43]['c']}} ({{stocks[43]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[43]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'wba'">
+			<div class = "stockinfo">				
+				<h1>Walgreens</h1>
+				<h2>WBA</h2>
+				<img src="static/images/walgreens_logo.png" alt="walgreenslogo">
+				<h2>${{stocks[43]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[43]['c']}} ({{stocks[43]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[43]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'wba'">
+			<div class = "stockinfo">				
+				<h1>Walgreens</h1>
+				<h2>WBA</h2>
+				<img src="static/images/walgreens_logo.png" alt="walgreenslogo">
+				<h2>${{stocks[43]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[43]['c']}} ({{stocks[43]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[43]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'wba'">
+			<div class = "stockinfo">				
+				<h1>Walgreens</h1>
+				<h2>WBA</h2>
+				<img src="static/images/walgreens_logo.png" alt="walgreenslogo">
+				<h2>${{stocks[43]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[43]['c']}} ({{stocks[43]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[43]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>				
+		<div ng-if="user.stock5 == 'wba'">
+			<div class = "stockinfo">				
+				<h1>Walgreens</h1>
+				<h2>WBA</h2>
+				<img src="static/images/walgreens_logo.png" alt="walgreenslogo">
+				<h2>${{stocks[43]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[43]['c']}} ({{stocks[43]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[43]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>							
+<!-- Paypal -->
+		<div ng-if="user.stock1 == 'pypl'">
+			<div class = "stockinfo">				
+				<h1>PayPal</h1>
+				<h2>PYPL</h2>
+				<img src="static/images/paypal_logo.png" alt="paypallogo">
+				<h2>${{stocks[44]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[44]['c']}} ({{stocks[44]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[44]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'pypl'">
+			<div class = "stockinfo">				
+				<h1>PayPal</h1>
+				<h2>PYPL</h2>
+				<img src="static/images/paypal_logo.png" alt="paypallogo">
+				<h2>${{stocks[44]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[44]['c']}} ({{stocks[44]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[44]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'pypl'">
+			<div class = "stockinfo">				
+				<h1>PayPal</h1>
+				<h2>PYPL</h2>
+				<img src="static/images/paypal_logo.png" alt="paypallogo">
+				<h2>${{stocks[44]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[44]['c']}} ({{stocks[44]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[44]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>		
+		<div ng-if="user.stock4 == 'pypl'">
+			<div class = "stockinfo">				
+				<h1>PayPal</h1>
+				<h2>PYPL</h2>
+				<img src="static/images/paypal_logo.png" alt="paypallogo">
+				<h2>${{stocks[44]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[44]['c']}} ({{stocks[44]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[44]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'pypl'">
+			<div class = "stockinfo">				
+				<h1>PayPal</h1>
+				<h2>PYPL</h2>
+				<img src="static/images/paypal_logo.png" alt="paypallogo">
+				<h2>${{stocks[44]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[44]['c']}} ({{stocks[44]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[44]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>			
+<!-- Visa -->
+		<div ng-if="user.stock1 == 'v'">
+			<div class = "stockinfo">				
+				<h1>Visa</h1>
+				<h2>V</h2>
+				<img src="static/images/visa_logo.png" alt="visalogo">
+				<h2>${{stocks[45]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[45]['c']}} ({{stocks[45]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[45]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>	
+		<div ng-if="user.stock2 == 'v'">
+			<div class = "stockinfo">				
+				<h1>Visa</h1>
+				<h2>V</h2>
+				<img src="static/images/visa_logo.png" alt="visalogo">
+				<h2>${{stocks[45]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[45]['c']}} ({{stocks[45]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[45]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'v'">
+			<div class = "stockinfo">				
+				<h1>Visa</h1>
+				<h2>V</h2>
+				<img src="static/images/visa_logo.png" alt="visalogo">
+				<h2>${{stocks[45]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[45]['c']}} ({{stocks[45]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[45]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>	
+		<div ng-if="user.stock4 == 'v'">
+			<div class = "stockinfo">				
+				<h1>Visa</h1>
+				<h2>V</h2>
+				<img src="static/images/visa_logo.png" alt="visalogo">
+				<h2>${{stocks[45]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[45]['c']}} ({{stocks[45]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[45]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'v'">
+			<div class = "stockinfo">				
+				<h1>Visa</h1>
+				<h2>V</h2>
+				<img src="static/images/visa_logo.png" alt="visalogo">
+				<h2>${{stocks[45]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[45]['c']}} ({{stocks[45]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[45]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>	
+<!-- ebay -->
+		<div ng-if="user.stock1 == 'ebay'">
+			<div class = "stockinfo">				
+				<h1>eBay</h1>
+				<h2>EBAY</h2>
+				<img src="static/images/ebay_logo.png" alt="ebaylogo">
+				<h2>${{stocks[46]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[46]['c']}} ({{stocks[46]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[46]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'ebay'">
+			<div class = "stockinfo">				
+				<h1>eBay</h1>
+				<h2>EBAY</h2>
+				<img src="static/images/ebay_logo.png" alt="ebaylogo">
+				<h2>${{stocks[46]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[46]['c']}} ({{stocks[46]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[46]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'ebay'">
+			<div class = "stockinfo">				
+				<h1>eBay</h1>
+				<h2>EBAY</h2>
+				<img src="static/images/ebay_logo.png" alt="ebaylogo">
+				<h2>${{stocks[46]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[46]['c']}} ({{stocks[46]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[46]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>	
+		<div ng-if="user.stock4 == 'ebay'">
+			<div class = "stockinfo">				
+				<h1>eBay</h1>
+				<h2>EBAY</h2>
+				<img src="static/images/ebay_logo.png" alt="ebaylogo">
+				<h2>${{stocks[46]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[46]['c']}} ({{stocks[46]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[46]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'ebay'">
+			<div class = "stockinfo">				
+				<h1>eBay</h1>
+				<h2>EBAY</h2>
+				<img src="static/images/ebay_logo.png" alt="ebaylogo">
+				<h2>${{stocks[46]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[46]['c']}} ({{stocks[46]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[46]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>		
+<!-- Mastercard -->
+		<div ng-if="user.stock1 == 'ma'">
+			<div class = "stockinfo">				
+				<h1>Mastercard</h1>
+				<h2>MA</h2>
+				<img src="static/images/mastercard_logo.png" alt="mastercardlogo">
+				<h2>${{stocks[47]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[47]['c']}} ({{stocks[47]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[47]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'ma'">
+			<div class = "stockinfo">				
+				<h1>Mastercard</h1>
+				<h2>MA</h2>
+				<img src="static/images/mastercard_logo.png" alt="mastercardlogo">
+				<h2>${{stocks[47]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[47]['c']}} ({{stocks[47]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[47]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'ma'">
+			<div class = "stockinfo">				
+				<h1>Mastercard</h1>
+				<h2>MA</h2>
+				<img src="static/images/mastercard_logo.png" alt="mastercardlogo">
+				<h2>${{stocks[47]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[47]['c']}} ({{stocks[47]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[47]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>	
+		<div ng-if="user.stock4 == 'ma'">
+			<div class = "stockinfo">				
+				<h1>Mastercard</h1>
+				<h2>MA</h2>
+				<img src="static/images/mastercard_logo.png" alt="mastercardlogo">
+				<h2>${{stocks[47]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[47]['c']}} ({{stocks[47]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[47]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'ma'">
+			<div class = "stockinfo">				
+				<h1>Mastercard</h1>
+				<h2>MA</h2>
+				<img src="static/images/mastercard_logo.png" alt="mastercardlogo">
+				<h2>${{stocks[47]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[47]['c']}} ({{stocks[47]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[47]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>		
+<!-- Fidelity -->
+		<div ng-if="user.stock1 == 'fis'">
+			<div class = "stockinfo">				
+				<h1>Fidelity</h1>
+				<h2>FIS</h2>
+				<img src="static/images/fidelity_logo.png" alt="fidelitylogo">
+				<h2>${{stocks[48]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[48]['c']}} ({{stocks[48]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[48]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'fis'">
+			<div class = "stockinfo">				
+				<h1>Fidelity</h1>
+				<h2>FIS</h2>
+				<img src="static/images/fidelity_logo.png" alt="fidelitylogo">
+				<h2>${{stocks[48]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[48]['c']}} ({{stocks[48]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[48]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'fis'">
+			<div class = "stockinfo">				
+				<h1>Fidelity</h1>
+				<h2>FIS</h2>
+				<img src="static/images/fidelity_logo.png" alt="fidelitylogo">
+				<h2>${{stocks[48]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[48]['c']}} ({{stocks[48]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[48]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'fis'">
+			<div class = "stockinfo">				
+				<h1>Fidelity</h1>
+				<h2>FIS</h2>
+				<img src="static/images/fidelity_logo.png" alt="fidelitylogo">
+				<h2>${{stocks[48]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[48]['c']}} ({{stocks[48]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[48]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>	
+		<div ng-if="user.stock5 == 'fis'">
+			<div class = "stockinfo">				
+				<h1>Fidelity</h1>
+				<h2>FIS</h2>
+				<img src="static/images/fidelity_logo.png" alt="fidelitylogo">
+				<h2>${{stocks[48]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[48]['c']}} ({{stocks[48]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[48]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Verizon -->
+		<div ng-if="user.stock1 == 'vz'">
+			<div class = "stockinfo">				
+				<h1>Verizon</h1>
+				<h2>VZ</h2>
+				<img src="static/images/verizon_logo.png" alt="verizonlogo">
+				<h2>${{stocks[49]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[49]['c']}} ({{stocks[49]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[49]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'vz'">
+			<div class = "stockinfo">				
+				<h1>Verizon</h1>
+				<h2>VZ</h2>
+				<img src="static/images/verizon_logo.png" alt="verizonlogo">
+				<h2>${{stocks[49]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[49]['c']}} ({{stocks[49]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[49]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'vz'">
+			<div class = "stockinfo">				
+				<h1>Verizon</h1>
+				<h2>VZ</h2>
+				<img src="static/images/verizon_logo.png" alt="verizonlogo">
+				<h2>${{stocks[49]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[49]['c']}} ({{stocks[49]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[49]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'vz'">
+			<div class = "stockinfo">				
+				<h1>Verizon</h1>
+				<h2>VZ</h2>
+				<img src="static/images/verizon_logo.png" alt="verizonlogo">
+				<h2>${{stocks[49]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[49]['c']}} ({{stocks[49]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[49]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'vz'">
+			<div class = "stockinfo">				
+				<h1>Verizon</h1>
+				<h2>VZ</h2>
+				<img src="static/images/verizon_logo.png" alt="verizonlogo">
+				<h2>${{stocks[49]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[49]['c']}} ({{stocks[49]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[49]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- AT&T -->
+		<div ng-if="user.stock1 == 't'">
+			<div class = "stockinfo">				
+				<h1>AT&T</h1>
+				<h2>T</h2>
+				<img src="static/images/att_logo.png" alt="attlogo">
+				<h2>${{stocks[50]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[50]['c']}} ({{stocks[50]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[50]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 't'">
+			<div class = "stockinfo">				
+				<h1>AT&T</h1>
+				<h2>T</h2>
+				<img src="static/images/att_logo.png" alt="attlogo">
+				<h2>${{stocks[50]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[50]['c']}} ({{stocks[50]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[50]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 't'">
+			<div class = "stockinfo">				
+				<h1>AT&T</h1>
+				<h2>T</h2>
+				<img src="static/images/att_logo.png" alt="attlogo">
+				<h2>${{stocks[50]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[50]['c']}} ({{stocks[50]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[50]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 't'">
+			<div class = "stockinfo">				
+				<h1>AT&T</h1>
+				<h2>T</h2>
+				<img src="static/images/att_logo.png" alt="attlogo">
+				<h2>${{stocks[50]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[50]['c']}} ({{stocks[50]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[50]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 't'">
+			<div class = "stockinfo">				
+				<h1>AT&T</h1>
+				<h2>T</h2>
+				<img src="static/images/att_logo.png" alt="attlogo">
+				<h2>${{stocks[50]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[50]['c']}} ({{stocks[50]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[50]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- CenturyLink -->
+		<div ng-if="user.stock1 == 'ctl'">
+			<div class = "stockinfo">				
+				<h1>CenturyLink</h1>
+				<h2>CTL</h2>
+				<img src="static/images/centurylink_logo.png" alt="centurylinklogo">
+				<h2>${{stocks[51]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[51]['c']}} ({{stocks[51]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[51]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'ctl'">
+			<div class = "stockinfo">				
+				<h1>CenturyLink</h1>
+				<h2>CTL</h2>
+				<img src="static/images/centurylink_logo.png" alt="centurylinklogo">
+				<h2>${{stocks[51]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[51]['c']}} ({{stocks[51]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[51]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'ctl'">
+			<div class = "stockinfo">				
+				<h1>CenturyLink</h1>
+				<h2>CTL</h2>
+				<img src="static/images/centurylink_logo.png" alt="centurylinklogo">
+				<h2>${{stocks[51]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[51]['c']}} ({{stocks[51]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[51]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'ctl'">
+			<div class = "stockinfo">				
+				<h1>CenturyLink</h1>
+				<h2>CTL</h2>
+				<img src="static/images/centurylink_logo.png" alt="centurylinklogo">
+				<h2>${{stocks[51]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[51]['c']}} ({{stocks[51]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[51]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'ctl'">
+			<div class = "stockinfo">				
+				<h1>CenturyLink</h1>
+				<h2>CTL</h2>
+				<img src="static/images/centurylink_logo.png" alt="centurylinklogo">
+				<h2>${{stocks[51]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[51]['c']}} ({{stocks[51]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[51]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- WasteManagement -->
+		<div ng-if="user.stock1 == 'wm'">
+			<div class = "stockinfo">				
+				<h1>WasteManagement</h1>
+				<h2>WM</h2>
+				<img src="static/images/wastemanagement_logo.png" alt="wastemanagementlogo">
+				<h2>${{stocks[52]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[52]['c']}} ({{stocks[52]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[52]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'wm'">
+			<div class = "stockinfo">				
+				<h1>WasteManagement</h1>
+				<h2>WM</h2>
+				<img src="static/images/wastemanagement_logo.png" alt="wastemanagementlogo">
+				<h2>${{stocks[52]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[52]['c']}} ({{stocks[52]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[52]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity)| number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'wm'">
+			<div class = "stockinfo">				
+				<h1>WasteManagement</h1>
+				<h2>WM</h2>
+				<img src="static/images/wastemanagement_logo.png" alt="wastemanagementlogo">
+				<h2>${{stocks[52]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[52]['c']}} ({{stocks[52]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[52]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'wm'">
+			<div class = "stockinfo">				
+				<h1>WasteManagement</h1>
+				<h2>WM</h2>
+				<img src="static/images/wastemanagement_logo.png" alt="wastemanagementlogo">
+				<h2>${{stocks[52]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[52]['c']}} ({{stocks[52]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[52]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'wm'">
+			<div class = "stockinfo">				
+				<h1>WasteManagement</h1>
+				<h2>WM</h2>
+				<img src="static/images/wastemanagement_logo.png" alt="wastemanagementlogo">
+				<h2>${{stocks[52]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[52]['c']}} ({{stocks[52]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[52]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- T-Mobile -->
+		<div ng-if="user.stock1 == 'tmus'">
+			<div class = "stockinfo">				
+				<h1>T-Mobile</h1>
+				<h2>TMUS</h2>
+				<img src="static/images/tmobile_logo.png" alt="tmobilelogo">
+				<h2>${{stocks[53]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[53]['c']}} ({{stocks[53]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[53]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'tmus'">
+			<div class = "stockinfo">				
+				<h1>T-Mobile</h1>
+				<h2>TMUS</h2>
+				<img src="static/images/tmobile_logo.png" alt="tmobilelogo">
+				<h2>${{stocks[53]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[53]['c']}} ({{stocks[53]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[53]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'tmus'">
+			<div class = "stockinfo">				
+				<h1>T-Mobile</h1>
+				<h2>TMUS</h2>
+				<img src="static/images/tmobile_logo.png" alt="tmobilelogo">
+				<h2>${{stocks[53]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[53]['c']}} ({{stocks[53]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[53]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'tmus'">
+			<div class = "stockinfo">				
+				<h1>T-Mobile</h1>
+				<h2>TMUS</h2>
+				<img src="static/images/tmobile_logo.png" alt="tmobilelogo">
+				<h2>${{stocks[53]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[53]['c']}} ({{stocks[53]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[53]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'tmus'">
+			<div class = "stockinfo">				
+				<h1>T-Mobile</h1>
+				<h2>TMUS</h2>
+				<img src="static/images/tmobile_logo.png" alt="tmobilelogo">
+				<h2>${{stocks[53]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[53]['c']}} ({{stocks[53]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[53]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- UPS -->
+		<div ng-if="user.stock1 == 'ups'">
+			<div class = "stockinfo">				
+				<h1>UPS</h1>
+				<h2>UPS</h2>
+				<img src="static/images/ups_logo.png" alt="upslogo">
+				<h2>${{stocks[54]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[54]['c']}} ({{stocks[54]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[54]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'ups'">
+			<div class = "stockinfo">				
+				<h1>UPS</h1>
+				<h2>UPS</h2>
+				<img src="static/images/ups_logo.png" alt="upslogo">
+				<h2>${{stocks[54]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[54]['c']}} ({{stocks[54]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[54]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'ups'">
+			<div class = "stockinfo">				
+				<h1>UPS</h1>
+				<h2>UPS</h2>
+				<img src="static/images/ups_logo.png" alt="upslogo">
+				<h2>${{stocks[54]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[54]['c']}} ({{stocks[54]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[54]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'ups'">
+			<div class = "stockinfo">				
+				<h1>UPS</h1>
+				<h2>UPS</h2>
+				<img src="static/images/ups_logo.png" alt="upslogo">
+				<h2>${{stocks[54]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[54]['c']}} ({{stocks[54]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[54]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'ups'">
+			<div class = "stockinfo">				
+				<h1>UPS</h1>
+				<h2>UPS</h2>
+				<img src="static/images/ups_logo.png" alt="upslogo">
+				<h2>${{stocks[54]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[54]['c']}} ({{stocks[54]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[54]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- American Airlines -->
+		<div ng-if="user.stock1 == 'aal'">
+			<div class = "stockinfo">				
+				<h1>American Airlines</h1>
+				<h2>AAL</h2>
+				<img src="static/images/americanairlines_logo.png" alt="americanairlineslogo">
+				<h2>${{stocks[55]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[55]['c']}} ({{stocks[55]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[55]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'aal'">
+			<div class = "stockinfo">				
+				<h1>American Airlines</h1>
+				<h2>AAL</h2>
+				<img src="static/images/americanairlines_logo.png" alt="americanairlineslogo">
+				<h2>${{stocks[55]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[55]['c']}} ({{stocks[55]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[55]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'aal'">
+			<div class = "stockinfo">				
+				<h1>American Airlines</h1>
+				<h2>AAL</h2>
+				<img src="static/images/americanairlines_logo.png" alt="americanairlineslogo">
+				<h2>${{stocks[55]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[55]['c']}} ({{stocks[55]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[55]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'aal'">
+			<div class = "stockinfo">				
+				<h1>American Airlines</h1>
+				<h2>AAL</h2>
+				<img src="static/images/americanairlines_logo.png" alt="americanairlineslogo">
+				<h2>${{stocks[55]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[55]['c']}} ({{stocks[55]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[55]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'aal'">
+			<div class = "stockinfo">				
+				<h1>American Airlines</h1>
+				<h2>AAL</h2>
+				<img src="static/images/americanairlines_logo.png" alt="americanairlineslogo">
+				<h2>${{stocks[55]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[55]['c']}} ({{stocks[55]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[55]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Delta Airlines -->
+		<div ng-if="user.stock1 == 'dal'">
+			<div class = "stockinfo">				
+				<h1>Delta Airlines</h1>
+				<h2>DAL</h2>
+				<img src="static/images/deltaairlines_logo.png" alt="deltaairlineslogo">
+				<h2>${{stocks[56]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[56]['c']}} ({{stocks[56]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[56]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'dal'">
+			<div class = "stockinfo">				
+				<h1>Delta Airlines</h1>
+				<h2>DAL</h2>
+				<img src="static/images/deltaairlines_logo.png" alt="deltaairlineslogo">
+				<h2>${{stocks[56]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[56]['c']}} ({{stocks[56]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[56]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'dal'">
+			<div class = "stockinfo">				
+				<h1>Delta Airlines</h1>
+				<h2>DAL</h2>
+				<img src="static/images/deltaairlines_logo.png" alt="deltaairlineslogo">
+				<h2>${{stocks[56]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[56]['c']}} ({{stocks[56]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[56]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'dal'">
+			<div class = "stockinfo">				
+				<h1>Delta Airlines</h1>
+				<h2>DAL</h2>
+				<img src="static/images/deltaairlines_logo.png" alt="deltaairlineslogo">
+				<h2>${{stocks[56]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[56]['c']}} ({{stocks[56]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[56]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'dal'">
+			<div class = "stockinfo">				
+				<h1>Delta Airlines</h1>
+				<h2>DAL</h2>
+				<img src="static/images/deltaairlines_logo.png" alt="deltaairlineslogo">
+				<h2>${{stocks[56]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[56]['c']}} ({{stocks[56]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[56]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Fedex -->
+		<div ng-if="user.stock1 == 'fdx'">
+			<div class = "stockinfo">				
+				<h1>FedEx</h1>
+				<h2>FDX</h2>
+				<img src="static/images/fedex_logo.png" alt="fedexlogo">
+				<h2>${{stocks[57]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[57]['c']}} ({{stocks[57]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[57]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'fdx'">
+			<div class = "stockinfo">				
+				<h1>FedEx</h1>
+				<h2>FDX</h2>
+				<img src="static/images/fedex_logo.png" alt="fedexlogo">
+				<h2>${{stocks[57]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[57]['c']}} ({{stocks[57]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[57]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'fdx'">
+			<div class = "stockinfo">				
+				<h1>FedEx</h1>
+				<h2>FDX</h2>
+				<img src="static/images/fedex_logo.png" alt="fedexlogo">
+				<h2>${{stocks[57]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[57]['c']}} ({{stocks[57]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[57]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'fdx'">
+			<div class = "stockinfo">				
+				<h1>FedEx</h1>
+				<h2>FDX</h2>
+				<img src="static/images/fedex_logo.png" alt="fedexlogo">
+				<h2>${{stocks[57]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[57]['c']}} ({{stocks[57]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[57]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'fdx'">
+			<div class = "stockinfo">				
+				<h1>FedEx</h1>
+				<h2>FDX</h2>
+				<img src="static/images/fedex_logo.png" alt="fedexlogo">
+				<h2>${{stocks[57]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[57]['c']}} ({{stocks[57]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[57]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+<!-- Alaska Airlines -->
+		<div ng-if="user.stock1 == 'alk'">
+			<div class = "stockinfo">				
+				<h1>Alaska Airlines</h1>
+				<h2>ALK</h2>
+				<img src="static/images/alaskaairlines_logo.png" alt="alaskaairlineslogo">
+				<h2>${{stocks[58]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[58]['c']}} ({{stocks[58]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[58]['l'] * user.stock1quantity) - (user.stock1buyprice * user.stock1quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock2 == 'alk'">
+			<div class = "stockinfo">				
+				<h1>Alaska Airlines</h1>
+				<h2>ALK</h2>
+				<img src="static/images/alaskaairlines_logo.png" alt="alaskaairlineslogo">
+				<h2>${{stocks[58]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[58]['c']}} ({{stocks[58]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[58]['l'] * user.stock2quantity) - (user.stock2buyprice * user.stock2quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock3 == 'alk'">
+			<div class = "stockinfo">				
+				<h1>Alaska Airlines</h1>
+				<h2>ALK</h2>
+				<img src="static/images/alaskaairlines_logo.png" alt="alaskaairlineslogo">
+				<h2>${{stocks[58]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[58]['c']}} ({{stocks[58]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[58]['l'] * user.stock3quantity) - (user.stock3buyprice * user.stock3quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock4 == 'alk'">
+			<div class = "stockinfo">				
+				<h1>Alaska Airlines</h1>
+				<h2>ALK</h2>
+				<img src="static/images/alaskaairlines_logo.png" alt="alaskaairlineslogo">
+				<h2>${{stocks[58]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[58]['c']}} ({{stocks[58]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[58]['l'] * user.stock4quantity) - (user.stock4buyprice * user.stock4quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+		<div ng-if="user.stock5 == 'alk'">
+			<div class = "stockinfo">				
+				<h1>Alaska Airlines</h1>
+				<h2>ALK</h2>
+				<img src="static/images/alaskaairlines_logo.png" alt="alaskaairlineslogo">
+				<h2>${{stocks[58]['l']}}</h2>
+				<h3>Today's Change</h3>
+				<p>${{stocks[58]['c']}} ({{stocks[58]['cp']}}%)</p>
+				<h3>Change Since Purchase</h3>
+				<p>${{(stocks[58]['l'] * user.stock5quantity) - (user.stock5buyprice * user.stock5quantity) | number: 2}}</p>
+				<button ng-click='sellStock()'>Sell</button>
+			</div>
+		</div>
+
+
+		</div>
+	</div>
+</div>

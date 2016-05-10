@@ -1,0 +1,634 @@
+#landingContainer {
+	height: 615px;
+	width: 1256px;
+/*	width: 100%;*/
+	border: 4px solid black;
+	margin: 0 auto;
+	margin-top: 20px;
+	border-radius: 40px;
+	background-color: #009ec2;
+}
+
+/*LOGIN & REGISTRATION PAGE*/
+
+#landingContainer img {
+	position: absolute;
+	height: 72px;
+	width: 500px;
+	margin-left: 360px;
+	margin-top: 40px;
+}
+
+#signup {
+    height: 315px;
+    width: 49%;
+    border-right: 4px solid black;
+    margin-top: 157.5px;
+    position: absolute;
+}
+
+#signupform {
+	height: 290px;
+	width: 500px;
+	position: absolute;
+	background-color: white;
+	margin-top:5px;
+	margin-left:54px;
+	border: 5px solid #C3C3C3;
+	border-radius: 50px;
+}
+
+#signupform h1 {
+	font-family: sans-serif;
+    font-weight: 300;
+    margin-left: 115px;
+    margin-top: 39px;
+    margin-bottom: 28px;
+}
+
+#signupform input {
+	margin-left: 93px;
+    height: 25px;
+    width: 300px;
+    font-size: 16px;
+    font-weight:300;
+    margin-top: 3px;
+}
+
+#signupform button {
+    border: 2px solid #009EC2;
+    margin-left: 210px;
+    margin-top: 33px;
+    background-color: white;
+    color: #009EC2;
+    width: 80px;
+}
+
+
+#login {
+    height: 315px;
+    width: 49%;
+    border-left: 4px solid black;
+    margin-top: 157.5px;
+    margin-left: 627px;
+    position: absolute;
+    padding-left:10px;
+}
+
+#loginform {
+	height: 290px;
+	width: 500px;
+	position: absolute;
+	background-color: white;
+	margin-top:5px;
+	margin-left:54px;
+	border: 5px solid #C3C3C3;
+	border-radius: 50px;
+}
+
+#loginform h1 {
+	font-family: sans-serif;
+    font-weight: 300;
+    margin-left: 205px;
+    margin-top: 39px;
+    margin-bottom: 28px;
+}
+
+#loginform input {
+	margin-left: 93px;
+    height: 25px;
+    width: 300px;
+    font-size: 16px;
+    font-weight:300;
+    margin-top: 3px;
+}
+
+#loginform button {
+    border: 2px solid #009EC2;
+    margin-left: 210px;
+    margin-top: 33px;
+    background-color: white;
+    color: #009EC2;
+    width: 80px;
+}
+
+/*COMPLETE PROFILE PAGE*/
+
+#profileContainer {
+	height: 615px;
+	width: 1256px;
+/*	width: 100%;*/
+	border: 4px solid black;
+	margin: 0 auto;
+	margin-top: 20px;
+	border-radius: 40px;
+	background-color: #009ec2;
+}
+
+#profileContainer img {
+	height: 3%;
+    margin-top: 20px;
+    margin-left: 20px;
+    position: absolute;
+}
+
+#completeprofile {
+    height: 542px;
+    width: 700px;
+    position: absolute;
+    background-color: white;
+    margin-top: 35px;
+    margin-left: 250px;
+    border: 7px solid #C3C3C3;
+    border-radius: 30px;
+}
+
+#completeprofile h1 {
+	font-family: sans-serif;
+    font-weight: 300;
+	margin-left: 20px;
+}
+
+#completeprofile td {
+    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    padding-left: 30px;
+    padding-top: 25px;
+}
+
+#completeprofile h3 {
+	font-family: sans-serif;
+    font-weight: 300;
+	margin-left: 32px;
+	margin-top: 15px;
+	color: #0076C2;
+}
+
+#completeprofile input[type="text"] {
+	margin-left: 32px;
+    width: 140px;
+}
+
+#completeprofile input[type="checkbox"] {
+	font-size: 6px;
+	margin-right: 6px;
+	font-family: sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+#completeprofile table {
+	margin-left: -13px;
+	margin-top: -19px;
+}
+
+#tabledetail {
+	margin: 0;
+    font-size: 9px;
+    margin-left: 19px;
+}
+
+#select3 {
+	font-size: 9px;
+	font-family: sans-serif;
+    font-weight: 300;
+    color: #0076C2;
+}
+
+input#conservative {
+	font-family: sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+input#aggressive {
+	font-family: sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+#completeprofile button {
+ 	border: 2px solid #009EC2;
+    margin-left: 565px;
+    margin-top: 0px;
+    background-color: white;
+    color: #009EC2;
+    width: 80px;
+}
+
+/*SELECT STOCKS PAGE*/
+
+#stockscontainer {
+	height: 615px;
+	width: 1255px;
+/*	width: 100%;*/
+	border: 4px solid black;
+	margin: 0 auto;
+	margin-top: 20px;
+	border-radius: 40px;
+	background-color: #009ec2;
+}
+
+#stockscontainer img {
+	height: 3%;
+    margin-top: 20px;
+    margin-left: 20px;
+    position: absolute;
+}
+
+#stockscontent {
+    height: 500px;
+    width: 1160px;
+    position: absolute;
+    background-color: white;
+    margin-top: 66px;
+    margin-left: 40px;
+    border: 7px solid #C3C3C3;
+    border-radius: 30px;
+}
+
+#stockscontent h1 {
+    font-family: sans-serif;
+    font-weight: 300;
+    margin-left: 20px;
+    margin-bottom: -15px;
+}
+
+#stockscontent h3 {
+    font-family: sans-serif;
+    font-weight: 300;
+    margin-left: 32px;
+    margin-top: 15px;
+    color: #0076C2;
+    margin-right: 35px;
+}
+
+#select5 {
+	font-size: 11px;
+	font-family: sans-serif;
+    font-weight: 300;
+    color: #0076C2;
+}
+
+/*div.stock_card {
+    height: 100px;
+    width: 140px;
+    border: 2px solid black;
+    margin-top: 25px;
+    margin-right: 15px;
+    margin-left: 30px;
+    border-radius: 5px;
+}*/
+
+#stockscontent button {
+    border: 2px solid #009EC2;
+    margin-left: 985px;
+    margin-top: 20px;
+    background-color: white;
+    color: #009EC2;
+    width: 144px;
+}
+
+div.company {
+    height: 100px;
+    width: 140px;
+    border: 2px solid black;
+    margin-top: 25px;
+    margin-right: 15px;
+    margin-left: 30px;
+    border-radius: 5px;
+}
+
+div.company1 {
+    height: 100px;
+    width: 140px;
+    border: 2px solid black;
+    margin-top: 25px;
+    margin-right: 15px;
+    margin-left: 30px;
+    border-radius: 5px;
+}
+
+div.company1 h4 {
+    text-align: center;
+    margin-top: 4px;
+    font-weight: 300;
+    font-family: sans-serif;
+    margin-bottom: 0px;
+}
+
+div.company1 p {
+    margin: 0px;
+    margin-top: 38px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: sans-serif;
+}
+
+div.company h4 {
+	text-align: center;
+    margin-top: 4px;
+    font-weight: 300;
+    font-family: sans-serif;
+    margin-bottom: 0px;
+}
+
+img#stocklogo {
+    height: 9%;
+    margin: 0px;
+    margin-left: 47px;
+    margin-top: 5px;
+    position: absolute;
+}
+
+div.company p {
+    margin: 0px;
+    margin-top: 38px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: sans-serif;
+}
+
+/*BUY STOCKS*/
+
+#buystockscontainer {
+	height: 615px;
+	border: 4px solid black;
+	margin: 0 auto;
+	margin-top: 20px;
+	border-radius: 40px;
+	background-color: #009ec2;
+    width: 1255px;
+}
+
+#logo {
+	height: 3%;
+    margin-top: 20px;
+    margin-left: 20px;
+    position: absolute;
+}
+
+#buystockscontent {
+	height: 500px;
+    width: 1160px;
+    position: absolute;
+    background-color: white;
+    margin-top: 66px;
+    margin-left: 40px;
+    border: 7px solid #C3C3C3;
+    border-radius: 30px;
+}
+
+#buystocksheader h1 {
+	font-family: sans-serif;
+    font-weight: 300;
+    margin-left: 20px;
+    margin-bottom: -15px;
+    display: block;
+}
+
+#buystocksheader h2 {
+    display: inline-block;
+    font-family: sans-serif;
+    font-weight: 200;
+    margin-left: 765px;
+    border: 0px solid black;
+    padding: 8px;
+    font-size: 18px;
+    margin-top: -4px;
+    position: absolute;
+    width: 162px;
+}
+
+div.buystocksinfo {
+    height: 255px;
+    width: 185px;
+    border: 2px solid black;
+    display: inline-block;
+    margin-left: 31px;
+    margin-top: 75px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+div.buystocksinfo h3 {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+div.buystocksinfo p {
+	text-align: center;
+	font-family: sans-serif;
+	font-weight: 600;
+}
+
+div.buystocksinfo img {
+	height: 24%;
+    margin-left: 62px;
+}
+
+div.buystocksinfo input[type="number"] {
+	width: 30px;
+}
+
+#buystockscontent button {
+    border: 2px solid #009EC2;
+    margin-left: 985px;
+    margin-top: 70px;
+    background-color: white;
+    color: #009EC2;
+    width: 144px;
+}
+
+#stockprice {
+	color: green;
+	font-size:20px;
+}
+
+#pershare {
+	font-size:12px;
+}
+
+div#buystockscontainer .ng-scope {
+    display: inline-block;
+    margin-left: 2px;
+}
+
+/*.ng-scope {
+    display: inline-block;
+}*/
+/*USER DASHBOARD*/
+
+#dashboardcontainer {
+    max-height: 667px;
+    width: 100%;
+    background-color: #009ec2;
+    position: absolute;
+    margin-left: -8px;
+    margin-top: -8px;
+    overflow: hidden;
+}
+
+div#dashboardcontainer .ng-scope {
+    display: inline-block;
+}
+
+div.header {
+	height: 65px;
+	border-bottom: 3px solid #BABABA;
+	background-color: black
+}
+
+div.header img {
+	height: 3%;
+    margin-top: 20px;
+    margin-left: 20px;
+    position: absolute;
+}
+
+div.header ul {
+    margin: 0px;
+    padding-top: 21px;
+    color: white;
+    margin-left: 725px;
+}
+
+div.header li {
+	display: inline;
+	font-family: sans-serif;
+	font-size: 13px;
+	color: white;
+	margin-left: 55px;
+}
+
+div.header li a {
+	font-family: sans-serif;
+	font-size: 13px;
+	color: white;
+	font-weight: 600;
+}
+
+div.sidebar {
+	width: 245px;
+    height: 599px;
+    border-right: 2px solid #BABABA;
+    margin-top: 0px;
+    background-color: white;
+    display: inline-block;
+}
+
+div.sidebar h3 {
+    font-family: sans-serif;
+    font-weight: 300;
+    margin-left: 50px;
+    margin-top: 20px;
+    position: absolute;
+}
+
+div.profilepicture {
+    width: 130px;
+    height: 130px;
+    border-radius: 65px;
+    background: white;
+    border: 2px solid black;
+    margin-top: 68px;
+    position: absolute;
+    margin-left: 57px;
+}
+
+div.portfoliostats {
+	margin-top: 210px;
+    position: absolute;
+    text-align: center;
+    margin-left: 45px;
+}
+
+div.portfoliostats h4 {
+	font-family: sans-serif;
+    font-size: 13px;
+}
+
+div.portfoliostats p {
+	font-family: sans-serif;
+    font-size: 18px;
+    color: green;
+}
+
+div.maincontent {
+	height: 600px;
+    width: 1033px;
+    background-color: #6ED0FF;
+    display: inline-block;
+    position: absolute;	
+}
+
+div.maincontent h1 {
+    font-family: sans-serif;
+    font-weight: 200;
+    color: white;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 28px;
+}
+
+div.stockinfo {
+	height: 440px;
+    width: 186px;
+    border: 3px solid black;
+    display: inline-block;
+    margin-left: 9px;
+    margin-top: 23px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+div.stockinfo h1 {
+	color: black;
+	font-size: 16px;
+    text-align: center;
+    margin-right: 20px;
+	
+}
+
+div.stockinfo h2 {
+	font-size: 26px;
+	text-align: center;
+	margin: 0px;
+	margin-top:10px;
+}
+
+div.stockinfo h3 {
+	text-align: center;
+    font-family: sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    margin-top: 33px;
+}
+
+div.stockinfo p {
+	text-align: center;
+}
+
+div.stockinfo img {
+    margin-left: 45px;
+    margin-top: 15px;
+}
+div.maincontent button {
+    border: 3px solid black;
+    margin-top: 0px;
+    background-color: white;
+    color: black;
+    width: 192px;
+    margin-left: -3px;
+    margin-right: 54px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    height: 30px;
+    background-color: red;
+    color: white;
+}

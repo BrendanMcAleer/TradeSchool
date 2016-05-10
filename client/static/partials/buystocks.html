@@ -1,0 +1,3072 @@
+<div ng-controller="userController as UC">
+	<div id="buystockscontainer">
+		<img id="logo" src="static/images/logo.png" alt="logo">
+
+		<div id="buystockscontent">
+			<div id="buystocksheader">
+				<h1>Buy Stocks<span><h2>Remaining: ${{user.balance}}</h2><span></h1>
+			</div>
+	<!-- Microsoft -->
+			<div ng-if="user.stock1 == 'msft'">
+				<div class="buystocksinfo">
+					<h3>Microsoft</h3>
+					<img src="static/images/microsoft_logo.png" alt="microsoftlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[2]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity= 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[2]['l'] * UC.new_stock.stock1quantity | number:2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'msft'">
+				<div class="buystocksinfo">
+					<h3>Microsoft</h3>
+					<img src="static/images/microsoft_logo.png" alt="microsoftlogo">
+					<p id="pershare"><span ng-model="stockprice" id="stockprice">${{stocks[2]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[2]['l'] * UC.new_stock.stock2quantity | number:2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'msft'">
+				<div class="buystocksinfo">
+					<h3>Microsoft</h3>
+					<img src="static/images/microsoft_logo.png" alt="microsoftlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[2]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[2]['l'] * UC.new_stock.stock2quantity | number:2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'msft'">
+				<div class="buystocksinfo">
+					<h3>Microsoft</h3>
+					<img src="static/images/microsoft_logo.png" alt="microsoftlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[2]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[2]['l'] * UC.new_stock.stock2quantity | number:2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'msft'">
+				<div class="buystocksinfo">
+					<h3>Microsoft</h3>
+					<img src="static/images/microsoft_logo.png" alt="microsoftlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[2]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[2]['l'] * UC.new_stock.stock2quantity | number:2}}</span></p>
+				</div>
+			</div>
+	<!--Google  -->
+			<div ng-if="user.stock1 == 'googl'">
+				<div class="buystocksinfo">
+					<h3>Google</h3>
+					<img src="static/images/google_logo.png" alt="googlelogo">
+					<p id="pershare"><span id="stockprice">	${{stocks[4]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" ng-init="UC.new_stock.stock1quantity = 1" type="number"></p>
+					<hr>
+					<p>Total: <span>${{stocks[4]['l'] * UC.new_stock.stock1quantity | number:2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'googl'">
+				<div class="buystocksinfo">
+					<h3>Google</h3>
+					<img src="static/images/google_logo.png" alt="googlelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[4]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[4]['l'] * UC.new_stock.stock2quantity | number:2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'googl'">
+				<div class="buystocksinfo">
+					<h3>Google</h3>
+					<img src="static/images/google_logo.png" alt="googlelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[4]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[4]['l'] * UC.new_stock.stock3quantity | number:2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'googl'">
+				<div class="buystocksinfo">
+					<h3>Google</h3>
+					<img src="static/images/google_logo.png" alt="googlelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[4]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[4]['l'] * UC.new_stock.stock4quantity | number:2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'googl'">
+				<div class="buystocksinfo">
+					<h3>Google</h3>
+					<img src="static/images/google_logo.png" alt="googlelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[4]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[4]['l'] * UC.new_stock.stock5quantity | number:2}}</span></p>
+				</div>
+			</div>
+	<!-- Apple -->
+			<div ng-if="user.stock1 == 'aapl'">
+				<div class="buystocksinfo">
+					<h3>Apple</h3>
+					<img src="static/images/apple_logo.png" alt="applelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[1]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[1]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'aapl'">
+				<div class="buystocksinfo">
+					<h3>Apple</h3>
+					<img src="static/images/apple_logo.png" alt="applelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[1]['l']}}</span>/share</p>
+					<p>Shares:<input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total:<span>${{stocks[1]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'aapl'">
+				<div class="buystocksinfo">
+					<h3>Apple</h3>
+					<img src="static/images/apple_logo.png" alt="applelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[1]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[1]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'aapl'">
+				<div class="buystocksinfo">
+					<h3>Apple</h3>
+					<img src="static/images/apple_logo.png" alt="applelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[1]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[1]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'aapl'">
+				<div class="buystocksinfo">
+					<h3>Apple</h3>
+					<img src="static/images/apple_logo.png" alt="applelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[1]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[1]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Facebook -->
+			<div ng-if="user.stock1 == 'fb'">
+				<div class="buystocksinfo">
+					<h3>Facebook</h3>
+					<img src="static/images/facebook_logo.png" alt="facebooklogo">
+					<p id="pershare"><span id="stockprice">${{stocks[3]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[3]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'fb'">
+				<div class="buystocksinfo">
+					<h3>Facebook</h3>
+					<img src="static/images/facebook_logo.png" alt="facebooklogo">
+					<p id="pershare"><span id="stockprice">${{stocks[3]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[3]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'fb'">
+				<div class="buystocksinfo">
+					<h3>Facebook</h3>
+					<img src="static/images/facebook_logo.png" alt="facebooklogo">
+					<p id="pershare"><span id="stockprice">${{stocks[3]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[3]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'fb'">
+				<div class="buystocksinfo">
+					<h3>Facebook</h3>
+					<img src="static/images/facebook_logo.png" alt="facebooklogo">
+					<p id="pershare"><span id="stockprice">${{stocks[3]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[3]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'fb'">
+				<div class="buystocksinfo">
+					<h3>Facebook</h3>
+					<img src="static/images/facebook_logo.png" alt="facebooklogo">
+					<p id="pershare"><span id="stockprice">${{stocks[3]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[3]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Intel -->
+			<div ng-if="user.stock1 == 'intc'">
+				<div class="buystocksinfo">
+					<h3>Intel</h3>
+					<img src="static/images/intel_logo.png" alt="intellogo">
+					<p id="pershare"><span id="stockprice">${{stocks[59]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[59]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'intc'">
+				<div class="buystocksinfo">
+					<h3>Intel</h3>
+					<img src="static/images/intel_logo.png" alt="intellogo">
+					<p id="pershare"><span id="stockprice">${{stocks[59]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[59]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'intc'">
+				<div class="buystocksinfo">
+					<h3>Intel</h3>
+					<img src="static/images/intel_logo.png" alt="intellogo">
+					<p id="pershare"><span id="stockprice">${{stocks[59]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[59]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'intc'">
+				<div class="buystocksinfo">
+					<h3>Intel</h3>
+					<img src="static/images/intel_logo.png" alt="intellogo">
+					<p id="pershare"><span id="stockprice">${{stocks[59]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[59]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'intc'">
+				<div class="buystocksinfo">
+					<h3>Intel</h3>
+					<img src="static/images/intel_logo.png" alt="intellogo">
+					<p id="pershare"><span id="stockprice">${{stocks[59]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[59]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!--  P&G -->
+			<div ng-if="user.stock1 == 'pg'">
+				<div class="buystocksinfo">
+					<h3>Proctor & Gamble</h3>
+					<img src="static/images/pg_logo.png" alt="pglogo">
+					<p id="pershare"><span id="stockprice">${{stocks[5]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[5]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'pg'">
+				<div class="buystocksinfo">
+					<h3>Proctor & Gamble</h3>
+					<img src="static/images/pg_logo.png" alt="pglogo">
+					<p id="pershare"><span id="stockprice">${{stocks[5]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[5]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'pg'">
+				<div class="buystocksinfo">
+					<h3>Proctor & Gamble</h3>
+					<img src="static/images/pg_logo.png" alt="pglogo">
+					<p id="pershare"><span id="stockprice">${{stocks[5]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[5]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'pg'">
+				<div class="buystocksinfo">
+					<h3>Proctor & Gamble</h3>
+					<img src="static/images/pg_logo.png" alt="pglogo">
+					<p id="pershare"><span id="stockprice">${{stocks[5]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[5]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'pg'">
+				<div class="buystocksinfo">
+					<h3>Proctor & Gamble</h3>
+					<img src="static/images/pg_logo.png" alt="pglogo">
+					<p id="pershare"><span id="stockprice">${{stocks[5]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[5]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Praxair -->
+			<div ng-if="user.stock1 == 'px'">
+				<div class="buystocksinfo">
+					<h3>Praxair</h3>
+					<img src="static/images/praxair_logo.png" alt="praxairlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[6]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[6]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'px'">
+				<div class="buystocksinfo">
+					<h3>Praxair</h3>
+					<img src="static/images/praxair_logo.png" alt="praxairlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[6]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[6]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'px'">
+				<div class="buystocksinfo">
+					<h3>Praxair</h3>
+					<img src="static/images/praxair_logo.png" alt="praxairlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[6]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[6]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'px'">
+				<div class="buystocksinfo">
+					<h3>Praxair</h3>
+					<img src="static/images/praxair_logo.png" alt="praxairlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[6]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[6]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'px'">
+				<div class="buystocksinfo">
+					<h3>Praxair</h3>
+					<img src="static/images/praxair_logo.png" alt="praxairlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[6]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[6]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Monsanto -->
+			<div ng-if="user.stock1 == 'mon'">
+				<div class="buystocksinfo">
+					<h3>Monsanto</h3>
+					<img src="static/images/monsanto_logo.png" alt="monsantologo">
+					<p id="pershare"><span id="stockprice">${{stocks[7]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[7]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'mon'">
+				<div class="buystocksinfo">
+					<h3>Monsanto</h3>
+					<img src="static/images/monsanto_logo.png" alt="monsantologo">
+					<p id="pershare"><span id="stockprice">${{stocks[7]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[7]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'mon'">
+				<div class="buystocksinfo">
+					<h3>Monsanto</h3>
+					<img src="static/images/monsanto_logo.png" alt="monsantologo">
+					<p id="pershare"><span id="stockprice">${{stocks[7]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[7]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'mon'">
+				<div class="buystocksinfo">
+					<h3>Monsanto</h3>
+					<img src="static/images/monsanto_logo.png" alt="monsantologo">
+					<p id="pershare"><span id="stockprice">${{stocks[7]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[7]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'mon'">
+				<div class="buystocksinfo">
+					<h3>Monsanto</h3>
+					<img src="static/images/monsanto_logo.png" alt="monsantologo">
+					<p id="pershare"><span id="stockprice">${{stocks[7]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[7]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Valspar -->
+			<div ng-if="user.stock1 == 'val'">
+				<div class="buystocksinfo">
+					<h3>Valspar</h3>
+					<img src="static/images/valspar_logo.png" alt="valsparlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[8]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[8]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'val'">
+				<div class="buystocksinfo">
+					<h3>Valspar</h3>
+					<img src="static/images/valspar_logo.png" alt="valsparlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[8]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[8]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'val'">
+				<div class="buystocksinfo">
+					<h3>Valspar</h3>
+					<img src="static/images/valspar_logo.png" alt="valsparlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[8]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[8]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'val'">
+				<div class="buystocksinfo">
+					<h3>Valspar</h3>
+					<img src="static/images/valspar_logo.png" alt="valsparlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[8]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[8]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'val'">
+				<div class="buystocksinfo">
+					<h3>Valspar</h3>
+					<img src="static/images/valspar_logo.png" alt="valsparlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[8]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[8]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Steel Dyanamics -->
+			<div ng-if="user.stock1 == 'stld'">
+				<div class="buystocksinfo">
+					<h3>Steel Dynamics</h3>
+					<img src="static/images/steeldynamics_logo.png" alt="steeldynamicslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[9]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[9]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'stld'">
+				<div class="buystocksinfo">
+					<h3>Steel Dynamics</h3>
+					<img src="static/images/steeldynamics_logo.png" alt="steeldynamicslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[9]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[9]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'stld'">
+				<div class="buystocksinfo">
+					<h3>Steel Dynamics</h3>
+					<img src="static/images/steeldynamics_logo.png" alt="steeldynamicslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[9]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[9]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'stld'">
+				<div class="buystocksinfo">
+					<h3>Steel Dynamics</h3>
+					<img src="static/images/steeldynamics_logo.png" alt="steeldynamicslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[9]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[9]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'stld'">
+				<div class="buystocksinfo">
+					<h3>Steel Dynamics</h3>
+					<img src="static/images/steeldynamics_logo.png" alt="steeldynamicslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[9]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[9]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Ford -->
+			<div ng-if="user.stock1 == 'f'">
+				<div class="buystocksinfo">
+					<h3>Ford</h3>
+					<img src="static/images/ford_logo.png" alt="fordlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[10]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[10]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'f'">
+				<div class="buystocksinfo">
+					<h3>Ford</h3>
+					<img src="static/images/ford_logo.png" alt="fordlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[10]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[10]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'f'">
+				<div class="buystocksinfo">
+					<h3>Ford</h3>
+					<img src="static/images/ford_logo.png" alt="fordlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[10]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[10]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'f'">
+				<div class="buystocksinfo">
+					<h3>Ford</h3>
+					<img src="static/images/ford_logo.png" alt="fordlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[10]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[10]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'f'">
+				<div class="buystocksinfo">
+					<h3>Ford</h3>
+					<img src="static/images/ford_logo.png" alt="fordlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[10]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[10]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Boeing -->
+			<div ng-if="user.stock1 == 'ba'">
+				<div class="buystocksinfo">
+					<h3>Boeing</h3>
+					<img src="static/images/boeing_logo.png" alt="boeinglogo">
+					<p id="pershare"><span id="stockprice">${{stocks[0]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[0]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'ba'">
+				<div class="buystocksinfo">
+					<h3>Boeing</h3>
+					<img src="static/images/boeing_logo.png" alt="boeinglogo">
+					<p id="pershare"><span id="stockprice">${{stocks[0]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[0]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'ba'">
+				<div class="buystocksinfo">
+					<h3>Boeing</h3>
+					<img src="static/images/boeing_logo.png" alt="boeinglogo">
+					<p id="pershare"><span id="stockprice">${{stocks[0]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[0]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'ba'">
+				<div class="buystocksinfo">
+					<h3>Boeing</h3>
+					<img src="static/images/boeing_logo.png" alt="boeinglogo">
+					<p id="pershare"><span id="stockprice">${{stocks[0]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[0]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'ba'">
+				<div class="buystocksinfo">
+					<h3>Boeing</h3>
+					<img src="static/images/boeing_logo.png" alt="boeinglogo">
+					<p id="pershare"><span id="stockprice">${{stocks[0]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[0]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Tesla -->
+			<div ng-if="user.stock1 == 'tsla'">
+				<div class="buystocksinfo">
+					<h3>Tesla</h3>
+					<img src="static/images/tesla_logo.png" alt="teslalogo">
+					<p id="pershare"><span id="stockprice">${{stocks[11]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[11]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'tsla'">
+				<div class="buystocksinfo">
+					<h3>Tesla</h3>
+					<img src="static/images/tesla_logo.png" alt="teslalogo">
+					<p id="pershare"><span id="stockprice">${{stocks[11]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[11]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'tsla'">
+				<div class="buystocksinfo">
+					<h3>Tesla</h3>
+					<img src="static/images/tesla_logo.png" alt="teslalogo">
+					<p id="pershare"><span id="stockprice">${{stocks[11]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[11]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'tsla'">
+				<div class="buystocksinfo">
+					<h3>Tesla</h3>
+					<img src="static/images/tesla_logo.png" alt="teslalogo">
+					<p id="pershare"><span id="stockprice">${{stocks[11]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[11]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'tsla'">
+				<div class="buystocksinfo">
+					<h3>Tesla</h3>
+					<img src="static/images/tesla_logo.png" alt="teslalogo">
+					<p id="pershare"><span id="stockprice">${{stocks[11]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[11]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Caterpillar -->
+			<div ng-if="user.stock1 == 'cat'">
+				<div class="buystocksinfo">
+					<h3>Caterpillar</h3>
+					<img src="static/images/caterpillar_logo.png" alt="catlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[12]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[12]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'cat'">
+				<div class="buystocksinfo">
+					<h3>Caterpillar</h3>
+					<img src="static/images/caterpillar_logo.png" alt="catlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[12]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[12]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'cat'">
+				<div class="buystocksinfo">
+					<h3>Caterpillar</h3>
+					<img src="static/images/caterpillar_logo.png" alt="catlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[12]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[12]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'cat'">
+				<div class="buystocksinfo">
+					<h3>Caterpillar</h3>
+					<img src="static/images/caterpillar_logo.png" alt="catlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[12]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[12]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'cat'">
+				<div class="buystocksinfo">
+					<h3>Caterpillar</h3>
+					<img src="static/images/caterpillar_logo.png" alt="catlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[12]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[12]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Ferrari -->
+			<div ng-if="user.stock1 == 'race'">
+				<div class="buystocksinfo">
+					<h3>Ferrari</h3>
+					<img src="static/images/ferrari_logo.png" alt="ferrarilogo">
+					<p id="pershare"><span id="stockprice">${{stocks[13]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[13]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'race'">
+				<div class="buystocksinfo">
+					<h3>Ferrari</h3>
+					<img src="static/images/ferrari_logo.png" alt="ferrarilogo">
+					<p id="pershare"><span id="stockprice">${{stocks[13]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[13]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'race'">
+				<div class="buystocksinfo">
+					<h3>Ferrari</h3>
+					<img src="static/images/ferrari_logo.png" alt="ferrarilogo">
+					<p id="pershare"><span id="stockprice">${{stocks[13]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[13]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'race'">
+				<div class="buystocksinfo">
+					<h3>Ferrari</h3>
+					<img src="static/images/ferrari_logo.png" alt="ferrarilogo">
+					<p id="pershare"><span id="stockprice">${{stocks[13]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[13]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'race'">
+				<div class="buystocksinfo">
+					<h3>Ferrari</h3>
+					<img src="static/images/ferrari_logo.png" alt="ferrarilogo">
+					<p id="pershare"><span id="stockprice">${{stocks[13]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[13]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Clorox -->
+			<div ng-if="user.stock1 == 'clx'">
+				<div class="buystocksinfo">
+					<h3>Clorox</h3>
+					<img src="static/images/clorox_logo.png" alt="cloroxlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[14]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[14]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'clx'">
+				<div class="buystocksinfo">
+					<h3>Clorox</h3>
+					<img src="static/images/clorox_logo.png" alt="cloroxlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[14]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[14]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'clx'">
+				<div class="buystocksinfo">
+					<h3>Clorox</h3>
+					<img src="static/images/clorox_logo.png" alt="cloroxlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[14]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[14]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'clx'">
+				<div class="buystocksinfo">
+					<h3>Clorox</h3>
+					<img src="static/images/clorox_logo.png" alt="cloroxlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[14]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[14]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'clx'">
+				<div class="buystocksinfo">
+					<h3>Clorox</h3>
+					<img src="static/images/clorox_logo.png" alt="cloroxlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[14]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[14]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Whirlpool -->
+			<div ng-if="user.stock1 == 'whr'">
+				<div class="buystocksinfo">
+					<h3>Whirlpool</h3>
+					<img src="static/images/whirlpool_logo.png" alt="whirlpoollogo">
+					<p id="pershare"><span id="stockprice">${{stocks[15]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[15]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'whr'">
+				<div class="buystocksinfo">
+					<h3>Whirlpool</h3>
+					<img src="static/images/whirlpool_logo.png" alt="whirlpoollogo">
+					<p id="pershare"><span id="stockprice">${{stocks[15]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[15]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'whr'">
+				<div class="buystocksinfo">
+					<h3>Whirlpool</h3>
+					<img src="static/images/whirlpool_logo.png" alt="whirlpoollogo">
+					<p id="pershare"><span id="stockprice">${{stocks[15]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[15]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'whr'">
+				<div class="buystocksinfo">
+					<h3>Whirlpool</h3>
+					<img src="static/images/whirlpool_logo.png" alt="whirlpoollogo">
+					<p id="pershare"><span id="stockprice">${{stocks[15]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[15]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'whr'">
+				<div class="buystocksinfo">
+					<h3>Whirlpool</h3>
+					<img src="static/images/whirlpool_logo.png" alt="whirlpoollogo">
+					<p id="pershare"><span id="stockprice">${{stocks[15]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[15]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- CarMax -->
+			<div ng-if="user.stock1 == 'kmx'">
+				<div class="buystocksinfo">
+					<h3>CarMax</h3>
+					<img src="static/images/carmax_logo.png" alt="carmaxlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[16]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[16]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'kmx'">
+				<div class="buystocksinfo">
+					<h3>CarMax</h3>
+					<img src="static/images/carmax_logo.png" alt="carmaxlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[16]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[16]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'kmx'">
+				<div class="buystocksinfo">
+					<h3>CarMax</h3>
+					<img src="static/images/carmax_logo.png" alt="carmaxlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[16]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[16]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'kmx'">
+				<div class="buystocksinfo">
+					<h3>CarMax</h3>
+					<img src="static/images/carmax_logo.png" alt="carmaxlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[16]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[16]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'kmx'">
+				<div class="buystocksinfo">
+					<h3>CarMax</h3>
+					<img src="static/images/carmax_logo.png" alt="carmaxlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[16]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[16]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Goodyear -->
+			<div ng-if="user.stock1 == 'gt'">
+				<div class="buystocksinfo">
+					<h3>Goodyear</h3>
+					<img src="static/images/goodyear_logo.png" alt="goodyearlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[17]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[17]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'gt'">
+				<div class="buystocksinfo">
+					<h3>Goodyear</h3>
+					<img src="static/images/goodyear_logo.png" alt="goodyearlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[17]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[17]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'gt'">
+				<div class="buystocksinfo">
+					<h3>Goodyear</h3>
+					<img src="static/images/goodyear_logo.png" alt="goodyearlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[17]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[17]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'gt'">
+				<div class="buystocksinfo">
+					<h3>Goodyear</h3>
+					<img src="static/images/goodyear_logo.png" alt="goodyearlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[17]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[17]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'gt'">
+				<div class="buystocksinfo">
+					<h3>Goodyear</h3>
+					<img src="static/images/goodyear_logo.png" alt="goodyearlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[17]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[17]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Autonation -->
+			<div ng-if="user.stock1 == 'an'">
+				<div class="buystocksinfo">
+					<h3>AutoNation</h3>
+					<img src="static/images/autonation_logo.png" alt="autonationlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[18]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[18]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'an'">
+				<div class="buystocksinfo">
+					<h3>AutoNation</h3>
+					<img src="static/images/autonation_logo.png" alt="autonationlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[18]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[18]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'an'">
+				<div class="buystocksinfo">
+					<h3>AutoNation</h3>
+					<img src="static/images/autonation_logo.png" alt="autonationlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[18]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[18]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'an'">
+				<div class="buystocksinfo">
+					<h3>AutoNation</h3>
+					<img src="static/images/autonation_logo.png" alt="autonationlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[18]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[18]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'an'">
+				<div class="buystocksinfo">
+					<h3>AutoNation</h3>
+					<img src="static/images/autonation_logo.png" alt="autonationlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[18]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[18]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Coors -->
+			<div ng-if="user.stock1 == 'tap'">
+				<div class="buystocksinfo">
+					<h3>Molson Coors</h3>
+					<img src="static/images/coors_logo.png" alt="coorslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[19]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[19]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'tap'">
+				<div class="buystocksinfo">
+					<h3>Molson Coors</h3>
+					<img src="static/images/coors_logo.png" alt="coorslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[19]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[19]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'tap'">
+				<div class="buystocksinfo">
+					<h3>Molson Coors</h3>
+					<img src="static/images/coors_logo.png" alt="coorslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[19]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[19]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'tap'">
+				<div class="buystocksinfo">
+					<h3>Molson Coors</h3>
+					<img src="static/images/coors_logo.png" alt="coorslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[19]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[19]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'tap'">
+				<div class="buystocksinfo">
+					<h3>Molson Coors</h3>
+					<img src="static/images/coors_logo.png" alt="coorslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[19]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[19]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Coca-Cola -->
+			<div ng-if="user.stock1 == 'ko'">
+				<div class="buystocksinfo">
+					<h3>Coca-Cola</h3>
+					<img src="static/images/cocacola_logo.png" alt="cokelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[20]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[20]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'ko'">
+				<div class="buystocksinfo">
+					<h3>Coca-Cola</h3>
+					<img src="static/images/cocacola_logo.png" alt="cokelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[20]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[20]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'ko'">
+				<div class="buystocksinfo">
+					<h3>Coca-Cola</h3>
+					<img src="static/images/cocacola_logo.png" alt="cokelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[20]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[20]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'ko'">
+				<div class="buystocksinfo">
+					<h3>Coca-Cola</h3>
+					<img src="static/images/cocacola_logo.png" alt="cokelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[20]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[20]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'ko'">
+				<div class="buystocksinfo">
+					<h3>Coca-Cola</h3>
+					<img src="static/images/cocacola_logo.png" alt="cokelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[20]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[20]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Nike -->
+			<div ng-if="user.stock1 == 'nke'">
+				<div class="buystocksinfo">
+					<h3>Nike</h3>
+					<img src="static/images/nike_logo.png" alt="nikelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[21]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[21]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'nke'">
+				<div class="buystocksinfo">
+					<h3>Nike</h3>
+					<img src="static/images/nike_logo.png" alt="nikelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[21]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[21]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'nke'">
+				<div class="buystocksinfo">
+					<h3>Nike</h3>
+					<img src="static/images/nike_logo.png" alt="nikelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[21]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[21]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'nke'">
+				<div class="buystocksinfo">
+					<h3>Nike</h3>
+					<img src="static/images/nike_logo.png" alt="nikelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[21]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[21]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'nke'">
+				<div class="buystocksinfo">
+					<h3>Nike</h3>
+					<img src="static/images/nike_logo.png" alt="nikelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[21]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[21]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Tyson Foods -->
+			<div ng-if="user.stock1 == 'tsn'">
+				<div class="buystocksinfo">
+					<h3>Tyson Foods</h3>
+					<img src="static/images/tysonfoods_logo.png" alt="tysonfoodslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[22]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[22]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'tsn'">
+				<div class="buystocksinfo">
+					<h3>Tyson Foods</h3>
+					<img src="static/images/tysonfoods_logo.png" alt="tysonfoodslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[22]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[22]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'tsn'">
+				<div class="buystocksinfo">
+					<h3>Tyson Foods</h3>
+					<img src="static/images/tysonfoods_logo.png" alt="tysonfoodslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[22]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[22]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'tsn'">
+				<div class="buystocksinfo">
+					<h3>Tyson Foods</h3>
+					<img src="static/images/tysonfoods_logo.png" alt="tysonfoodslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[22]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[22]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'tsn'">
+				<div class="buystocksinfo">
+					<h3>Tyson Foods</h3>
+					<img src="static/images/tysonfoods_logo.png" alt="tysonfoodslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[22]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[22]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Philip Morris -->
+			<div ng-if="user.stock1 == 'pm'">
+				<div class="buystocksinfo">
+					<h3>Philip Morris</h3>
+					<img src="static/images/philipmorris_logo.png" alt="philipmorrislogo">
+					<p id="pershare"><span id="stockprice">${{stocks[23]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[23]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'pm'">
+				<div class="buystocksinfo">
+					<h3>Philip Morris</h3>
+					<img src="static/images/philipmorris_logo.png" alt="philipmorrislogo">
+					<p id="pershare"><span id="stockprice">${{stocks[23]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[23]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'pm'">
+				<div class="buystocksinfo">
+					<h3>Philip Morris</h3>
+					<img src="static/images/philipmorris_logo.png" alt="philipmorrislogo">
+					<p id="pershare"><span id="stockprice">${{stocks[23]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[23]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'pm'">
+				<div class="buystocksinfo">
+					<h3>Philip Morris</h3>
+					<img src="static/images/philipmorris_logo.png" alt="philipmorrislogo">
+					<p id="pershare"><span id="stockprice">${{stocks[23]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[23]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'pm'">
+				<div class="buystocksinfo">
+					<h3>Philip Morris</h3>
+					<img src="static/images/philipmorris_logo.png" alt="philipmorrislogo">
+					<p id="pershare"><span id="stockprice">${{stocks[23]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[23]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Amazon -->
+			<div ng-if="user.stock1 == 'amzn'">
+				<div class="buystocksinfo">
+					<h3>Amazon</h3>
+					<img src="static/images/amazon_logo.png" alt="amazonlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[24]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" value=UC.new_stock.stock1quantity type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[24]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'amzn'">
+				<div class="buystocksinfo">
+					<h3>Amazon</h3>
+					<img src="static/images/amazon_logo.png" alt="amazonlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[24]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[24]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'amzn'">
+				<div class="buystocksinfo">
+					<h3>Amazon</h3>
+					<img src="static/images/amazon_logo.png" alt="amazonlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[24]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[24]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'amzn'">
+				<div class="buystocksinfo">
+					<h3>Amazon</h3>
+					<img src="static/images/amazon_logo.png" alt="amazonlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[24]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[24]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'amzn'">
+				<div class="buystocksinfo">
+					<h3>Amazon</h3>
+					<img src="static/images/amazon_logo.png" alt="amazonlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[24]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[24]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Costco -->
+			<div ng-if="user.stock1 == 'cost'">
+				<div class="buystocksinfo">
+					<h3>Costco</h3>
+					<img src="static/images/costco_logo.png" alt="costcologo">
+					<p id="pershare"><span id="stockprice">${{stocks[25]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[25]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'cost'">
+				<div class="buystocksinfo">
+					<h3>Costco</h3>
+					<img src="static/images/costco_logo.png" alt="costcologo">
+					<p id="pershare"><span id="stockprice">${{stocks[25]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[25]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'cost'">
+				<div class="buystocksinfo">
+					<h3>Costco</h3>
+					<img src="static/images/costco_logo.png" alt="costcologo">
+					<p id="pershare"><span id="stockprice">${{stocks[25]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[25]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'cost'">
+				<div class="buystocksinfo">
+					<h3>Costco</h3>
+					<img src="static/images/costco_logo.png" alt="costcologo">
+					<p id="pershare"><span id="stockprice">${{stocks[25]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[25]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'cost'">
+				<div class="buystocksinfo">
+					<h3>Costco</h3>
+					<img src="static/images/costco_logo.png" alt="costcologo">
+					<p id="pershare"><span id="stockprice">${{stocks[25]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[25]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Starbucks -->
+			<div ng-if="user.stock1 == 'sbux'">
+				<div class="buystocksinfo">
+					<h3>Starbucks</h3>
+					<img src="static/images/starbucks_logo.png" alt="starbuckslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[26]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[26]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'sbux'">
+				<div class="buystocksinfo">
+					<h3>Starbucks</h3>
+					<img src="static/images/starbucks_logo.png" alt="starbuckslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[26]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[26]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'sbux'">
+				<div class="buystocksinfo">
+					<h3>Starbucks</h3>
+					<img src="static/images/starbucks_logo.png" alt="starbuckslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[26]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[26]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'sbux'">
+				<div class="buystocksinfo">
+					<h3>Starbucks</h3>
+					<img src="static/images/starbucks_logo.png" alt="starbuckslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[26]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[26]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'sbux'">
+				<div class="buystocksinfo">
+					<h3>Starbucks</h3>
+					<img src="static/images/starbucks_logo.png" alt="starbuckslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[26]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[26]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Comcast -->
+			<div ng-if="user.stock1 == 'cmcsa'">
+				<div class="buystocksinfo">
+					<h3>Comcast</h3>
+					<img src="static/images/comcast_logo.png" alt="comcastlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[27]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[27]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'cmcsa'">
+				<div class="buystocksinfo">
+					<h3>Comcast</h3>
+					<img src="static/images/comcast_logo.png" alt="comcastlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[27]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[27]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'cmcsa'">
+				<div class="buystocksinfo">
+					<h3>Comcast</h3>
+					<img src="static/images/comcast_logo.png" alt="comcastlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[27]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[27]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'cmcsa'">
+				<div class="buystocksinfo">
+					<h3>Comcast</h3>
+					<img src="static/images/comcast_logo.png" alt="comcastlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[27]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[27]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'cmcsa'">
+				<div class="buystocksinfo">
+					<h3>Comcast</h3>
+					<img src="static/images/comcast_logo.png" alt="comcastlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[27]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[27]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Disney -->
+			<div ng-if="user.stock1 == 'dis'">
+				<div class="buystocksinfo">
+					<h3>Disney</h3>
+					<img src="static/images/disney_logo.png" alt="disneylogo">
+					<p id="pershare"><span id="stockprice">${{stocks[28]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[28]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'dis'">
+				<div class="buystocksinfo">
+					<h3>Disney</h3>
+					<img src="static/images/disney_logo.png" alt="disneylogo">
+					<p id="pershare"><span id="stockprice">${{stocks[28]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[28]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'dis'">
+				<div class="buystocksinfo">
+					<h3>Disney</h3>
+					<img src="static/images/disney_logo.png" alt="disneylogo">
+					<p id="pershare"><span id="stockprice">${{stocks[28]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[28]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'dis'">
+				<div class="buystocksinfo">
+					<h3>Disney</h3>
+					<img src="static/images/disney_logo.png" alt="disneylogo">
+					<p id="pershare"><span id="stockprice">${{stocks[28]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[28]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'dis'">
+				<div class="buystocksinfo">
+					<h3>Disney</h3>
+					<img src="static/images/disney_logo.png" alt="disneylogo">
+					<p id="pershare"><span id="stockprice">${{stocks[28]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[28]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- General Electric -->
+			<div ng-if="user.stock1 == 'ge'">
+				<div class="buystocksinfo">
+					<h3>General Electric</h3>
+					<img src="static/images/generalelectric_logo.png" alt="gelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[29]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[29]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'ge'">
+				<div class="buystocksinfo">
+					<h3>General Electric</h3>
+					<img src="static/images/generalelectric_logo.png" alt="gelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[29]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[29]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'ge'">
+				<div class="buystocksinfo">
+					<h3>General Electric</h3>
+					<img src="static/images/generalelectric_logo.png" alt="gelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[29]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[29]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'ge'">
+				<div class="buystocksinfo">
+					<h3>General Electric</h3>
+					<img src="static/images/generalelectric_logo.png" alt="gelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[29]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[29]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'ge'">
+				<div class="buystocksinfo">
+					<h3>General Electric</h3>
+					<img src="static/images/generalelectric_logo.png" alt="gelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[29]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[29]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Exxon Mobil -->
+			<div ng-if="user.stock1 == 'xom'">
+				<div class="buystocksinfo">
+					<h3>Exxon Mobil</h3>
+					<img src="static/images/exxon_logo.png" alt="exxonlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[30]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[30]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'xom'">
+				<div class="buystocksinfo">
+					<h3>Exxon Mobil</h3>
+					<img src="static/images/exxon_logo.png" alt="exxonlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[30]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[30]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'xom'">
+				<div class="buystocksinfo">
+					<h3>Exxon Mobil</h3>
+					<img src="static/images/exxon_logo.png" alt="exxonlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[30]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[30]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'xom'">
+				<div class="buystocksinfo">
+					<h3>Exxon Mobil</h3>
+					<img src="static/images/exxon_logo.png" alt="exxonlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[30]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[30]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'xom'">
+				<div class="buystocksinfo">
+					<h3>Exxon Mobil</h3>
+					<img src="static/images/exxon_logo.png" alt="exxonlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[30]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[30]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Chevron -->
+			<div ng-if="user.stock1 == 'cvx'">
+				<div class="buystocksinfo">
+					<h3>Chevron</h3>
+					<img src="static/images/chevron_logo.png" alt="chevronlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[31]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[31]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'cvx'">
+				<div class="buystocksinfo">
+					<h3>Chevron</h3>
+					<img src="static/images/chevron_logo.png" alt="chevronlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[31]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[31]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'cvx'">
+				<div class="buystocksinfo">
+					<h3>Chevron</h3>
+					<img src="static/images/chevron_logo.png" alt="chevronlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[31]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[31]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'cvx'">
+				<div class="buystocksinfo">
+					<h3>Chevron</h3>
+					<img src="static/images/chevron_logo.png" alt="chevronlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[31]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[31]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'cvx'">
+				<div class="buystocksinfo">
+					<h3>Chevron</h3>
+					<img src="static/images/chevron_logo.png" alt="chevronlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[31]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[31]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Conoco -->
+			<div ng-if="user.stock1 == 'cop'">
+				<div class="buystocksinfo">
+					<h3>ConocoPhillips</h3>
+					<img src="static/images/conoco_logo.png" alt="conocologo">
+					<p id="pershare"><span id="stockprice">${{stocks[32]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[32]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'cop'">
+				<div class="buystocksinfo">
+					<h3>ConocoPhillips</h3>
+					<img src="static/images/conoco_logo.png" alt="conocologo">
+					<p id="pershare"><span id="stockprice">${{stocks[32]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[32]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'cop'">
+				<div class="buystocksinfo">
+					<h3>ConocoPhillips</h3>
+					<img src="static/images/conoco_logo.png" alt="conocologo">
+					<p id="pershare"><span id="stockprice">${{stocks[32]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[32]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'cop'">
+				<div class="buystocksinfo">
+					<h3>ConocoPhillips</h3>
+					<img src="static/images/conoco_logo.png" alt="conocologo">
+					<p id="pershare"><span id="stockprice">${{stocks[32]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[32]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'cop'">
+				<div class="buystocksinfo">
+					<h3>ConocoPhillips</h3>
+					<img src="static/images/conoco_logo.png" alt="conocologo">
+					<p id="pershare"><span id="stockprice">${{stocks[32]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[32]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Halliburton -->
+			<div ng-if="user.stock1 == 'hal'">
+				<div class="buystocksinfo">
+					<h3>Halliburton</h3>
+					<img src="static/images/halliburton_logo.png" alt="halliburtonlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[33]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[33]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'hal'">
+				<div class="buystocksinfo">
+					<h3>Halliburton</h3>
+					<img src="static/images/halliburton_logo.png" alt="halliburtonlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[33]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[33]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'hal'">
+				<div class="buystocksinfo">
+					<h3>Halliburton</h3>
+					<img src="static/images/halliburton_logo.png" alt="halliburtonlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[33]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[33]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'hal'">
+				<div class="buystocksinfo">
+					<h3>Halliburton</h3>
+					<img src="static/images/halliburton_logo.png" alt="halliburtonlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[33]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[33]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'hal'">
+				<div class="buystocksinfo">
+					<h3>Halliburton</h3>
+					<img src="static/images/halliburton_logo.png" alt="halliburtonlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[33]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[33]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Wells Fargo -->
+			<div ng-if="user.stock1 == 'wfc'">
+				<div class="buystocksinfo">
+					<h3>Wells Fargo</h3>
+					<img src="static/images/wellsfargo_logo.png" alt="wellsfargologo">
+					<p id="pershare"><span id="stockprice">${{stocks[34]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[34]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'wfc'">
+				<div class="buystocksinfo">
+					<h3>Wells Fargo</h3>
+					<img src="static/images/wellsfargo_logo.png" alt="wellsfargologo">
+					<p id="pershare"><span id="stockprice">${{stocks[34]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[34]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'wfc'">
+				<div class="buystocksinfo">
+					<h3>Wells Fargo</h3>
+					<img src="static/images/wellsfargo_logo.png" alt="wellsfargologo">
+					<p id="pershare"><span id="stockprice">${{stocks[34]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[34]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'wfc'">
+				<div class="buystocksinfo">
+					<h3>Wells Fargo</h3>
+					<img src="static/images/wellsfargo_logo.png" alt="wellsfargologo">
+					<p id="pershare"><span id="stockprice">${{stocks[34]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[34]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'wfc'">
+				<div class="buystocksinfo">
+					<h3>Wells Fargo</h3>
+					<img src="static/images/wellsfargo_logo.png" alt="wellsfargologo">
+					<p id="pershare"><span id="stockprice">${{stocks[34]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[34]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Bank of America -->
+			<div ng-if="user.stock1 == 'bac'">
+				<div class="buystocksinfo">
+					<h3>Bank of America</h3>
+					<img src="static/images/bankofamerica_logo.png" alt="bankofamericalogo">
+					<p id="pershare"><span id="stockprice">${{stocks[35]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[35]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'bac'">
+				<div class="buystocksinfo">
+					<h3>Bank of America</h3>
+					<img src="static/images/bankofamerica_logo.png" alt="bankofamericalogo">
+					<p id="pershare"><span id="stockprice">${{stocks[35]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[35]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'bac'">
+				<div class="buystocksinfo">
+					<h3>Bank of America</h3>
+					<img src="static/images/bankofamerica_logo.png" alt="bankofamericalogo">
+					<p id="pershare"><span id="stockprice">${{stocks[35]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[35]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'bac'">
+				<div class="buystocksinfo">
+					<h3>Bank of America</h3>
+					<img src="static/images/bankofamerica_logo.png" alt="bankofamericalogo">
+					<p id="pershare"><span id="stockprice">${{stocks[35]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[35]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'bac'">
+				<div class="buystocksinfo">
+					<h3>Bank of America</h3>
+					<img src="static/images/bankofamerica_logo.png" alt="bankofamericalogo">
+					<p id="pershare"><span id="stockprice">${{stocks[35]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[35]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- JP Morgan Chase -->
+			<div ng-if="user.stock1 == 'jpm'">
+				<div class="buystocksinfo">
+					<h3>JPMorgan Chase</h3>
+					<img src="static/images/chase_logo.png" alt="chaselogo">
+					<p id="pershare"><span id="stockprice">${{stocks[36]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[36]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'jpm'">
+				<div class="buystocksinfo">
+					<h3>JPMorgan Chase</h3>
+					<img src="static/images/chase_logo.png" alt="chaselogo">
+					<p id="pershare"><span id="stockprice">${{stocks[36]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[36]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'jpm'">
+				<div class="buystocksinfo">
+					<h3>JPMorgan Chase</h3>
+					<img src="static/images/chase_logo.png" alt="chaselogo">
+					<p id="pershare"><span id="stockprice">${{stocks[36]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[36]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'jpm'">
+				<div class="buystocksinfo">
+					<h3>JPMorgan Chase</h3>
+					<img src="static/images/chase_logo.png" alt="chaselogo">
+					<p id="pershare"><span id="stockprice">${{stocks[36]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[36]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'jpm'">
+				<div class="buystocksinfo">
+					<h3>JPMorgan Chase</h3>
+					<img src="static/images/chase_logo.png" alt="chaselogo">
+					<p id="pershare"><span id="stockprice">${{stocks[36]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[36]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Citigroup -->
+			<div ng-if="user.stock1 == 'c'">
+				<div class="buystocksinfo">
+					<h3>Citigroup</h3>
+					<img src="static/images/citi_logo.png" alt="citilogo">
+					<p id="pershare"><span id="stockprice">${{stocks[37]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[37]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'c'">
+				<div class="buystocksinfo">
+					<h3>Citigroup</h3>
+					<img src="static/images/citi_logo.png" alt="citilogo">
+					<p id="pershare"><span id="stockprice">${{stocks[37]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[37]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'c'">
+				<div class="buystocksinfo">
+					<h3>Citigroup</h3>
+					<img src="static/images/citi_logo.png" alt="citilogo">
+					<p id="pershare"><span id="stockprice">${{stocks[37]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[37]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'c'">
+				<div class="buystocksinfo">
+					<h3>Citigroup</h3>
+					<img src="static/images/citi_logo.png" alt="citilogo">
+					<p id="pershare"><span id="stockprice">${{stocks[37]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[37]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'c'">
+				<div class="buystocksinfo">
+					<h3>Citigroup</h3>
+					<img src="static/images/citi_logo.png" alt="citilogo">
+					<p id="pershare"><span id="stockprice">${{stocks[37]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[37]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Goldman Sachs -->
+			<div ng-if="user.stock1 == 'gs'">
+				<div class="buystocksinfo">
+					<h3>Goldman Sachs</h3>
+					<img src="static/images/goldmansachs_logo.png" alt="gslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[38]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[38]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'gs'">
+				<div class="buystocksinfo">
+					<h3>Goldman Sachs</h3>
+					<img src="static/images/goldmansachs_logo.png" alt="gslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[38]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[38]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'gs'">
+				<div class="buystocksinfo">
+					<h3>Goldman Sachs</h3>
+					<img src="static/images/goldmansachs_logo.png" alt="gslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[38]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[38]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'gs'">
+				<div class="buystocksinfo">
+					<h3>Goldman Sachs</h3>
+					<img src="static/images/goldmansachs_logo.png" alt="gslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[38]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[38]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'gs'">
+				<div class="buystocksinfo">
+					<h3>Goldman Sachs</h3>
+					<img src="static/images/goldmansachs_logo.png" alt="gslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[38]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[38]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Merck -->
+			<div ng-if="user.stock1 == 'mrk'">
+				<div class="buystocksinfo">
+					<h3>Merck</h3>
+					<img src="static/images/merck_logo.png" alt="mercklogo">
+					<p id="pershare"><span id="stockprice">${{stocks[39]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[39]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'mrk'">
+				<div class="buystocksinfo">
+					<h3>Merck</h3>
+					<img src="static/images/merck_logo.png" alt="mercklogo">
+					<p id="pershare"><span id="stockprice">${{stocks[39]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[39]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'mrk'">
+				<div class="buystocksinfo">
+					<h3>Merck</h3>
+					<img src="static/images/merck_logo.png" alt="mercklogo">
+					<p id="pershare"><span id="stockprice">${{stocks[39]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[39]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'mrk'">
+				<div class="buystocksinfo">
+					<h3>Merck</h3>
+					<img src="static/images/merck_logo.png" alt="mercklogo">
+					<p id="pershare"><span id="stockprice">${{stocks[39]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[39]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'mrk'">
+				<div class="buystocksinfo">
+					<h3>Merck</h3>
+					<img src="static/images/merck_logo.png" alt="mercklogo">
+					<p id="pershare"><span id="stockprice">${{stocks[39]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[39]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Pfizer -->
+			<div ng-if="user.stock1 == 'pfe'">
+				<div class="buystocksinfo">
+					<h3>Pfizer</h3>
+					<img src="static/images/pfizer_logo.png" alt="pfizerlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[40]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[40]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'pfe'">
+				<div class="buystocksinfo">
+					<h3>Pfizer</h3>
+					<img src="static/images/pfizer_logo.png" alt="pfizerlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[40]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[40]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'pfe'">
+				<div class="buystocksinfo">
+					<h3>Pfizer</h3>
+					<img src="static/images/pfizer_logo.png" alt="pfizerlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[40]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[40]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'pfe'">
+				<div class="buystocksinfo">
+					<h3>Pfizer</h3>
+					<img src="static/images/pfizer_logo.png" alt="pfizerlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[40]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[40]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'pfe'">
+				<div class="buystocksinfo">
+					<h3>Pfizer</h3>
+					<img src="static/images/pfizer_logo.png" alt="pfizerlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[40]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[40]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- CVS -->
+			<div ng-if="user.stock1 == 'cvs'">
+				<div class="buystocksinfo">
+					<h3>CVS</h3>
+					<img src="static/images/cvs_logo.png" alt="cvslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[41]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[41]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'cvs'">
+				<div class="buystocksinfo">
+					<h3>CVS</h3>
+					<img src="static/images/cvs_logo.png" alt="cvslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[41]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[41]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'cvs'">
+				<div class="buystocksinfo">
+					<h3>CVS</h3>
+					<img src="static/images/cvs_logo.png" alt="cvslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[41]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[41]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'cvs'">
+				<div class="buystocksinfo">
+					<h3>CVS</h3>
+					<img src="static/images/cvs_logo.png" alt="cvslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[41]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[41]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'cvs'">
+				<div class="buystocksinfo">
+					<h3>CVS</h3>
+					<img src="static/images/cvs_logo.png" alt="cvslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[41]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[41]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- 3M -->
+			<div ng-if="user.stock1 == 'mmm'">
+				<div class="buystocksinfo">
+					<h3>3M</h3>
+					<img src="static/images/3m_logo.png" alt="3mlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[42]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[42]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'mmm'">
+				<div class="buystocksinfo">
+					<h3>3M</h3>
+					<img src="static/images/3m_logo.png" alt="3mlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[42]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[42]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'mmm'">
+				<div class="buystocksinfo">
+					<h3>3M</h3>
+					<img src="static/images/3m_logo.png" alt="3mlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[42]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[42]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'mmm'">
+				<div class="buystocksinfo">
+					<h3>3M</h3>
+					<img src="static/images/3m_logo.png" alt="3mlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[42]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[42]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'mmm'">
+				<div class="buystocksinfo">
+					<h3>3M</h3>
+					<img src="static/images/3m_logo.png" alt="3mlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[42]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[42]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Walgreens -->
+			<div ng-if="user.stock1 == 'wba'">
+				<div class="buystocksinfo">
+					<h3>Walgreens</h3>
+					<img src="static/images/walgreens_logo.png" alt="walgreenslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[43]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[43]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'wba'">
+				<div class="buystocksinfo">
+					<h3>Walgreens</h3>
+					<img src="static/images/walgreens_logo.png" alt="walgreenslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[43]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[43]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'wba'">
+				<div class="buystocksinfo">
+					<h3>Walgreens</h3>
+					<img src="static/images/walgreens_logo.png" alt="walgreenslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[43]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[43]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'wba'">
+				<div class="buystocksinfo">
+					<h3>Walgreens</h3>
+					<img src="static/images/walgreens_logo.png" alt="walgreenslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[43]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[43]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'wba'">
+				<div class="buystocksinfo">
+					<h3>Walgreens</h3>
+					<img src="static/images/walgreens_logo.png" alt="walgreenslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[43]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[43]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- PayPal -->
+			<div ng-if="user.stock1 == 'pypl'">
+				<div class="buystocksinfo">
+					<h3>PayPal</h3>
+					<img src="static/images/paypal_logo.png" alt="paypallogo">
+					<p id="pershare"><span id="stockprice">${{stocks[44]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[44]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'pypl'">
+				<div class="buystocksinfo">
+					<h3>PayPal</h3>
+					<img src="static/images/paypal_logo.png" alt="paypallogo">
+					<p id="pershare"><span id="stockprice">${{stocks[44]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[44]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'pypl'">
+				<div class="buystocksinfo">
+					<h3>PayPal</h3>
+					<img src="static/images/paypal_logo.png" alt="paypallogo">
+					<p id="pershare"><span id="stockprice">${{stocks[44]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[44]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'pypl'">
+				<div class="buystocksinfo">
+					<h3>PayPal</h3>
+					<img src="static/images/paypal_logo.png" alt="paypallogo">
+					<p id="pershare"><span id="stockprice">${{stocks[44]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[44]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'pypl'">
+				<div class="buystocksinfo">
+					<h3>PayPal</h3>
+					<img src="static/images/paypal_logo.png" alt="paypallogo">
+					<p id="pershare"><span id="stockprice">${{stocks[44]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[44]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Visa -->
+			<div ng-if="user.stock1 == 'v'">
+				<div class="buystocksinfo">
+					<h3>Visa</h3>
+					<img src="static/images/visa_logo.png" alt="visalogo">
+					<p id="pershare"><span id="stockprice">${{stocks[45]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[45]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'v'">
+				<div class="buystocksinfo">
+					<h3>Visa</h3>
+					<img src="static/images/visa_logo.png" alt="visalogo">
+					<p id="pershare"><span id="stockprice">${{stocks[45]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[45]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'v'">
+				<div class="buystocksinfo">
+					<h3>Visa</h3>
+					<img src="static/images/visa_logo.png" alt="visalogo">
+					<p id="pershare"><span id="stockprice">${{stocks[45]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[45]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'v'">
+				<div class="buystocksinfo">
+					<h3>Visa</h3>
+					<img src="static/images/visa_logo.png" alt="visalogo">
+					<p id="pershare"><span id="stockprice">${{stocks[45]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[45]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'v'">
+				<div class="buystocksinfo">
+					<h3>Visa</h3>
+					<img src="static/images/visa_logo.png" alt="visalogo">
+					<p id="pershare"><span id="stockprice">${{stocks[45]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[45]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- eBay -->
+			<div ng-if="user.stock1 == 'ebay'">
+				<div class="buystocksinfo">
+					<h3>Ebay</h3>
+					<img src="static/images/ebay_logo.png" alt="ebaylogo">
+					<p id="pershare"><span id="stockprice">${{stocks[46]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[46]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'ebay'">
+				<div class="buystocksinfo">
+					<h3>Ebay</h3>
+					<img src="static/images/ebay_logo.png" alt="ebaylogo">
+					<p id="pershare"><span id="stockprice">${{stocks[46]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[46]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'ebay'">
+				<div class="buystocksinfo">
+					<h3>Ebay</h3>
+					<img src="static/images/ebay_logo.png" alt="ebaylogo">
+					<p id="pershare"><span id="stockprice">${{stocks[46]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[46]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'ebay'">
+				<div class="buystocksinfo">
+					<h3>Ebay</h3>
+					<img src="static/images/ebay_logo.png" alt="ebaylogo">
+					<p id="pershare"><span id="stockprice">${{stocks[46]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[46]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'ebay'">
+				<div class="buystocksinfo">
+					<h3>Ebay</h3>
+					<img src="static/images/ebay_logo.png" alt="ebaylogo">
+					<p id="pershare"><span id="stockprice">${{stocks[46]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[46]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Mastercard -->
+			<div ng-if="user.stock1 == 'ma'">
+				<div class="buystocksinfo">
+					<h3>Mastercard</h3>
+					<img src="static/images/mastercard_logo.png" alt="mastercardlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[47]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[47]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'ma'">
+				<div class="buystocksinfo">
+					<h3>Mastercard</h3>
+					<img src="static/images/mastercard_logo.png" alt="mastercardlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[47]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[47]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'ma'">
+				<div class="buystocksinfo">
+					<h3>Mastercard</h3>
+					<img src="static/images/mastercard_logo.png" alt="mastercardlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[47]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[47]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'ma'">
+				<div class="buystocksinfo">
+					<h3>Mastercard</h3>
+					<img src="static/images/mastercard_logo.png" alt="mastercardlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[47]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[47]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'ma'">
+				<div class="buystocksinfo">
+					<h3>Mastercard</h3>
+					<img src="static/images/mastercard_logo.png" alt="mastercardlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[47]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[47]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Fidelity -->
+			<div ng-if="user.stock1 == 'fis'">
+				<div class="buystocksinfo">
+					<h3>Fidelity</h3>
+					<img src="static/images/fidelity_logo.png" alt="fidelitylogo">
+					<p id="pershare"><span id="stockprice">${{stocks[48]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[48]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'fis'">
+				<div class="buystocksinfo">
+					<h3>Fidelity</h3>
+					<img src="static/images/fidelity_logo.png" alt="fidelitylogo">
+					<p id="pershare"><span id="stockprice">${{stocks[48]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[48]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'fis'">
+				<div class="buystocksinfo">
+					<h3>Fidelity</h3>
+					<img src="static/images/fidelity_logo.png" alt="fidelitylogo">
+					<p id="pershare"><span id="stockprice">${{stocks[48]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[48]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'fis'">
+				<div class="buystocksinfo">
+					<h3>Fidelity</h3>
+					<img src="static/images/fidelity_logo.png" alt="fidelitylogo">
+					<p id="pershare"><span id="stockprice">${{stocks[48]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[48]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'fis'">
+				<div class="buystocksinfo">
+					<h3>Fidelity</h3>
+					<img src="static/images/fidelity_logo.png" alt="fidelitylogo">
+					<p id="pershare"><span id="stockprice">${{stocks[48]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[48]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Verizon -->
+			<div ng-if="user.stock1 == 'vz'">
+				<div class="buystocksinfo">
+					<h3>Verizon</h3>
+					<img src="static/images/verizon_logo.png" alt="verizonlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[49]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[49]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'vz'">
+				<div class="buystocksinfo">
+					<h3>Verizon</h3>
+					<img src="static/images/verizon_logo.png" alt="verizonlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[49]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[49]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'vz'">
+				<div class="buystocksinfo">
+					<h3>Verizon</h3>
+					<img src="static/images/verizon_logo.png" alt="verizonlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[49]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[49]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'vz'">
+				<div class="buystocksinfo">
+					<h3>Verizon</h3>
+					<img src="static/images/verizon_logo.png" alt="verizonlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[49]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[49]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'vz'">
+				<div class="buystocksinfo">
+					<h3>Verizon</h3>
+					<img src="static/images/verizon_logo.png" alt="verizonlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[49]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[49]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- AT&T -->
+			<div ng-if="user.stock1 == 't'">
+				<div class="buystocksinfo">
+					<h3>AT&T</h3>
+					<img src="static/images/att_logo.png" alt="attlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[50]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[50]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 't'">
+				<div class="buystocksinfo">
+					<h3>AT&T</h3>
+					<img src="static/images/att_logo.png" alt="attlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[50]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[50]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 't'">
+				<div class="buystocksinfo">
+					<h3>AT&T</h3>
+					<img src="static/images/att_logo.png" alt="attlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[50]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[50]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 't'">
+				<div class="buystocksinfo">
+					<h3>AT&T</h3>
+					<img src="static/images/att_logo.png" alt="attlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[50]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[50]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 't'">
+				<div class="buystocksinfo">
+					<h3>AT&T</h3>
+					<img src="static/images/att_logo.png" alt="attlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[50]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[50]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- CenturyLink -->
+			<div ng-if="user.stock1 == 'ctl'">
+				<div class="buystocksinfo">
+					<h3>CenturyLink</h3>
+					<img src="static/images/centurylink_logo.png" alt="centurylinklogo">
+					<p id="pershare"><span id="stockprice">${{stocks[51]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[51]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'ctl'">
+				<div class="buystocksinfo">
+					<h3>CenturyLink</h3>
+					<img src="static/images/centurylink_logo.png" alt="centurylinklogo">
+					<p id="pershare"><span id="stockprice">${{stocks[51]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[51]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'ctl'">
+				<div class="buystocksinfo">
+					<h3>CenturyLink</h3>
+					<img src="static/images/centurylink_logo.png" alt="centurylinklogo">
+					<p id="pershare"><span id="stockprice">${{stocks[51]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[51]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'ctl'">
+				<div class="buystocksinfo">
+					<h3>CenturyLink</h3>
+					<img src="static/images/centurylink_logo.png" alt="centurylinklogo">
+					<p id="pershare"><span id="stockprice">${{stocks[51]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[51]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'ctl'">
+				<div class="buystocksinfo">
+					<h3>CenturyLink</h3>
+					<img src="static/images/centurylink_logo.png" alt="centurylinklogo">
+					<p id="pershare"><span id="stockprice">${{stocks[51]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[51]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- WasteManagement -->
+			<div ng-if="user.stock1 == 'wm'">
+				<div class="buystocksinfo">
+					<h3>WasteManagement</h3>
+					<img src="static/images/wastemanagement_logo.png" alt="wastemanagementlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[52]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[52]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'wm'">
+				<div class="buystocksinfo">
+					<h3>WasteManagement</h3>
+					<img src="static/images/wastemanagement_logo.png" alt="wastemanagementlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[52]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[52]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'wm'">
+				<div class="buystocksinfo">
+					<h3>WasteManagement</h3>
+					<img src="static/images/wastemanagement_logo.png" alt="wastemanagementlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[52]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[52]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'wm'">
+				<div class="buystocksinfo">
+					<h3>WasteManagement</h3>
+					<img src="static/images/wastemanagement_logo.png" alt="wastemanagementlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[52]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[52]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'wm'">
+				<div class="buystocksinfo">
+					<h3>WasteManagement</h3>
+					<img src="static/images/wastemanagement_logo.png" alt="wastemanagementlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[52]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[52]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- T-Mobile -->
+			<div ng-if="user.stock1 == 'tmus'">
+				<div class="buystocksinfo">
+					<h3>T-Mobile</h3>
+					<img src="static/images/tmobile_logo.png" alt="tmobilelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[53]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[53]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'tmus'">
+				<div class="buystocksinfo">
+					<h3>T-Mobile</h3>
+					<img src="static/images/tmobile_logo.png" alt="tmobilelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[53]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[53]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'tmus'">
+				<div class="buystocksinfo">
+					<h3>T-Mobile</h3>
+					<img src="static/images/tmobile_logo.png" alt="tmobilelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[53]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[53]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'tmus'">
+				<div class="buystocksinfo">
+					<h3>T-Mobile</h3>
+					<img src="static/images/tmobile_logo.png" alt="tmobilelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[53]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[53]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'tmus'">
+				<div class="buystocksinfo">
+					<h3>T-Mobile</h3>
+					<img src="static/images/tmobile_logo.png" alt="tmobilelogo">
+					<p id="pershare"><span id="stockprice">${{stocks[53]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[53]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- UPS -->
+			<div ng-if="user.stock1 == 'ups'">
+				<div class="buystocksinfo">
+					<h3>UPS</h3>
+					<img src="static/images/ups_logo.png" alt="upslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[54]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[54]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'ups'">
+				<div class="buystocksinfo">
+					<h3>UPS</h3>
+					<img src="static/images/ups_logo.png" alt="upslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[54]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[54]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'ups'">
+				<div class="buystocksinfo">
+					<h3>UPS</h3>
+					<img src="static/images/ups_logo.png" alt="upslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[54]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[54]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'ups'">
+				<div class="buystocksinfo">
+					<h3>UPS</h3>
+					<img src="static/images/ups_logo.png" alt="upslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[54]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[54]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'ups'">
+				<div class="buystocksinfo">
+					<h3>UPS</h3>
+					<img src="static/images/ups_logo.png" alt="upslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[54]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[54]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- American Airlines -->
+			<div ng-if="user.stock1 == 'aal'">
+				<div class="buystocksinfo">
+					<h3>American Airlines</h3>
+					<img src="static/images/americanairlines_logo.png" alt="americanairlineslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[55]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[55]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'aal'">
+				<div class="buystocksinfo">
+					<h3>American Airlines</h3>
+					<img src="static/images/americanairlines_logo.png" alt="americanairlineslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[55]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[55]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'aal'">
+				<div class="buystocksinfo">
+					<h3>American Airlines</h3>
+					<img src="static/images/americanairlines_logo.png" alt="americanairlineslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[55]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[55]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'aal'">
+				<div class="buystocksinfo">
+					<h3>American Airlines</h3>
+					<img src="static/images/americanairlines_logo.png" alt="americanairlineslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[55]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[55]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'aal'">
+				<div class="buystocksinfo">
+					<h3>American Airlines</h3>
+					<img src="static/images/americanairlines_logo.png" alt="americanairlineslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[55]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[55]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Delta Airlines -->
+			<div ng-if="user.stock1 == 'dal'">
+				<div class="buystocksinfo">
+					<h3>Delta Airlines</h3>
+					<img src="static/images/deltaairlines_logo.png" alt="deltaairlineslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[56]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[56]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'dal'">
+				<div class="buystocksinfo">
+					<h3>Delta Airlines</h3>
+					<img src="static/images/deltaairlines_logo.png" alt="deltaairlineslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[56]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[56]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'dal'">
+				<div class="buystocksinfo">
+					<h3>Delta Airlines</h3>
+					<img src="static/images/deltaairlines_logo.png" alt="deltaairlineslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[56]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[56]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'dal'">
+				<div class="buystocksinfo">
+					<h3>Delta Airlines</h3>
+					<img src="static/images/deltaairlines_logo.png" alt="deltaairlineslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[56]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[56]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'dal'">
+				<div class="buystocksinfo">
+					<h3>Delta Airlines</h3>
+					<img src="static/images/deltaairlines_logo.png" alt="deltaairlineslogo">
+					<p id="pershare"><span id="stockprice">${{stocks[56]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[56]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Fedex -->
+			<div ng-if="user.stock1 == 'fdx'">
+				<div class="buystocksinfo">
+					<h3>FedEx</h3>
+					<img src="static/images/fedex_logo.png" alt="fedexlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[57]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[57]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'fdx'">
+				<div class="buystocksinfo">
+					<h3>FedEx</h3>
+					<img src="static/images/fedex_logo.png" alt="fedexlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[57]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[57]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'fdx'">
+				<div class="buystocksinfo">
+					<h3>FedEx</h3>
+					<img src="static/images/fedex_logo.png" alt="fedexlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[57]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[57]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'fdx'">
+				<div class="buystocksinfo">
+					<h3>FedEx</h3>
+					<img src="static/images/fedex_logo.png" alt="fedexlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[57]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[57]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'fdx'">
+				<div class="buystocksinfo">
+					<h3>FedEx</h3>
+					<img src="static/images/fedex_logo.png" alt="fedexlogo">
+					<p id="pershare"><span id="stockprice">${{stocks[57]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[57]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+	<!-- Alaska Airlines -->
+			<div ng-if="user.stock1 == 'alk'">
+				<div class="buystocksinfo">
+					<h3>Alaska Airlines</h3>
+					<img src="static/images/alaskaairlines_logo.png" alt="alaskalogo">
+					<p id="pershare"><span id="stockprice">${{stocks[58]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock1quantity" type="number" ng-init="UC.new_stock.stock1quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[58]['l'] * UC.new_stock.stock1quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock2 == 'alk'">
+				<div class="buystocksinfo">
+					<h3>Alaska Airlines</h3>
+					<img src="static/images/alaskaairlines_logo.png" alt="alaskalogo">
+					<p id="pershare"><span id="stockprice">${{stocks[58]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock2quantity" type="number" ng-init="UC.new_stock.stock2quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[58]['l'] * UC.new_stock.stock2quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock3 == 'alk'">
+				<div class="buystocksinfo">
+					<h3>Alaska Airlines</h3>
+					<img src="static/images/alaskaairlines_logo.png" alt="alaskalogo">
+					<p id="pershare"><span id="stockprice">${{stocks[58]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock3quantity" type="number" ng-init="UC.new_stock.stock3quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[58]['l'] * UC.new_stock.stock3quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock4 == 'alk'">
+				<div class="buystocksinfo">
+					<h3>Alaska Airlines</h3>
+					<img src="static/images/alaskaairlines_logo.png" alt="alaskalogo">
+					<p id="pershare"><span id="stockprice">${{stocks[58]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock4quantity" type="number" ng-init="UC.new_stock.stock4quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[58]['l'] * UC.new_stock.stock4quantity | number: 2}}</span></p>
+				</div>
+			</div>
+			<div ng-if="user.stock5 == 'alk'">
+				<div class="buystocksinfo">
+					<h3>Alaska Airlines</h3>
+					<img src="static/images/alaskaairlines_logo.png" alt="alaskalogo">
+					<p id="pershare"><span id="stockprice">${{stocks[58]['l']}}</span>/share</p>
+					<p>Shares: <input ng-model="UC.new_stock.stock5quantity" type="number" ng-init="UC.new_stock.stock5quantity = 1"></p>
+					<hr>
+					<p>Total: <span>${{stocks[58]['l'] * UC.new_stock.stock5quantity | number: 2}}</span></p>
+				</div>
+			</div>
+		<button ng-click="addQuantities(UC.new_stock)">Proceed to Dashboard</button>
+		</div>
+	</div>
+</div>

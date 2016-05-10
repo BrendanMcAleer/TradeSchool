@@ -1,0 +1,972 @@
+<div ng-controller="userController">
+	<div id="stockscontainer">
+		<img src="static/images/logo.png" alt="logo">
+		
+		<div id = "stockscontent">
+			<h1>Companies <span id="select5">(select five)</span></h1>
+			<table>
+				<tr ng-if="user.interest1 == 'basicindustries' || user.interest2 == 'basicindustries'">
+					<td><h3>Basic Industries</h3></td>
+					<td><div id ="pg" ng-style="style1" ng-mouseover="style1={'opacity': '.5'}" ng-mouseleave="style1={'opacity': '1'}" ng-click="selectStocks('pg'); buyStock(stocks[5]['l']); select1={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select1">Proctor & Gamble</h4>
+								<img id="stocklogo" src="static/images/pg_logo.png" alt="pglogo"><br>
+								<p ng-style="select1">${{stocks[5]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="px" ng-style="style2" ng-mouseover="style2={'opacity': '.5'}" ng-mouseleave="style2={'opacity': '1'}" ng-click="selectStocks('px'); buyStock(stocks[6]['l']); select2={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select2">Praxair</h4>
+								<img id="stocklogo" src="static/images/praxair_logo.png" alt="praxairlogo"><br>
+								<p ng-style="select2">${{stocks[6]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="mon" ng-style="style3" ng-mouseover="style3={'opacity': '.5'}" ng-mouseleave="style3={'opacity': '1'}" ng-click="selectStocks('mon'); buyStock(stocks[7]['l']); select3={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select3"> Monsanto</h4>
+								<img id="stocklogo" src="static/images/monsanto_logo.png" alt="monsantologo"><br>
+								<p ng-style="select3">${{stocks[7]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="val" ng-style="style4" ng-mouseover="style4={'opacity': '.5'}" ng-mouseleave="style4={'opacity': '1'}" ng-click="selectStocks('val'); buyStock(stocks[8]['l']); select4={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select4">Valspar</h4>
+								<img id="stocklogo" src="static/images/valspar_logo.png" alt="valsparlogo"><br>
+								<p ng-style="select4">${{stocks[8]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="stld" ng-style="style5" ng-mouseover="style5={'opacity': '.5'}" ng-mouseleave="style5={'opacity': '1'}" ng-click="selectStocks('stld'); buyStock(stocks[9]['l']); select5={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select5">Steel Dynamics</h4>
+								<img id="stocklogo" src="static/images/steeldynamics_logo.png" alt="steeldynamicslogo"><br>
+								<p ng-style="select5">${{stocks[9]['l']}}</p><br>
+							</div>
+					</div></td>
+				</tr>
+				<tr ng-if="user.interest3 == 'basicindustries'">
+					<td><h3>Basic Industries</h3></td>
+					<td><div id ="pg" ng-style="style1" ng-mouseover="style1={'opacity': '.5'}" ng-mouseleave="style1={'opacity': '1'}" ng-click="selectStocks('pg'); buyStock(stocks[5]['l']); select1={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select1">Proctor & Gamble</h4>
+								<img id="stocklogo" src="static/images/pg_logo.png" alt="pglogo"><br>
+								<p ng-style="select1">${{stocks[5]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="px" ng-style="style2" ng-mouseover="style2={'opacity': '.5'}" ng-mouseleave="style2={'opacity': '1'}" ng-click="selectStocks('px'); buyStock(stocks[6]['l']); select2={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select2">Praxair</h4>
+								<img id="stocklogo" src="static/images/praxair_logo.png" alt="praxairlogo"><br>
+								<p ng-style="select2">${{stocks[6]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="mon" ng-style="style3" ng-mouseover="style3={'opacity': '.5'}" ng-mouseleave="style3={'opacity': '1'}" ng-click="selectStocks('mon'); buyStock(stocks[7]['l']); select3={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select3"> Monsanto</h4>
+								<img id="stocklogo" src="static/images/monsanto_logo.png" alt="monsantologo"><br>
+								<p ng-style="select3">${{stocks[7]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="val" ng-style="style4" ng-mouseover="style4={'opacity': '.5'}" ng-mouseleave="style4={'opacity': '1'}" ng-click="selectStocks('val'); buyStock(stocks[8]['l']); select4={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select4">Valspar</h4>
+								<img id="stocklogo" src="static/images/valspar_logo.png" alt="valsparlogo"><br>
+								<p ng-style="select4">${{stocks[8]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="stld" ng-style="style5" ng-mouseover="style5={'opacity': '.5'}" ng-mouseleave="style5={'opacity': '1'}" ng-click="selectStocks('stld'); buyStock(stocks[9]['l']); select5={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select5">Steel Dynamics</h4>
+								<img id="stocklogo" src="static/images/steeldynamics_logo.png" alt="steeldynamicslogo"><br>
+								<p ng-style="select5">${{stocks[9]['l']}}</p><br>
+							</div>
+					</div></td>
+				</tr>
+				<tr ng-if="user.interest1 == 'capitalgoods' || user.interest2 == 'capitalgoods'">
+					<td><h3>Capital Goods</h3></td>
+					<td><div id ="f" ng-style="style1" ng-mouseover="style1={'opacity': '.5'}" ng-mouseleave="style1={'opacity': '1'}" ng-click="selectStocks('f'); buyStock(stocks[10]['l']); select1={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select1">Ford</h4>
+								<img id="stocklogo" src="static/images/ford_logo.png" alt="fordlogo"><br>
+								<p ng-style="select1">${{stocks[10]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="ba" ng-style="style2" ng-mouseover="style2={'opacity': '.5'}" ng-mouseleave="style2={'opacity': '1'}" ng-click="selectStocks('ba'); buyStock(stocks[0]['l']); select2={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select2"> Boeing </h4>
+								<img id="stocklogo" src="static/images/boeing_logo.png" alt="boeinglogo"><br>
+								<p ng-style="select2">${{stocks[0]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="tsla" ng-style="style3" ng-mouseover="style3={'opacity': '.5'}" ng-mouseleave="style3={'opacity': '1'}" ng-click="selectStocks('tsla'); buyStock(stocks[11]['l']); select3={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select3">Tesla</h4>
+								<img id="stocklogo" src="static/images/tesla_logo.png" alt="teslalogo"><br>
+								<p ng-style="select3">${{stocks[11]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="cat" ng-style="style4" ng-mouseover="style4={'opacity': '.5'}" ng-mouseleave="style4={'opacity': '1'}" ng-click="selectStocks('cat'); buyStock(stocks[12]['l']); select4={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select4">Caterpillar</h4>
+								<img id="stocklogo" src="static/images/caterpillar_logo.png" alt="caterpillarlogo"><br>
+								<p ng-style="select4">${{stocks[12]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="race" ng-style="style5" ng-mouseover="style5={'opacity': '.5'}" ng-mouseleave="style5={'opacity': '1'}" ng-click="selectStocks('race'); buyStock(stocks[13]['l']); select5={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select5">Ferrari</h4>
+								<img id="stocklogo" src="static/images/ferrari_logo.png" alt="ferrarilogo"><br>
+								<p ng-style="select5">${{stocks[13]['l']}}</p><br>
+							</div>
+					</div></td>
+				</tr>					
+				<tr ng-if="user.interest3 == 'capitalgoods'">
+					<td><h3>Capital Goods</h3></td>
+					<td><div id ="f" ng-style="style1" ng-mouseover="style1={'opacity': '.5'}" ng-mouseleave="style1={'opacity': '1'}" ng-click="selectStocks('f'); buyStock(stocks[10]['l']); select1={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select1">Ford</h4>
+								<img id="stocklogo" src="static/images/ford_logo.png" alt="fordlogo"><br>
+								<p ng-style="select1">${{stocks[10]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="ba" ng-style="style2" ng-mouseover="style2={'opacity': '.5'}" ng-mouseleave="style2={'opacity': '1'}" ng-click="selectStocks('ba'); buyStock(stocks[0]['l']); select2={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select2"> Boeing </h4>
+								<img id="stocklogo" src="static/images/boeing_logo.png" alt="boeinglogo"><br>
+								<p ng-style="select2">${{stocks[0]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="tsla" ng-style="style3" ng-mouseover="style3={'opacity': '.5'}" ng-mouseleave="style3={'opacity': '1'}" ng-click="selectStocks('tsla'); buyStock(stocks[11]['l']); select3={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select3">Tesla</h4>
+								<img id="stocklogo" src="static/images/tesla_logo.png" alt="teslalogo"><br>
+								<p ng-style="select3">${{stocks[11]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="cat" ng-style="style4" ng-mouseover="style4={'opacity': '.5'}" ng-mouseleave="style4={'opacity': '1'}" ng-click="selectStocks('cat'); buyStock(stocks[12]['l']); select4={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select4">Caterpillar</h4>
+								<img id="stocklogo" src="static/images/caterpillar_logo.png" alt="caterpillarlogo"><br>
+								<p ng-style="select4">${{stocks[12]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="race" ng-style="style5" ng-mouseover="style5={'opacity': '.5'}" ng-mouseleave="style5={'opacity': '1'}" ng-click="selectStocks('race'); buyStock(stocks[13]['l']); select5={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select5">Ferrari</h4>
+								<img id="stocklogo" src="static/images/ferrari_logo.png" alt="ferrarilogo"><br>
+								<p ng-style="select5">${{stocks[13]['l']}}</p><br>
+							</div>
+					</div></td>
+				</tr>
+				<tr ng-if="user.interest1 == 'consumerdurables' || user.interest2 == 'consumerdurables'">
+					<td><h3>Consumer Durables</h3></td>
+					<td>
+						<div id ="clx" ng-style="style1" ng-mouseover="style1={'opacity': '.5'}" ng-mouseleave="style1={'opacity': '1'}" ng-click="selectStocks('clx'); buyStock(stocks[14]['l']); select1={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select1">Clorox</h4>
+								<img id="stocklogo" src="static/images/clorox_logo.png" alt="cloroxlogo"><br>
+								<p ng-style="select1">${{stocks[14]['l']}}</p><br>
+							</div>
+						</div>
+					</td>
+					<td><div id ="whr" ng-style="style2" ng-mouseover="style2={'opacity': '.5'}" ng-mouseleave="style2={'opacity': '1'}" ng-click="selectStocks('whr'); buyStock(stocks[15]['l']); select2={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select2"> Whirlpool </h4>
+								<img id="stocklogo" src="static/images/whirlpool_logo.png" alt="whirlpoollogo"><br>
+								<p ng-style="select2">${{stocks[15]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="kmx" ng-style="style3" ng-mouseover="style3={'opacity': '.5'}" ng-mouseleave="style3={'opacity': '1'}" ng-click="selectStocks('kmx'); buyStock(stocks[16]['l']);  select3={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select3">CarMax</h4>
+								<img id="stocklogo" src="static/images/carmax_logo.png" alt="carmaxlogo"><br>
+								<p ng-style="select3">${{stocks[16]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="gt" ng-style="style4" ng-mouseover="style4={'opacity': '.5'}" ng-mouseleave="style4={'opacity': '1'}" ng-click="selectStocks('gt'); buyStock(stocks[17]['l']); select4={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select4">Goodyear</h4>
+								<img id="stocklogo" src="static/images/goodyear_logo.png" alt="goodyearlogo"><br>
+								<p ng-style="select4">${{stocks[17]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="an" ng-style="style5" ng-mouseover="style5={'opacity': '.5'}" ng-mouseleave="style5={'opacity': '1'}" ng-click="selectStocks('an'); buyStock(stocks[18]['l']); select5={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select5">AutoNation</h4>
+								<img id="stocklogo" src="static/images/autonation_logo.png" alt="autonationlogo"><br>
+								<p ng-style="select5">${{stocks[18]['l']}}</p><br>
+							</div>
+					</div></td>
+				</tr>
+				<tr ng-if="user.interest3 == 'consumerdurables'">
+					<td><h3>Consumer Durables</h3></td>
+					<td>
+						<div id ="clx" ng-style="style1" ng-mouseover="style1={'opacity': '.5'}" ng-mouseleave="style1={'opacity': '1'}" ng-click="selectStocks('clx'); buyStock(stocks[14]['l']); select1={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select1">Clorox</h4>
+								<img id="stocklogo" src="static/images/clorox_logo.png" alt="cloroxlogo"><br>
+								<p ng-style="select1">${{stocks[14]['l']}}</p><br>
+							</div>
+						</div>
+					</td>
+					<td><div id ="whr" ng-style="style2" ng-mouseover="style2={'opacity': '.5'}" ng-mouseleave="style2={'opacity': '1'}" ng-click="selectStocks('whr'); buyStock(stocks[15]['l']); select2={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select2"> Whirlpool </h4>
+								<img id="stocklogo" src="static/images/whirlpool_logo.png" alt="whirlpoollogo"><br>
+								<p ng-style="select2">${{stocks[15]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="kmx" ng-style="style3" ng-mouseover="style3={'opacity': '.5'}" ng-mouseleave="style3={'opacity': '1'}" ng-click="selectStocks('kmx'); buyStock(stocks[16]['l']); select3={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select3">CarMax</h4>
+								<img id="stocklogo" src="static/images/carmax_logo.png" alt="carmaxlogo"><br>
+								<p ng-style="select3">${{stocks[16]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="gt" ng-style="style4" ng-mouseover="style4={'opacity': '.5'}" ng-mouseleave="style4={'opacity': '1'}" ng-click="selectStocks('gt'); buyStock(stocks[17]['l']); select4={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select4">Goodyear</h4>
+								<img id="stocklogo" src="static/images/goodyear_logo.png" alt="goodyearlogo"><br>
+								<p ng-style="select4">${{stocks[17]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="an" ng-style="style5" ng-mouseover="style5={'opacity': '.5'}" ng-mouseleave="style5={'opacity': '1'}" ng-click="selectStocks('an'); buyStock(stocks[18]['l']); select5={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select5">AutoNation</h4>
+								<img id="stocklogo" src="static/images/autonation_logo.png" alt="autonationlogo"><br>
+								<p ng-style="select5">${{stocks[18]['l']}}</p><br>
+							</div>
+					</div></td>
+				</tr>
+				<tr ng-if="user.interest1 == 'consumernondurables' || user.interest2 == 'consumernondurables'">
+					<td><h3>Consumer<br>Non-Durables</h3></td>
+					<td>
+						<div class="company1">
+							<div id ="tap" ng-style="style1" ng-mouseover="style1={'opacity': '.5'}" ng-mouseleave="style1={'opacity': '1'}" ng-click="selectStocks('tap'); buyStock(stocks[19]['l']);  select1={'color': 'green', 'font-weight': '700'}">
+								<h4 ng-style="select1">Molson Coors</h4>
+								<img id="stocklogo" src="static/images/coors_logo.png" alt="coorslogo"><br>
+								<p ng-style="select1">${{stocks[19]['l']}}</p><br>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class = "company">
+							<div id ="ko" ng-style="style2" ng-mouseover="style2={'opacity': '.5'}" ng-mouseleave="style2={'opacity': '1'}" ng-click="selectStocks('ko'); buyStock(stocks[20]['l']); select2={'color': 'green', 'font-weight': '700'}">
+								<h4 ng-style="select2">Coca-Cola</h4>
+								<img id="stocklogo" src="static/images/cocacola_logo.png" alt="cocacolalogo"><br>
+								<p ng-style="select2">${{stocks[20]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td>
+						<div class="company">
+							<div id ="nke" ng-style="style3" ng-mouseover="style3={'opacity': '.5'}" ng-mouseleave="style3={'opacity': '1'}" ng-click="selectStocks('nke'); buyStock(stocks[21]['l']); select3={'color': 'green', 'font-weight': '700'}">
+								<h4 ng-style="select3">Nike</h4>
+								<img id="stocklogo" src="static/images/nike_logo.png" alt="nikelogo"><br>
+								<p ng-style="select3">${{stocks[21]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td>
+						<div class="company">
+							<div id ="tsn" ng-style="style4" ng-mouseover="style4={'opacity': '.5'}" ng-mouseleave="style4={'opacity': '1'}" ng-click="selectStocks('tsn'); buyStock(stocks[22]['l']); select4={'color': 'green', 'font-weight': '700'}">
+								<h4 ng-style="select4">Tyson Foods</h4>
+								<img id="stocklogo" src="static/images/tysonfoods_logo.png" alt="tysonfoodslogo"><br>
+								<p ng-style="select4">${{stocks[22]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td>
+						<div class="company">
+							<div id ="pm" ng-style="style5" ng-mouseover="style5={'opacity': '.5'}" ng-mouseleave="style5={'opacity': '1'}" ng-click="selectStocks('pm'); buyStock(stocks[23]['l']); select5={'color': 'green', 'font-weight': '700'}">
+								<h4 ng-style="select5">Philip Morris</h4>
+								<img id="stocklogo" src="static/images/philipmorris_logo.png" alt="philipmorrislogo"><br>
+								<p ng-style="select5">${{stocks[23]['l']}}</p><br>
+							</div>
+					</div></td>
+				</tr>
+				<tr ng-if="user.interest3 == 'consumernondurables'">
+					<td><h3>Consumer<br>Non-Durables</h3></td>
+					<td>
+						<div class="company1">
+							<div id ="tap" ng-style="style1" ng-mouseover="style1={'opacity': '.5'}" ng-mouseleave="style1={'opacity': '1'}" ng-click="selectStocks('tap'); buyStock(stocks[19]['l']); select1={'color': 'green', 'font-weight': '700'}">
+								<h4 ng-style="select1">Molson Coors</h4>
+								<img id="stocklogo" src="static/images/coors_logo.png" alt="coorslogo"><br>
+								<p ng-style="select1">${{stocks[19]['l']}}</p><br>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class = "company">
+							<div id ="ko" ng-style="style2" ng-mouseover="style2={'opacity': '.5'}" ng-mouseleave="style2={'opacity': '1'}" ng-click="selectStocks('ko'); buyStock(stocks[20]['l']); select2={'color': 'green', 'font-weight': '700'}">
+								<h4 ng-style="select2">Coca-Cola</h4>
+								<img id="stocklogo" src="static/images/cocacola_logo.png" alt="cocacolalogo"><br>
+								<p ng-style="select2">${{stocks[20]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td>
+						<div class="company">
+							<div id ="nke" ng-style="style3" ng-mouseover="style3={'opacity': '.5'}" ng-mouseleave="style3={'opacity': '1'}" ng-click="selectStocks('nke'); buyStock(stocks[21]['l']); select3={'color': 'green', 'font-weight': '700'}">
+								<h4 ng-style="select3">Nike</h4>
+								<img id="stocklogo" src="static/images/nike_logo.png" alt="nikelogo"><br>
+								<p ng-style="select3">${{stocks[21]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td>
+						<div class="company">
+							<div id ="tsn" ng-style="style4" ng-mouseover="style4={'opacity': '.5'}" ng-mouseleave="style4={'opacity': '1'}" ng-click="selectStocks('tsn'); buyStock(stocks[22]['l']); select4={'color': 'green', 'font-weight': '700'}">
+								<h4 ng-style="select4">Tyson Foods</h4>
+								<img id="stocklogo" src="static/images/tysonfoods_logo.png" alt="tysonfoodslogo"><br>
+								<p ng-style="select4">${{stocks[22]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td>
+						<div class="company">
+							<div id ="pm" ng-style="style5" ng-mouseover="style5={'opacity': '.5'}" ng-mouseleave="style5={'opacity': '1'}" ng-click="selectStocks('pm'); buyStock(stocks[23]['l']); select5={'color': 'green', 'font-weight': '700'}">
+								<h4 ng-style="select5">Philip Morris</h4>
+								<img id="stocklogo" src="static/images/philipmorris_logo.png" alt="philipmorrislogo"><br>
+								<p ng-style="select5">${{stocks[23]['l']}}</p><br>
+							</div>
+					</div></td>
+				</tr>
+				<tr ng-if="user.interest1 == 'consumerservices' || user.interest2 == 'consumerservices'">
+					<td><h3>Consumer Services</h3></td>
+					<td>
+						<div id ="amzn" name="amazon" ng-style="style1" ng-mouseover="style1={'opacity': '.5'}" ng-mouseleave="style1={'opacity': '1'}" ng-click="selectStocks('amzn'); buyStock(stocks[24]['l']); select1={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select1">Amazon</h4>
+								<img id="stocklogo" src="static/images/amazon_logo.png" alt="amazonlogo"><br>
+								<p ng-style="select1">${{stocks[24]['l']}}</p><br>
+							</div>
+						</div>
+					</td>
+					<td><div id = "cost" ng-style="style2" ng-mouseover="style2={'opacity': '.5'}" ng-mouseleave="style2={'opacity': '1'}" ng-click="selectStocks('cost'); buyStock(stocks[25]['l']); select2={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select2">Costco</h4>
+								<img id="stocklogo" src="static/images/costco_logo.png" alt="costcologo"><br>
+								<p ng-style="select2">${{stocks[25]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id="sbux" ng-style="style3" ng-mouseover="style3={'opacity': '.5'}" ng-mouseleave="style3={'opacity': '1'}" ng-click="selectStocks('sbux'); buyStock(stocks[26]['l']); select3={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select3">Starbucks</h4>
+								<img id="stocklogo" src="static/images/starbucks_logo.png" alt="starbuckslogo"><br>
+								<p ng-style="select3">${{stocks[26]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id="cmcsa" ng-style="style4" ng-mouseover="style4={'opacity': '.5'}" ng-mouseleave="style4={'opacity': '1'}" ng-click="selectStocks('cmcsa'); buyStock(stocks[27]['l']); select4={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select4">Comcast</h4>
+								<img id="stocklogo" src="static/images/comcast_logo.png" alt="comcastlogo"><br>
+								<p ng-style="select4">${{stocks[27]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id="dis" ng-style="style5" ng-mouseover="style5={'opacity': '.5'}" ng-mouseleave="style5={'opacity': '1'}" ng-click="selectStocks('dis'); buyStock(stocks[28]['l']); select5={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select5">Disney</h4>
+								<img id="stocklogo" src="static/images/disney_logo.png" alt="disneylogo"><br>
+								<p ng-style="select5">${{stocks[28]['l']}}</p><br>
+							</div>
+					</div></td>
+				</tr>
+				<tr ng-if="user.interest3 == 'consumerservices'">
+					<td><h3>Consumer Services</h3></td>
+					<td>
+						<div id ="amzn" ng-style="style1" ng-mouseover="style1={'opacity': '.5'}" ng-mouseleave="style1={'opacity': '1'}" ng-click="selectStocks('amzn'); buyStock(stocks[24]['l']); select1={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select1">Amazon</h4>
+								<img id="stocklogo" src="static/images/amazon_logo.png" alt="amazonlogo"><br>
+								<p ng-style="select1">${{stocks[24]['l']}}</p><br>
+							</div>
+						</div>
+					</td>
+					<td><div id = "cost" ng-style="style2" ng-mouseover="style2={'opacity': '.5'}" ng-mouseleave="style2={'opacity': '1'}" ng-click="selectStocks('cost'); buyStock(stocks[25]['l']); select2={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select2">Costco</h4>
+								<img id="stocklogo" src="static/images/costco_logo.png" alt="costcologo"><br>
+								<p ng-style="select2">${{stocks[25]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id="sbux" ng-style="style3" ng-mouseover="style3={'opacity': '.5'}" ng-mouseleave="style3={'opacity': '1'}" ng-click="selectStocks('sbux'); buyStock(stocks[26]['l']); select3={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select3">Starbucks</h4>
+								<img id="stocklogo" src="static/images/starbucks_logo.png" alt="starbuckslogo"><br>
+								<p ng-style="select3">${{stocks[26]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id="cmcsa" ng-style="style4" ng-mouseover="style4={'opacity': '.5'}" ng-mouseleave="style4={'opacity': '1'}" ng-click="selectStocks('cmcsa'); buyStock(stocks[27]['l']); select4={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select4">Comcast</h4>
+								<img id="stocklogo" src="static/images/comcast_logo.png" alt="comcastlogo"><br>
+								<p ng-style="select4">${{stocks[27]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id="dis" ng-style="style5" ng-mouseover="style5={'opacity': '.5'}" ng-mouseleave="style5={'opacity': '1'}" ng-click="selectStocks('dis'); buyStock(stocks[28]['l']); select5={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select5">Disney</h4>
+								<img id="stocklogo" src="static/images/disney_logo.png" alt="disneylogo"><br>
+								<p ng-style="select5">${{stocks[28]['l']}}</p><br>
+							</div>
+					</div></td>
+				</tr>
+				<tr ng-if="user.interest1 == 'energy' || user.interest2 == 'energy'">
+					<td><h3>Energy</h3></td>
+					<td>
+						<div id ="ge" ng-style="style1" ng-mouseover="style1={'opacity': '.5'}" ng-mouseleave="style1={'opacity': '1'}" ng-click="selectStocks('ge'); buyStock(stocks[29]['l']); select1={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select1">General Electric</h4>
+								<img id="stocklogo" src="static/images/generalelectric_logo.png" alt="gelogo"><br>
+								<p ng-style="select1">${{stocks[29]['l']}}</p><br>
+							</div>
+						</div>
+					</td>
+					<td><div id ="xom" ng-style="style2" ng-mouseover="style2={'opacity': '.5'}" ng-mouseleave="style2={'opacity': '1'}">
+							<div class="company" ng-click="selectStocks('xom'); buyStock(stocks[30]['l']); select2={'color': 'green', 'font-weight': '700'}">
+								<h4 ng-style="select2">Exxon Mobil</h4>
+								<img id="stocklogo" src="static/images/exxon_logo.png" alt="exxonogo"><br>
+								<p ng-style="select2">${{stocks[30]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="cvx" ng-style="style3" ng-mouseover="style3={'opacity': '.5'}" ng-mouseleave="style3={'opacity': '1'}" ng-click="selectStocks('cvx'); buyStock(stocks[31]['l']); select3={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select3">Chevron</h4>
+								<img id="stocklogo" src="static/images/chevron_logo.png" alt="chevronlogo"><br>
+								<p ng-style="select3">${{stocks[31]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="cop" ng-style="style4" ng-mouseover="style4={'opacity': '.5'}" ng-mouseleave="style4={'opacity': '1'}" ng-click="selectStocks('cop'); buyStock(stocks[32]['l']); select4={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select4">Conoco</h4>
+								<img id="stocklogo" src="static/images/conoco_logo.png" alt="conocologo"><br>
+								<p ng-style="select4">${{stocks[32]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="hal" ng-style="style5" ng-mouseover="style5={'opacity': '.5'}" ng-mouseleave="style5={'opacity': '1'}" ng-click="selectStocks('hal'); buyStock(stocks[33]['l']); select5={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select5">Halliburton</h4>
+								<img id="stocklogo" src="static/images/halliburton_logo.png" alt="halliburtonlogo"><br>
+								<p ng-style="select5">${{stocks[33]['l']}}</p><br>
+							</div>
+					</div></td>
+				</tr>
+				<tr ng-if="user.interest3 == 'energy'">
+					<td><h3>Energy</h3></td>
+					<td>
+						<div id ="ge" ng-style="style1" ng-mouseover="style1={'opacity': '.5'}" ng-mouseleave="style1={'opacity': '1'}" ng-click="selectStocks('ge'); buyStock(stocks[29]['l']); select1={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select1">General Electric</h4>
+								<img id="stocklogo" src="static/images/generalelectric_logo.png" alt="gelogo"><br>
+								<p ng-style="select1">${{stocks[29]['l']}}</p><br>
+							</div>
+						</div>
+					</td>
+					<td><div id ="xom" ng-style="style2" ng-mouseover="style2={'opacity': '.5'}" ng-mouseleave="style2={'opacity': '1'}">
+							<div class="company" ng-click="selectStocks('xom'); buyStock(stocks[30]['l']); select2={'color': 'green', 'font-weight': '700'}">
+								<h4 ng-style="select2">Exxon Mobil</h4>
+								<img id="stocklogo" src="static/images/exxon_logo.png" alt="exxonogo"><br>
+								<p ng-style="select2">${{stocks[30]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="cvx" ng-style="style3" ng-mouseover="style3={'opacity': '.5'}" ng-mouseleave="style3={'opacity': '1'}" ng-click="selectStocks('cvx'); buyStock(stocks[31]['l']); select3={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select3">Chevron</h4>
+								<img id="stocklogo" src="static/images/chevron_logo.png" alt="chevronlogo"><br>
+								<p ng-style="select3">${{stocks[31]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="cop" ng-style="style4" ng-mouseover="style4={'opacity': '.5'}" ng-mouseleave="style4={'opacity': '1'}" ng-click="selectStocks('cop'); buyStock(stocks[32]['l']);  select4={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select4">Conoco</h4>
+								<img id="stocklogo" src="static/images/conoco_logo.png" alt="conocologo"><br>
+								<p ng-style="select4">${{stocks[32]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="hal" ng-style="style5" ng-mouseover="style5={'opacity': '.5'}" ng-mouseleave="style5={'opacity': '1'}" ng-click="selectStocks('hal'); buyStock(stocks[33]['l']); select5={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select5">Halliburton</h4>
+								<img id="stocklogo" src="static/images/halliburton_logo.png" alt="halliburtonlogo"><br>
+								<p ng-style="select5">${{stocks[33]['l']}}</p><br>
+							</div>
+					</div></td>
+				</tr>
+				<tr ng-if="user.interest1 == 'finance' || user.interest2 == 'finance'">
+					<td><h3>Finance</h3></td>
+					<td>
+						<div id ="wfc" ng-style="style1" ng-mouseover="style1={'opacity': '.5'}" ng-mouseleave="style1={'opacity': '1'}" ng-click="selectStocks('wfc'); buyStock(stocks[34]['l']); select1={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select1">Wells Fargo</h4>
+								<img id="stocklogo" src="static/images/wellsfargo_logo.png" alt="wellsfargologo"><br>
+								<p ng-style="select1">${{stocks[34]['l']}}</p><br>
+							</div>
+						</div>
+					</td>
+					<td><div id ="bac" ng-style="style2" ng-mouseover="style2={'opacity': '.5'}" ng-mouseleave="style2={'opacity': '1'}" ng-click="selectStocks('bac'); buyStock(stocks[35]['l']); select2={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select2">Bank of America</h4>
+								<img id="stocklogo" src="static/images/bankofamerica_logo.png" alt="bofalogo"><br>
+								<p ng-style="select2">${{stocks[35]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="jpm" ng-style="style3" ng-mouseover="style3={'opacity': '.5'}" ng-mouseleave="style3={'opacity': '1'}" ng-click="selectStocks('jpm'); buyStock(stocks[36]['l']); select3={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select3">JPMorgan Chase</h4>
+								<img id="stocklogo" src="static/images/chase_logo.png" alt="chaselogo"><br>
+								<p ng-style="select3">${{stocks[36]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="c" ng-style="style4" ng-mouseover="style4={'opacity': '.5'}" ng-mouseleave="style4={'opacity': '1'}" ng-click="selectStocks('c'); buyStock(stocks[37]['l']); select4={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select4">Citigroup</h4>
+								<img id="stocklogo" src="static/images/citi_logo.png" alt="citilogo"><br>
+								<p ng-style="select4">${{stocks[37]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="gs" ng-style="style5" ng-mouseover="style5={'opacity': '.5'}" ng-mouseleave="style5={'opacity': '1'}" ng-click="selectStocks('gs'); buyStock(stocks[38]['l']); select5={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select5">Goldman Sachs</h4>
+								<img id="stocklogo" src="static/images/goldmansachs_logo.png" alt="goldmanlogo"><br>
+								<p ng-style="select5">${{stocks[38]['l']}}</p><br>
+							</div>
+					</div></td>
+				</tr>
+				<tr ng-if="user.interest3 == 'finance'">
+					<td><h3>Finance</h3></td>
+					<td>
+						<div id ="wfc" ng-style="style1" ng-mouseover="style1={'opacity': '.5'}" ng-mouseleave="style1={'opacity': '1'}" ng-click="selectStocks('wfc'); buyStock(stocks[34]['l']); select1={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select1">Wells Fargo</h4>
+								<img id="stocklogo" src="static/images/wellsfargo_logo.png" alt="wellsfargologo"><br>
+								<p ng-style="select1">${{stocks[34]['l']}}</p><br>
+							</div>
+						</div>
+					</td>
+					<td><div id ="bac" ng-style="style2" ng-mouseover="style2={'opacity': '.5'}" ng-mouseleave="style2={'opacity': '1'}" ng-click="selectStocks('bac'); buyStock(stocks[35]['l']); select2={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select2">Bank of America</h4>
+								<img id="stocklogo" src="static/images/bankofamerica_logo.png" alt="microsoftlogo"><br>
+								<p ng-style="select2">${{stocks[35]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="jpm" ng-style="style3" ng-mouseover="style3={'opacity': '.5'}" ng-mouseleave="style3={'opacity': '1'}" ng-click="selectStocks('jpm'); buyStock(stocks[36]['l']); select3={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select3">JPMorgan Chase</h4>
+								<img id="stocklogo" src="static/images/chase_logo.png" alt="chaselogo"><br>
+								<p ng-style="select3">${{stocks[36]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="c" ng-style="style4" ng-mouseover="style4={'opacity': '.5'}" ng-mouseleave="style4={'opacity': '1'}" ng-click="selectStocks('c'); buyStock(stocks[37]['l']); select4={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select4">Citigroup</h4>
+								<img id="stocklogo" src="static/images/citi_logo.png" alt="citilogo"><br>
+								<p ng-style="select4">${{stocks[37]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="gs" ng-style="style5" ng-mouseover="style5={'opacity': '.5'}" ng-mouseleave="style5={'opacity': '1'}" ng-click="selectStocks('gs'); buyStock(stocks[38]['l']); select5={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select5">Goldman Sachs</h4>
+								<img id="stocklogo" src="static/images/goldmansachs_logo.png" alt="goldmanlogo"><br>
+								<p ng-style="select5">${{stocks[38]['l']}}</p><br>
+							</div>
+					</div></td>
+				</tr>
+				<tr ng-if="user.interest1 == 'healthcare' || user.interest2 == 'healthcare'">
+					<td><h3>Healthcare</h3></td>
+					<td>
+						<div id ="mrk" ng-style="style1" ng-mouseover="style1={'opacity': '.5'}" ng-mouseleave="style1={'opacity': '1'}" ng-click="selectStocks('mrk'); buyStock(stocks[39]['l']); select1={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select1">Merck</h4>
+								<img id="stocklogo" src="static/images/merck_logo.png" alt="mercklogo"><br>
+								<p ng-style="select1">${{stocks[39]['l']}}</p><br>
+							</div>
+						</div>
+					</td>
+					<td><div id ="pfe" ng-style="style2" ng-mouseover="style2={'opacity': '.5'}" ng-mouseleave="style2={'opacity': '1'}" ng-click="selectStocks('pfe'); buyStock(stocks[40]['l']); select2={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select2">Pfizer</h4>
+								<img id="stocklogo" src="static/images/pfizer_logo.png" alt="pfizerlogo"><br>
+								<p ng-style="select2">${{stocks[40]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="cvs" ng-style="style3" ng-mouseover="style3={'opacity': '.5'}" ng-mouseleave="style3={'opacity': '1'}" ng-click="selectStocks('cvs'); buyStock(stocks[41]['l']); select3={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select3">CVS</h4>
+								<img id="stocklogo" src="static/images/cvs_logo.png" alt="cvsclogo"><br>
+								<p ng-style="select3">${{stocks[41]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="mmm" ng-style="style4" ng-mouseover="style4={'opacity': '.5'}" ng-mouseleave="style4={'opacity': '1'}" ng-click="selectStocks('mmm'); buyStock(stocks[42]['l']); select4={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select4">3M</h4>
+								<img id="stocklogo" src="static/images/3m_logo.png" alt="3mlogo"><br>
+								<p ng-style="select4">${{stocks[42]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="wba" ng-style="style5" ng-mouseover="style5={'opacity': '.5'}" ng-mouseleave="style5={'opacity': '1'}" ng-click="selectStocks('wba'); buyStock(stocks[43]['l']); select5={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select5">Walgreens</h4>
+								<img id="stocklogo" src="static/images/walgreens_logo.png" alt="walgreenslogo"><br>
+								<p ng-style="select5">${{stocks[43]['l']}}</p><br>
+							</div>
+					</div></td>
+				</tr>
+				<tr ng-if="user.interest3 == 'healthcare'">
+					<td><h3>Healthcare</h3></td>
+					<td>
+					<div id ="mrk" ng-style="style1" ng-mouseover="style1={'opacity': '.5'}" ng-mouseleave="style1={'opacity': '1'}" ng-click="selectStocks('mrk'); buyStock(stocks[39]['l']); select1={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select1">Merck</h4>
+								<img id="stocklogo" src="static/images/merck_logo.png" alt="mercklogo"><br>
+								<p ng-style="select1">${{stocks[39]['l']}}</p><br>
+							</div>
+						</div>
+					</td>
+					<td><div id ="pfe" ng-style="style2" ng-mouseover="style2={'opacity': '.5'}" ng-mouseleave="style2={'opacity': '1'}" ng-click="selectStocks('pfe'); buyStock(stocks[40]['l']); select2={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select2">Pfizer</h4>
+								<img id="stocklogo" src="static/images/pfizer_logo.png" alt="pfizerlogo"><br>
+								<p ng-style="select2">${{stocks[40]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="cvs" ng-style="style3" ng-mouseover="style3={'opacity': '.5'}" ng-mouseleave="style3={'opacity': '1'}" ng-click="selectStocks('cvs'); buyStock(stocks[41]['l']); select3={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select3">CVS</h4>
+								<img id="stocklogo" src="static/images/cvs_logo.png" alt="cvsclogo"><br>
+								<p ng-style="select3">${{stocks[41]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="mmm" ng-style="style4" ng-mouseover="style4={'opacity': '.5'}" ng-mouseleave="style4={'opacity': '1'}" ng-click="selectStocks('mmm'); buyStock(stocks[42]['l']); select4={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select4">3M</h4>
+								<img id="stocklogo" src="static/images/3m_logo.png" alt="3mlogo"><br>
+								<p ng-style="select4">${{stocks[42]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="wba" ng-style="style5" ng-mouseover="style5={'opacity': '.5'}" ng-mouseleave="style5={'opacity': '1'}" ng-click="selectStocks('wba'); buyStock(stocks[43]['l']); select5={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select5">Walgreens</h4>
+								<img id="stocklogo" src="static/images/walgreens_logo.png" alt="walgreenslogo"><br>
+								<p ng-style="select5">${{stocks[43]['l']}}</p><br>
+							</div>
+					</div></td>
+				</tr>
+				<tr ng-if="user.interest1=='miscellaneous' || user.interest2=='miscellaneous'">
+					<td><h3>Miscellaneous</h3></td>
+					<td>
+						<div id ="pypl" ng-style="style1" ng-mouseover="style1={'opacity': '.5'}" ng-mouseleave="style1={'opacity': '1'}" ng-click="selectStocks('pypl'); buyStock(stocks[44]['l']); select1={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select1">PayPal</h4>
+								<img id="stocklogo" src="static/images/paypal_logo.png" alt="paypallogo"><br>
+								<p ng-style="select1">${{stocks[44]['l']}}</p><br>
+							</div>
+						</div>
+					</td>
+					<td><div id ="v" ng-style="style2" ng-mouseover="style2={'opacity': '.5'}" ng-mouseleave="style2={'opacity': '1'}" ng-click="selectStocks('v'); buyStock(stocks[45]['l']); select2={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select2">Visa</h4>
+								<img id="stocklogo" src="static/images/visa_logo.png" alt="visalogo"><br>
+								<p ng-style="select2">${{stocks[45]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="ebay" ng-style="style3" ng-mouseover="style3={'opacity': '.5'}" ng-mouseleave="style3={'opacity': '1'}" ng-click="selectStocks('ebay'); buyStock(stocks[46]['l']); select3={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select3">eBay</h4>
+								<img id="stocklogo" src="static/images/ebay_logo.png" alt="ebayogo"><br>
+								<p ng-style="select3">${{stocks[46]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="ma" ng-style="style4" ng-mouseover="style4={'opacity': '.5'}" ng-mouseleave="style4={'opacity': '1'}" ng-click="selectStocks('ma'); buyStock(stocks[47]['l']); select4={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select4">Mastercard</h4>
+								<img id="stocklogo" src="static/images/mastercard_logo.png" alt="mastercardlogo"><br>
+								<p ng-style="select4">${{stocks[47]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="fis" ng-style="style5" ng-mouseover="style5={'opacity': '.5'}" ng-mouseleave="style5={'opacity': '1'}" ng-click="selectStocks('fis'); buyStock(stocks[48]['l']); select5={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select5">Fidelity</h4>
+								<img id="stocklogo" src="static/images/fidelity_logo.png" alt="fidelitylogo"><br>
+								<p ng-style="select5">${{stocks[48]['l']}}</p><br>
+							</div>
+					</div></td>
+				</tr>
+				<tr ng-if="user.interest3=='miscellaneous'">
+					<td><h3>Miscellaneous</h3></td>
+					<td>
+						<div id ="pypl" ng-style="style1" ng-mouseover="style1={'opacity': '.5'}" ng-mouseleave="style1={'opacity': '1'}" ng-click="selectStocks('pypl'); buyStock(stocks[44]['l']); select1={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select1">PayPal</h4>
+								<img id="stocklogo" src="static/images/paypal_logo.png" alt="paypallogo"><br>
+								<p ng-style="select1">${{stocks[44]['l']}}</p><br>
+							</div>
+						</div>
+					</td>
+					<td><div id ="v" ng-style="style2" ng-mouseover="style2={'opacity': '.5'}" ng-mouseleave="style2={'opacity': '1'}" ng-click="selectStocks('v'); buyStock(stocks[45]['l']); select2={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select2">Visa</h4>
+								<img id="stocklogo" src="static/images/visa_logo.png" alt="visalogo"><br>
+								<p ng-style="select2">${{stocks[45]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="ebay" ng-style="style3" ng-mouseover="style3={'opacity': '.5'}" ng-mouseleave="style3={'opacity': '1'}" ng-click="selectStocks('ebay'); buyStock(stocks[46]['l']); select3={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select3">eBay</h4>
+								<img id="stocklogo" src="static/images/ebay_logo.png" alt="ebayogo"><br>
+								<p ng-style="select3">${{stocks[46]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="ma" ng-style="style4" ng-mouseover="style4={'opacity': '.5'}" ng-mouseleave="style4={'opacity': '1'}" ng-click="selectStocks('ma'); buyStock(stocks[47]['l']); select4={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select4">Mastercard</h4>
+								<img id="stocklogo" src="static/images/mastercard_logo.png" alt="mastercardlogo"><br>
+								<p ng-style="select4">${{stocks[47]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="fis" ng-style="style5" ng-mouseover="style5={'opacity': '.5'}" ng-mouseleave="style5={'opacity': '1'}" ng-click="selectStocks('fis'); buyStock(stocks[48]['l']); select5={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select5">Fidelity</h4>
+								<img id="stocklogo" src="static/images/fidelity_logo.png" alt="fidelitylogo"><br>
+								<p ng-style="select5">${{stocks[48]['l']}}</p><br>
+							</div>
+					</div></td>
+				</tr>
+				<tr ng-if="user.interest1 == 'publicutilities' || user.interest2 == 'publicutilities'">
+					<td><h3>Public Utilities</h3></td>
+					<td>
+						<div id ="vz" ng-style="style1" ng-mouseover="style1={'opacity': '.5'}" ng-mouseleave="style1={'opacity': '1'}" ng-click="selectStocks('vz'); buyStock(stocks[49]['l']);  select1={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select1">Verizon</h4>
+								<img id="stocklogo" src="static/images/verizon_logo.png" alt="verizonlogo"><br>
+								<p ng-style="select1">${{stocks[49]['l']}}</p><br>
+							</div>
+						</div>
+					</td>
+					<td><div id ="t" ng-style="style2" ng-mouseover="style2={'opacity': '.5'}" ng-mouseleave="style2={'opacity': '1'}" ng-click="selectStocks('t'); buyStock(stocks[50]['l']); select2={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select2">AT&T</h4>
+								<img id="stocklogo" src="static/images/att_logo.png" alt="attlogo"><br>
+								<p ng-style="select2">${{stocks[50]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="ctl" ng-style="style3" ng-mouseover="style3={'opacity': '.5'}" ng-mouseleave="style3={'opacity': '1'}" ng-click="selectStocks('ctl'); buyStock(stocks[51]['l']); select3={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select3">CenturyLink</h4>
+								<img id="stocklogo" src="static/images/centurylink_logo.png" alt="centurylinklogo"><br>
+								<p ng-style="select3">${{stocks[51]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="wm" ng-style="style4" ng-mouseover="style4={'opacity': '.5'}" ng-mouseleave="style4={'opacity': '1'}" ng-click="selectStocks('wm'); buyStock(stocks[52]['l']); select4={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select4">WasteManagement</h4>
+								<img id="stocklogo" src="static/images/wastemanagement_logo.png" alt="wastemanagementlogo"><br>
+								<p ng-style="select4">${{stocks[52]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="tmus" ng-style="style5" ng-mouseover="style5={'opacity': '.5'}" ng-mouseleave="style5={'opacity': '1'}" ng-click="selectStocks('tmus'); buyStock(stocks[53]['l']); select5={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select5">T-Mobile</h4>
+								<img id="stocklogo" src="static/images/tmobile_logo.png" alt="tmobilelogo"><br>
+								<p ng-style="select5">${{stocks[53]['l']}}</p><br>
+							</div>
+					</div></td>
+				</tr>
+				<tr ng-if="user.interest3 == 'publicutilities'">
+					<td><h3>Public Utilities</h3></td>
+					<td>
+						<div id ="vz" ng-style="style1" ng-mouseover="style1={'opacity': '.5'}" ng-mouseleave="style1={'opacity': '1'}" ng-click="selectStocks('vz'); buyStock(stocks[49]['l']); select1={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select1">Verizon</h4>
+								<img id="stocklogo" src="static/images/verizon_logo.png" alt="verizonlogo"><br>
+								<p ng-style="select1">${{stocks[49]['l']}}</p><br>
+							</div>
+						</div>
+					</td>
+					<td><div id ="t" ng-style="style2" ng-mouseover="style2={'opacity': '.5'}" ng-mouseleave="style2={'opacity': '1'}" ng-click="selectStocks('t'); buyStock(stocks[50]['l']); select2={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select2">AT&T</h4>
+								<img id="stocklogo" src="static/images/att_logo.png" alt="attlogo"><br>
+								<p ng-style="select2">${{stocks[50]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="ctl" ng-style="style3" ng-mouseover="style3={'opacity': '.5'}" ng-mouseleave="style3={'opacity': '1'}" ng-click="selectStocks('ctl'); buyStock(stocks[51]['l']); select3={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select3">CenturyLink</h4>
+								<img id="stocklogo" src="static/images/centurylink_logo.png" alt="centurylinklogo"><br>
+								<p ng-style="select3">${{stocks[51]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="wm" ng-style="style4" ng-mouseover="style4={'opacity': '.5'}" ng-mouseleave="style4={'opacity': '1'}" ng-click="selectStocks('wm'); buyStock(stocks[52]['l']); select4={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select4">Waste Management</h4>
+								<img id="stocklogo" src="static/images/wastemanagement_logo.png" alt="wastemanagementlogo"><br>
+								<p ng-style="select4">${{stocks[52]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="tmus" ng-style="style5" ng-mouseover="style5={'opacity': '.5'}" ng-mouseleave="style5={'opacity': '1'}" ng-click="selectStocks('tmus'); buyStock(stocks[53]['l']); select5={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select5">T-Mobile</h4>
+								<img id="stocklogo" src="static/images/tmobile_logo.png" alt="tmobilelogo"><br>
+								<p ng-style="select5">${{stocks[53]['l']}}</p><br>
+							</div>
+					</div></td>
+				</tr>
+				<tr ng-if="user.interest1 == 'technology' || user.interest2 == 'technology'">
+					<td><h3>Technology</h3></td>
+					<td>
+						<div id ="aapl" ng-style="style1" ng-mouseover="style1={'opacity': '.5'}" ng-mouseleave="style1={'opacity': '1'}" ng-click="selectStocks('aapl'); buyStock(stocks[1]['l']); select1={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select1"> Apple </h4>
+								<img id="stocklogo" src="static/images/apple_logo.png" alt="applelogo"><br>
+								<p ng-style="select1">${{stocks[1]['l']}}</p><br>
+							</div>
+						</div>
+					</td>
+					<td><div id ="msft" ng-style="style2" ng-mouseover="style2={'opacity': '.5'}" ng-mouseleave="style2={'opacity': '1'}" ng-click="selectStocks('msft'); buyStock(stocks[2]['l']);  select2={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select2"> Microsoft </h4>
+								<img id="stocklogo" src="static/images/microsoft_logo.png" alt="microsoftlogo"><br>
+								<p ng-style="select2">${{stocks[2]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="googl" ng-style="style3" ng-mouseover="style3={'opacity': '.5'}" ng-mouseleave="style3={'opacity': '1'}" ng-click="selectStocks('googl'); buyStock(stocks[4]['l']); select3={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select3"> Google </h4>
+								<img id="stocklogo" src="static/images/google_logo.png" alt="googlelogo"><br>
+								<p ng-style="select3">${{stocks[4]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="fb" ng-style="style4" ng-mouseover="style4={'opacity': '.5'}" ng-mouseleave="style4={'opacity': '1'}" ng-click="selectStocks('fb'); buyStock(stocks[3]['l']); select4={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select4">Facebook</h4>
+								<img id="stocklogo" src="static/images/facebook_logo.png" alt="facebooklogo"><br>
+								<p ng-style="select4">${{stocks[3]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="intc" ng-style="style5" ng-mouseover="style5={'opacity': '.5'}" ng-mouseleave="style5={'opacity': '1'}" ng-click="selectStocks('intc'); buyStock(stocks[59]['l']); select5={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select5">Intel</h4>
+								<img id="stocklogo" src="static/images/intel_logo.png" alt="intellogo"><br>
+								<p ng-style="select5">${{stocks[59]['l']}}</p><br>
+							</div>
+					</div></td>
+				</tr>
+				<tr ng-if="user.interest3 == 'technology'">
+					<td><h3>Technology</h3></td>
+					<td>
+						<div id ="aapl" name="aapl" ng-style="style1" ng-mouseover="style1={'opacity': '.5'}" ng-mouseleave="style1={'opacity': '1'}" ng-click="selectStocks('aapl'); buyStock(stocks[1]['l']); select1={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select1"> Apple </h4>
+								<img id="stocklogo" src="static/images/apple_logo.png" alt="applelogo"><br>
+								<p ng-style="select1">${{stocks[1]['l']}}</p><br>
+							</div>
+						</div>
+					</td>
+					<td><div id ="msft" ng-style="style2" ng-mouseover="style2={'opacity': '.5'}" ng-mouseleave="style2={'opacity': '1'}" ng-click="selectStocks('msft'); buyStock(stocks[2]['l']); select2={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select2"> Microsoft </h4>
+								<img id="stocklogo" src="static/images/microsoft_logo.png" alt="microsoftlogo"><br>
+								<p ng-style="select2">${{stocks[2]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="googl" ng-style="style3" ng-mouseover="style3={'opacity': '.5'}" ng-mouseleave="style3={'opacity': '1'}" ng-click="selectStocks('googl'); buyStock(stocks[4]['l']); select3={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select3"> Google </h4>
+								<img id="stocklogo" src="static/images/google_logo.png" alt="googlelogo"><br>
+								<p ng-style="select3">${{stocks[4]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="fb" ng-style="style4" ng-mouseover="style4={'opacity': '.5'}" ng-mouseleave="style4={'opacity': '1'}" ng-click="selectStocks('fb'); buyStock(stocks[3]['l']); select4={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select4">Facebook</h4>
+								<img id="stocklogo" src="static/images/facebook_logo.png" alt="facebooklogo"><br>
+								<p ng-style="select4">${{stocks[3]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="intc" ng-style="style5" ng-mouseover="style5={'opacity': '.5'}" ng-mouseleave="style5={'opacity': '1'}" ng-click="selectStocks('intc'); buyStock(stocks[59]['l']); select5={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select5">Intel</h4>
+								<img id="stocklogo" src="static/images/intel_logo.png" alt="intellogo"><br>
+								<p ng-style="select5">${{stocks[59]['l']}}</p><br>
+							</div>
+					</div></td>
+				</tr>
+				<tr ng-if="user.interest1 == 'transportation' || user.interest2 == 'transportation'">
+					<td><h3>Transportation</h3></td>
+					<td>
+						<div id ="ups" ng-style="style1" ng-mouseover="style1={'opacity': '.5'}" ng-mouseleave="style1={'opacity': '1'}" ng-click="selectStocks('ups'); buyStock(stocks[54]['l']); select1={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select1">UPS</h4>
+								<img id="stocklogo" src="static/images/ups_logo.png" alt="upslogo"><br>
+								<p ng-style="select1">${{stocks[54]['l']}}</p><br>
+							</div>
+						</div>
+					</td>
+					<td><div id ="aal" ng-style="style2" ng-mouseover="style2={'opacity': '.5'}" ng-mouseleave="style2={'opacity': '1'}" ng-click="selectStocks('aal'); buyStock(stocks[55]['l']); select2={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select2">American Airlines</h4>
+								<img id="stocklogo" src="static/images/americanairlines_logo.png" alt="americanairlineslogo"><br>
+								<p ng-style="select2">${{stocks[55]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="dal" ng-style="style3" ng-mouseover="style3={'opacity': '.5'}" ng-mouseleave="style3={'opacity': '1'}" ng-click="selectStocks('dal'); buyStock(stocks[56]['l']); select3={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select3">Delta Airlines</h4>
+								<img id="stocklogo" src="static/images/deltaairlines_logo.png" alt="deltaairlineslogo"><br>
+								<p ng-style="select3">${{stocks[56]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="fdx" ng-style="style4" ng-mouseover="style4={'opacity': '.5'}" ng-mouseleave="style4={'opacity': '1'}" ng-click="selectStocks('fdx'); buyStock(stocks[57]['l']); select4={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select4">FedEx</h4>
+								<img id="stocklogo" src="static/images/fedex_logo.png" alt="fedexlogo"><br>
+								<p ng-style="select4">${{stocks[57]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="alk" ng-style="style5" ng-mouseover="style5={'opacity': '.5'}" ng-mouseleave="style5={'opacity': '1'}" ng-click="selectStocks('alk'); buyStock(stocks[58]['l']); select5={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select5">Alaska Air</h4>
+								<img id="stocklogo" src="static/images/alaskaairlines_logo.png" alt="alaskaairlineslogo"><br>
+								<p ng-style="select5">${{stocks[58]['l']}}</p><br>
+							</div>
+					</div></td>
+				</tr>
+				<tr ng-if="user.interest3 == 'transportation'">
+					<td><h3>Transportation</h3></td>
+					<td>
+						<div id ="ups" ng-style="style1" ng-mouseover="style1={'opacity': '.5'}" ng-mouseleave="style1={'opacity': '1'}" ng-click="selectStocks('ups'); buyStock(stocks[54]['l']); select1={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select1">UPS</h4>
+								<img id="stocklogo" src="static/images/ups_logo.png" alt="upslogo"><br>
+								<p ng-style="select1">${{stocks[54]['l']}}</p><br>
+							</div>
+						</div>
+					</td>
+					<td><div id ="aal" ng-style="style2" ng-mouseover="style2={'opacity': '.5'}" ng-mouseleave="style2={'opacity': '1'}" ng-click="selectStocks('aal'); buyStock(stocks[55]['l']); select2={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select2">American Airlines</h4>
+								<img id="stocklogo" src="static/images/americanairlines_logo.png" alt="americanairlineslogo"><br>
+								<p ng-style="select2">${{stocks[55]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="dal" ng-style="style3" ng-mouseover="style3={'opacity': '.5'}" ng-mouseleave="style3={'opacity': '1'}" ng-click="selectStocks('dal'); buyStock(stocks[56]['l']); select3={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select3">Delta Airlines</h4>
+								<img id="stocklogo" src="static/images/deltaairlines_logo.png" alt="deltaairlineslogo"><br>
+								<p ng-style="select3">${{stocks[56]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="fdx" ng-style="style4" ng-mouseover="style4={'opacity': '.5'}" ng-mouseleave="style4={'opacity': '1'}" ng-click="selectStocks('fdx'); buyStock(stocks[57]['l']); select4={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select4">FedEx</h4>
+								<img id="stocklogo" src="static/images/fedex_logo.png" alt="fedexlogo"><br>
+								<p ng-style="select4">${{stocks[57]['l']}}</p><br>
+							</div>
+					</div></td>
+					<td><div id ="alk" ng-style="style5" ng-mouseover="style5={'opacity': '.5'}" ng-mouseleave="style5={'opacity': '1'}" ng-click="selectStocks('alk'); buyStock(stocks[58]['l']); select5={'color': 'green', 'font-weight': '700'}">
+							<div class="company">
+								<h4 ng-style="select5">Alaska Air</h4>
+								<img id="stocklogo" src="static/images/alaskaairlines_logo.png" alt="alaskaairlineslogo"><br>
+								<p ng-style="select5">${{stocks[58]['l']}}</p><br>
+							</div>
+					</div></td>
+				</tr>
+			</table>
+			<button ng-click="proceed()">Proceed to Buy Stocks</button>
+		</div>
+	</div>
+</div>
